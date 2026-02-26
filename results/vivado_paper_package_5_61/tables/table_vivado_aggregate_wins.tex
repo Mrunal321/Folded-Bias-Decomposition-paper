@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.6pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Aggregate Vivado tradeoff summary. ADP and Pareto rows provide a joint area-delay view; higher Folded win-rate indicates stronger overall tradeoff.}
+\label{tab:vivado_aggregate_wins}
+\begin{tabular}{cccccccc}
+\hline
+Objective & Folded wins & Ties & Baseline wins & Tradeoff & Folded win rate (\%) & Mean gain & Mean gain (\%) \\
+\hline
+CLB LUTs (min) & 14 & 9 & 6 & 0 & 48.28 & 1.4828 & 4.653 \\
+Datapath delay (min) & 12 & 4 & 13 & 0 & 41.38 & 0.0295 & 0.126 \\
+WNS (max) & 12 & 4 & 13 & 0 & 41.38 & 0.0295 & -- \\
+Total power (min) & 3 & 26 & 0 & 0 & 10.34 & 0.0001 & 0.110 \\
+ADP = LUTs x delay (min) & 18 & 4 & 7 & 0 & 62.07 & 15.8889 & 4.832 \\
+Pareto on (LUT, delay) & 9 & 4 & 5 & 11 & 31.03 & -- & -- \\
+\hline
+\end{tabular}
+\end{table*}

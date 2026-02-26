@@ -1,0 +1,4 @@
+__pycache__/
+.Xil/
+abc.history
+results/*/runs/

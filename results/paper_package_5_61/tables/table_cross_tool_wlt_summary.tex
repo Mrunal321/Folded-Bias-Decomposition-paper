@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Win/Loss/Tie (WLT) summary for folded-bias vs baseline. All counts are computed from existing CSVs; ASIC rows use \texttt{mcnc.genlib}.}
+\label{tab:cross_tool_wlt}
+\begin{tabular}{l l r r r r r}
+\hline
+Group & Metric & Folded wins & Ties & Baseline wins & Tradeoff & n \\
+\hline
+ABC/Logic & Light MIG & 21 & 3 & 5 & 0 & 29 \\
+ABC/Logic & Light Runtime & 16 & 0 & 13 & 0 & 29 \\
+ABC/Logic & LUT6 Area & 18 & 7 & 4 & 0 & 29 \\
+ABC/Logic & LUT6 Delay & 3 & 23 & 3 & 0 & 29 \\
+CirKit & QCA Area & 21 & 3 & 5 & 0 & 29 \\
+CirKit & QCA Delay & 8 & 4 & 17 & 0 & 29 \\
+CirKit & STMG Area & 23 & 3 & 3 & 0 & 29 \\
+CirKit & STMG Delay & 6 & 4 & 19 & 0 & 29 \\
+Vivado & CLB LUTs & 14 & 9 & 6 & 0 & 29 \\
+Vivado & Delay & 12 & 4 & 13 & 0 & 29 \\
+Vivado & ADP & 18 & 4 & 7 & 0 & 29 \\
+Vivado Pareto & (LUT,Delay) & 9 & 4 & 5 & 11 & 29 \\
+ASIC (mcnc.genlib) & Area & 17 & 4 & 8 & 0 & 29 \\
+ASIC (mcnc.genlib) & Delay & 17 & 5 & 7 & 0 & 29 \\
+ASIC (mcnc.genlib) & ADP & 18 & 4 & 7 & 0 & 29 \\
+\hline
+\end{tabular}
+\end{table*}

@@ -1,0 +1,3 @@
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-subbuild/CMakeFiles/mockturtle_dep-populate.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-subbuild/CMakeFiles/edit_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-subbuild/CMakeFiles/rebuild_cache.dir

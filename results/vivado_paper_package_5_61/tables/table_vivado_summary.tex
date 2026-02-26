@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.6pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Vivado aggregate win/tie/loss summary over all $n$ points. $\Delta$ is baseline minus folded.}
+\label{tab:vivado_summary}
+\begin{tabular}{ccccccc}
+\hline
+Metric & Better & Folded wins & Ties & Baseline wins & Mean $\Delta$ (B-F) & Median $\Delta$ (B-F) \\
+\hline
+CLB LUTs & \downarrow & 14 & 9 & 6 & 1.4828 & 0.0000 \\
+Datapath delay (ns) & \downarrow & 12 & 4 & 13 & 0.0295 & 0.0000 \\
+Logic levels & \downarrow & 5 & 23 & 1 & 0.1379 & 0.0000 \\
+WNS (ns) & \uparrow & 12 & 4 & 13 & -0.0295 & 0.0000 \\
+Total power (W) & \downarrow & 3 & 26 & 0 & 0.0001 & 0.0000 \\
+Runtime (s) & \downarrow & 9 & 0 & 20 & -0.0708 & -0.0646 \\
+\hline
+\end{tabular}
+\end{table*}

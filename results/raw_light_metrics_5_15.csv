@@ -1,0 +1,7 @@
+n,folded_fa_count,folded_fa_levels,folded_raw_klut_gates,folded_light_mig_after,folded_light_depth_after,baseline_fa_count,baseline_fa_levels,baseline_raw_klut_gates,baseline_light_mig_after,baseline_light_depth_after,delta_raw_klut_baseline_minus_folded,delta_light_mig_baseline_minus_folded,delta_light_depth_baseline_minus_folded
+5,4,4,13,7,5,7,6,22,8,4,9,1,-1
+7,4,3,13,8,4,7,6,22,8,4,9,0,0
+9,9,6,28,19,7,15,9,46,17,6,18,-2,-1
+11,9,6,28,20,8,15,9,46,24,7,18,4,-1
+13,11,6,34,26,8,15,9,46,24,7,12,-2,-1
+15,11,5,34,27,7,15,9,46,27,7,12,0,0

@@ -1,0 +1,15 @@
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/CMakeFiles/mockturtle_mig_opt.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/CMakeFiles/edit_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/CMakeFiles/rebuild_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/CMakeFiles/edit_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/CMakeFiles/rebuild_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/include/CMakeFiles/edit_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/include/CMakeFiles/rebuild_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/lib/CMakeFiles/edit_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/lib/CMakeFiles/rebuild_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/lib/abcsat/CMakeFiles/libabcsat.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/lib/abcsat/CMakeFiles/edit_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/lib/abcsat/CMakeFiles/rebuild_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/lib/abcesop/CMakeFiles/libabcesop.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/lib/abcesop/CMakeFiles/edit_cache.dir
+/home/mrunal/Folded_Bias-Decomposition/tools/mockturtle_mig_opt/build/_deps/mockturtle_dep-build/lib/abcesop/CMakeFiles/rebuild_cache.dir
