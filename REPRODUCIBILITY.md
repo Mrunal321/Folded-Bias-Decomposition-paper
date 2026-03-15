@@ -1,10 +1,5 @@
 # Reproducibility Guide (Paper Artifacts)
 
-This repository supports two use-cases:
-
-- Reviewer-friendly regeneration from committed CSV artifacts (default flow).
-- Full recomputation of all metrics/figures (author flow with external tools).
-
 ## 1. One-Command Entry Point
 
 Use the wrapper:
