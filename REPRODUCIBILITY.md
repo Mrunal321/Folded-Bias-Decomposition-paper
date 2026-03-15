@@ -1,82 +1,124 @@
 # Reproducibility Guide (Paper Artifacts)
 
-This file defines exactly what to keep in git so reviewers can reproduce the
-results used in the manuscript.
+This repository supports two use-cases:
 
-## 1. What To Commit
+- Reviewer-friendly regeneration from committed CSV artifacts (default flow).
+- Full recomputation of all metrics/figures (author flow with external tools).
 
-Commit these source scripts:
+## 1. One-Command Entry Point
 
-- `final_generator.py`
-- `compare_raw_light_metrics.py`
-- `compare_abc_mapped_metrics.py`
-- `compare_cirkit_qca_stmg.py`
-- `compare_vivado_stats.py`
-- `generate_paper_package.py`
-- `generate_vivado_paper_package.py`
-- `generate_cross_tool_wlt.py`
-- `RUN_ALL_COMPARISONS.mf`
-- `reproduce_paper.sh`
-- `REPRODUCIBILITY.md`
-
-Commit these paper-facing artifacts (for the exact manuscript version):
-
-- `results/paper_package_5_61/data/*.csv`
-- `results/paper_package_5_61/tables/*.tex`
-- `results/paper_package_5_61/figures/*.pdf`
-- `results/paper_package_5_61/figures/*.png`
-- `results/paper_package_5_61/SUMMARY.md`
-
-- `results/vivado_compare_5_61_synth/vivado_comparison.csv`
-- `results/vivado_compare_5_61_synth/vivado_detailed.csv`
-
-- `results/vivado_paper_package_5_61/data/*.csv`
-- `results/vivado_paper_package_5_61/tables/*.tex`
-- `results/vivado_paper_package_5_61/figures/*.pdf`
-- `results/vivado_paper_package_5_61/figures/*.png`
-- `results/vivado_paper_package_5_61/SUMMARY.md`
-
-Do **not** commit large transient directories:
-
-- `results/vivado_compare_5_61_synth/runs/` (per-run Vivado logs/reports; huge)
-- `__pycache__/`
-- `.Xil/`
-
-## 2. Environment Required
-
-- Python 3
-- ABC binary
-- CirKit Python env (for QCA/STMG script)
-- Vivado (only if regenerating FPGA CSVs)
-
-Paths can be overridden with environment variables in `reproduce_paper.sh`.
-
-## 3. One-Command Reproduction
-
-From repo root:
+Use the wrapper:
 
 ```bash
-chmod +x reproduce_paper.sh
-./reproduce_paper.sh
+chmod +x reproduce_all_artifacts.sh
+./reproduce_all_artifacts.sh
 ```
 
-Defaults:
+Default behavior is conservative/reviewer-friendly:
 
-- `N_START=5`, `N_END=61`
-- ASIC panel library for cross-tool plot: `mcnc.genlib`
-- Runs Vivado synthesis flow (`RUN_VIVADO=1`)
+- `RUN_CORE_PACKAGE=0`
+- `RUN_VIVADO=0`
+- `RUN_CROSS_TOOL_WLT=0`
+- `RUN_INTRO_MOTIVATION=0`
+- `RUN_K_ADVANTAGE=0`
+- `RUN_LARGE_N=0`
+- `RUN_PACKAGE_ZIP=0`
 
-Skip Vivado rerun (use existing CSVs):
+So by default it does not require ABC/CirKit/Vivado/mockturtle.
+
+## 2. Full Regeneration (Author Mode)
+
+To regenerate all major paper artifacts from tools:
 
 ```bash
-RUN_VIVADO=0 ./reproduce_paper.sh
+RUN_CORE_PACKAGE=1 \
+RUN_VIVADO=1 \
+RUN_CROSS_TOOL_WLT=1 \
+RUN_INTRO_MOTIVATION=1 \
+RUN_K_ADVANTAGE=1 \
+RUN_LARGE_N=1 \
+RUN_PACKAGE_ZIP=1 \
+./reproduce_all_artifacts.sh
 ```
 
-## 4. Reviewer-Friendly Claim Scope
+## 3. Environment Variables
 
-When describing reproducibility in the paper:
+Core range and tool paths:
 
-- Core logic + mapping + cross-tool figures are fully script-reproducible.
-- Vivado per-case implementation logs are optional and can be omitted from git.
-- Published FPGA tables/figures are reproducible from committed Vivado CSVs.
+- `N_START` (default: `5`)
+- `N_END` (default: `61`)
+- `ABC_BIN` (default: `/home/mrunal/abc/abc`)
+- `CIRKIT_PY` (default: `/home/mrunal/Mockturtle-mMIG-main/experiments-dac19-flow/.venv/bin/python`)
+- `VIVADO_BIN` (default: `/tools/Xilinx/Vivado/2024.2/bin/vivado`)
+- `FPGA_PART` (default: `xc7a100tcsg324-1`)
+- `ASIC_LIB` (default: `mcnc.genlib`)
+- `LARGE_N_VALUES` (default: `513,1025,2049,4097,5001`)
 
+Execution switches:
+
+- `RUN_CORE_PACKAGE=0|1`
+- `RUN_VIVADO=0|1`
+- `RUN_CROSS_TOOL_WLT=0|1`
+- `RUN_INTRO_MOTIVATION=0|1`
+- `RUN_K_ADVANTAGE=0|1`
+- `RUN_LARGE_N=0|1`
+- `RUN_PACKAGE_ZIP=0|1`
+
+## 4. Tool Requirements by Stage
+
+- `RUN_CORE_PACKAGE=1` requires:
+  - Python 3
+  - ABC (`ABC_BIN`)
+  - CirKit python env (`CIRKIT_PY`)
+- `RUN_VIVADO=1` requires:
+  - Vivado (`VIVADO_BIN`)
+- `RUN_K_ADVANTAGE=1` requires:
+  - mockturtle binary (resolved by `final_generator.py`)
+- `RUN_LARGE_N=1` requires:
+  - mockturtle binary
+  - ABC (`ABC_BIN`)
+
+## 5. Expected Outputs
+
+Main output roots:
+
+- `results/paper_package_<N_START>_<N_END>/`
+- `results/vivado_compare_<N_START>_<N_END>_synth/`
+- `results/vivado_paper_package_<N_START>_<N_END>/`
+
+Optional outputs when enabled:
+
+- Cross-tool WLT figure/table:
+  - `results/paper_package_<...>/figures/fig_cross_tool_wlt_summary.*`
+  - `results/paper_package_<...>/figures/fig_cross_tool_wlt_grouped.*`
+  - `results/paper_package_<...>/tables/table_cross_tool_wlt_summary.tex`
+- Intro motivation artifact:
+  - `results/paper_package_<...>/figures/fig_intro_motivation.*`
+  - `results/paper_package_<...>/tables/fig_intro_motivation.tex`
+  - `results/paper_package_<...>/tables/intro_motivation_paragraph.tex`
+- K-advantage CSV:
+  - `results/k_advantage_mode_compare_<N_START>_<N_END>.csv`
+- Large-n scalability CSV:
+  - `results/scalability_large_n_metrics.csv`
+
+## 6. Common Failure Cases
+
+- Missing `results/vivado_compare_<range>_synth/*.csv` with `RUN_VIVADO=0`:
+  - Fix: set `RUN_VIVADO=1`, or use a range with committed Vivado CSVs.
+- Missing mockturtle when enabling `RUN_K_ADVANTAGE` or `RUN_LARGE_N`:
+  - Fix: build `tools/mockturtle_mig_opt` and ensure resolver can find the binary.
+- Missing ABC/CirKit when `RUN_CORE_PACKAGE=1`:
+  - Fix: set `ABC_BIN`/`CIRKIT_PY` correctly or disable core rebuild.
+
+## 7. Minimal Reviewer Command (No External EDA Tools)
+
+```bash
+RUN_CORE_PACKAGE=0 \
+RUN_VIVADO=0 \
+RUN_CROSS_TOOL_WLT=0 \
+RUN_INTRO_MOTIVATION=0 \
+RUN_K_ADVANTAGE=0 \
+RUN_LARGE_N=0 \
+RUN_PACKAGE_ZIP=0 \
+./reproduce_all_artifacts.sh
+```

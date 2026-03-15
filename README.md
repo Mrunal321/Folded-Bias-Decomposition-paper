@@ -1,3 +1,17 @@
+## Paper Reproduction (Start Here)
+
+For manuscript artifact reproduction, use:
+
+```bash
+chmod +x reproduce_all_artifacts.sh
+./reproduce_all_artifacts.sh
+```
+
+Detailed stage controls and reviewer/author modes are documented in
+`REPRODUCIBILITY.md`.
+
+---
+
 ## `final_generator.py`
 
 This script is the single entry point used to emit both Verilog and BLIF
