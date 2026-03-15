@@ -20,7 +20,6 @@ Default behavior is conservative/reviewer-friendly:
 - `RUN_VIVADO=0`
 - `RUN_CROSS_TOOL_WLT=0`
 - `RUN_INTRO_MOTIVATION=0`
-- `RUN_K_ADVANTAGE=0`
 - `RUN_LARGE_N=0`
 - `RUN_PACKAGE_ZIP=0`
 
@@ -35,7 +34,6 @@ RUN_CORE_PACKAGE=1 \
 RUN_VIVADO=1 \
 RUN_CROSS_TOOL_WLT=1 \
 RUN_INTRO_MOTIVATION=1 \
-RUN_K_ADVANTAGE=1 \
 RUN_LARGE_N=1 \
 RUN_PACKAGE_ZIP=1 \
 ./reproduce_all_artifacts.sh
@@ -60,7 +58,6 @@ Execution switches:
 - `RUN_VIVADO=0|1`
 - `RUN_CROSS_TOOL_WLT=0|1`
 - `RUN_INTRO_MOTIVATION=0|1`
-- `RUN_K_ADVANTAGE=0|1`
 - `RUN_LARGE_N=0|1`
 - `RUN_PACKAGE_ZIP=0|1`
 
@@ -72,8 +69,6 @@ Execution switches:
   - CirKit python env (`CIRKIT_PY`)
 - `RUN_VIVADO=1` requires:
   - Vivado (`VIVADO_BIN`)
-- `RUN_K_ADVANTAGE=1` requires:
-  - mockturtle binary (resolved by `final_generator.py`)
 - `RUN_LARGE_N=1` requires:
   - mockturtle binary
   - ABC (`ABC_BIN`)
@@ -96,8 +91,6 @@ Optional outputs when enabled:
   - `results/paper_package_<...>/figures/fig_intro_motivation.*`
   - `results/paper_package_<...>/tables/fig_intro_motivation.tex`
   - `results/paper_package_<...>/tables/intro_motivation_paragraph.tex`
-- K-advantage CSV:
-  - `results/k_advantage_mode_compare_<N_START>_<N_END>.csv`
 - Large-n scalability CSV:
   - `results/scalability_large_n_metrics.csv`
 
@@ -117,7 +110,6 @@ RUN_CORE_PACKAGE=0 \
 RUN_VIVADO=0 \
 RUN_CROSS_TOOL_WLT=0 \
 RUN_INTRO_MOTIVATION=0 \
-RUN_K_ADVANTAGE=0 \
 RUN_LARGE_N=0 \
 RUN_PACKAGE_ZIP=0 \
 ./reproduce_all_artifacts.sh
