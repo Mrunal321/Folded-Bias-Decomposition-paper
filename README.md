@@ -7,7 +7,7 @@ chmod +x reproduce_all_artifacts.sh
 ./reproduce_all_artifacts.sh
 ```
 
-Detailed stage controls and reviewer/author modes are documented in
+Detailed stage controls and thorough modes are documented in
 `REPRODUCIBILITY.md`.
 
 ---
