@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import csv
 import math
+import shutil
 from pathlib import Path
 
 
@@ -140,6 +141,75 @@ def _stacked_wlt(ax, entries, title, n_label):
     return b1[0], b2[0], b3[0]
 
 
+def _grouped_wlt(
+    ax,
+    entries,
+    title,
+    n_label,
+    bar_width=0.22,
+    title_fs=18,
+    ylabel_fs=16,
+    xtick_fs=13,
+    ytick_fs=13,
+    ann_fs=12,
+):
+    """Draw grouped W/T/L bars for each metric."""
+    labels = [e[0] for e in entries]
+    fw = [e[1] for e in entries]
+    ties = [e[2] for e in entries]
+    bw = [e[3] for e in entries]
+    x = list(range(len(entries)))
+
+    b1 = ax.bar([xi - bar_width for xi in x], fw, width=bar_width, color="#1f77b4", label="Folded wins")
+    b2 = ax.bar(x, ties, width=bar_width, color="#2ca02c", label="Ties")
+    b3 = ax.bar([xi + bar_width for xi in x], bw, width=bar_width, color="#ff7f0e", label="Baseline wins")
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, rotation=25, ha="right", fontsize=xtick_fs)
+    ax.set_title(title, fontsize=title_fs)
+    ax.set_ylabel("Count (n-values)", fontsize=ylabel_fs)
+    ax.tick_params(axis="y", labelsize=ytick_fs)
+    ax.grid(True, axis="y", alpha=0.25)
+
+    for xi in x:
+        top = max(fw[xi], ties[xi], bw[xi])
+        ax.text(xi, top + 0.2, f"n={n_label}", ha="center", va="bottom", fontsize=ann_fs)
+
+    return b1[0], b2[0], b3[0]
+
+
+def _grouped_pareto(
+    ax,
+    pareto,
+    n_label,
+    bar_width=0.18,
+    title_fs=18,
+    ylabel_fs=16,
+    xtick_fs=13,
+    ytick_fs=13,
+    ann_fs=12,
+):
+    """Draw grouped bars for the Vivado Pareto categories."""
+    f_dom, b_dom, exact_tie, tradeoff = pareto
+    x0 = 0.0
+    xs = [x0 - 1.5 * bar_width, x0 - 0.5 * bar_width, x0 + 0.5 * bar_width, x0 + 1.5 * bar_width]
+
+    b1 = ax.bar([xs[0]], [f_dom], width=bar_width, color="#1f77b4", label="Folded dominates")
+    b2 = ax.bar([xs[1]], [exact_tie], width=bar_width, color="#2ca02c", label="Exact tie")
+    b3 = ax.bar([xs[2]], [b_dom], width=bar_width, color="#ff7f0e", label="Baseline dominates")
+    b4 = ax.bar([xs[3]], [tradeoff], width=bar_width, color="#d62728", label="Tradeoff")
+
+    ax.set_xticks([x0])
+    ax.set_xticklabels(["Pareto (LUT,Delay)"], fontsize=xtick_fs)
+    ax.set_title("Vivado Pareto", fontsize=title_fs)
+    ax.set_ylabel("Count (n-values)", fontsize=ylabel_fs)
+    ax.tick_params(axis="y", labelsize=ytick_fs)
+    ax.grid(True, axis="y", alpha=0.25)
+    ax.text(x0, max(f_dom, b_dom, exact_tie, tradeoff) + 0.2, f"n={n_label}", ha="center", va="bottom", fontsize=ann_fs)
+
+    return b1[0], b2[0], b3[0], b4[0]
+
+
 def _latex_table(rows, caption, label):
     lines = []
     lines.append("\\begin{table*}[t]")
@@ -176,6 +246,22 @@ def main():
         help="Standard-cell library to use in ASIC panel/table (default: mcnc.genlib)",
     )
     parser.add_argument("--out-fig-prefix", default="results/paper_package_5_61/figures/fig_cross_tool_wlt_summary")
+    parser.add_argument(
+        "--out-fig-grouped-prefix",
+        default="results/paper_package_5_61/figures/fig_cross_tool_wlt_grouped",
+        help="Output prefix for grouped-bar WLT figure (.png/.pdf).",
+    )
+    parser.add_argument(
+        "--replace-summary-with-grouped",
+        action="store_true",
+        help="Also copy grouped figure to --out-fig-prefix names.",
+    )
+    parser.add_argument("--grouped-bar-width", type=float, default=0.22)
+    parser.add_argument("--grouped-axis-title-fontsize", type=float, default=18.0)
+    parser.add_argument("--grouped-axis-label-fontsize", type=float, default=16.0)
+    parser.add_argument("--grouped-xtick-fontsize", type=float, default=13.0)
+    parser.add_argument("--grouped-ytick-fontsize", type=float, default=13.0)
+    parser.add_argument("--grouped-annotation-fontsize", type=float, default=12.0)
     parser.add_argument("--out-tex", default="results/paper_package_5_61/tables/table_cross_tool_wlt_summary.tex")
     args = parser.parse_args()
 
@@ -376,8 +462,130 @@ def main():
     fig.savefig(out_prefix.with_suffix(".pdf"))
     plt.close(fig)
 
+    # Grouped-bars figure for reviewers who prefer separated W/T/L bars.
+    fig = plt.figure(figsize=(19, 8))
+    gs = fig.add_gridspec(1, 5, width_ratios=[1.2, 1.2, 1.2, 0.9, 1.1])
+    ax1 = fig.add_subplot(gs[0, 0])
+    ax2 = fig.add_subplot(gs[0, 1])
+    ax3 = fig.add_subplot(gs[0, 2])
+    ax4 = fig.add_subplot(gs[0, 3])
+    ax5 = fig.add_subplot(gs[0, 4])
+
+    gh_wlt = _grouped_wlt(
+        ax1,
+        [
+            ("Light MIG", *light_mig),
+            ("Light Runtime", *light_rt),
+            ("LUT6 Area", *lut_area),
+            ("LUT6 Delay", *lut_delay),
+        ],
+        "ABC / Logic-level",
+        n_raw,
+        bar_width=args.grouped_bar_width,
+        title_fs=args.grouped_axis_title_fontsize,
+        ylabel_fs=args.grouped_axis_label_fontsize,
+        xtick_fs=args.grouped_xtick_fontsize,
+        ytick_fs=args.grouped_ytick_fontsize,
+        ann_fs=args.grouped_annotation_fontsize,
+    )
+    _grouped_wlt(
+        ax2,
+        [
+            ("QCA Area", *qca_area),
+            ("QCA Delay", *qca_delay),
+            ("STMG Area", *stmg_area),
+            ("STMG Delay", *stmg_delay),
+        ],
+        "CirKit / Emerging fabrics",
+        n_cir,
+        bar_width=args.grouped_bar_width,
+        title_fs=args.grouped_axis_title_fontsize,
+        ylabel_fs=args.grouped_axis_label_fontsize,
+        xtick_fs=args.grouped_xtick_fontsize,
+        ytick_fs=args.grouped_ytick_fontsize,
+        ann_fs=args.grouped_annotation_fontsize,
+    )
+    _grouped_wlt(
+        ax3,
+        [
+            ("CLB LUTs", *viv_lut),
+            ("Delay", *viv_delay),
+            ("ADP", *viv_adp),
+        ],
+        "Vivado / FPGA",
+        n_viv,
+        bar_width=args.grouped_bar_width,
+        title_fs=args.grouped_axis_title_fontsize,
+        ylabel_fs=args.grouped_axis_label_fontsize,
+        xtick_fs=args.grouped_xtick_fontsize,
+        ytick_fs=args.grouped_ytick_fontsize,
+        ann_fs=args.grouped_annotation_fontsize,
+    )
+
+    gpareto = _grouped_pareto(
+        ax4,
+        pareto,
+        n_viv,
+        bar_width=max(0.12, args.grouped_bar_width * 0.8),
+        title_fs=args.grouped_axis_title_fontsize,
+        ylabel_fs=args.grouped_axis_label_fontsize,
+        xtick_fs=args.grouped_xtick_fontsize,
+        ytick_fs=args.grouped_ytick_fontsize,
+        ann_fs=args.grouped_annotation_fontsize,
+    )
+
+    if asic_stats:
+        _grouped_wlt(
+            ax5,
+            [
+                ("Area", *asic_stats["area"]),
+                ("Delay", *asic_stats["delay"]),
+                ("ADP", *asic_stats["adp"]),
+            ],
+            f"ASIC / {asic_stats['library']}",
+            asic_stats["n"],
+            bar_width=args.grouped_bar_width,
+            title_fs=args.grouped_axis_title_fontsize,
+            ylabel_fs=args.grouped_axis_label_fontsize,
+            xtick_fs=args.grouped_xtick_fontsize,
+            ytick_fs=args.grouped_ytick_fontsize,
+            ann_fs=args.grouped_annotation_fontsize,
+        )
+    else:
+        ax5.axis("off")
+        ax5.text(0.5, 0.5, f"ASIC proxy\n{args.asic_lib}\nnot available", ha="center", va="center")
+
+    ymax = max(n_raw, n_cir, n_viv)
+    for ax in (ax1, ax2, ax3, ax4, ax5):
+        ax.set_ylim(0, ymax + 1)
+
+    fig.suptitle("Cross-Tool WLT: Folded-bias vs Baseline", fontsize=22, y=0.98)
+    fig.legend(
+        [gh_wlt[0], gh_wlt[1], gh_wlt[2], gpareto[3]],
+        ["Folded better", "Tie", "Baseline better", "Tradeoff (Pareto only)"],
+        loc="upper center",
+        ncol=4,
+        frameon=False,
+        bbox_to_anchor=(0.5, 0.93),
+        fontsize=17,
+        handlelength=1.6,
+    )
+    fig.tight_layout(rect=[0, 0, 1, 0.90])
+
+    grouped_prefix = Path(args.out_fig_grouped_prefix)
+    grouped_prefix.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(grouped_prefix.with_suffix(".png"), dpi=300)
+    fig.savefig(grouped_prefix.with_suffix(".pdf"))
+    plt.close(fig)
+
+    if args.replace_summary_with_grouped:
+        shutil.copy2(grouped_prefix.with_suffix(".png"), out_prefix.with_suffix(".png"))
+        shutil.copy2(grouped_prefix.with_suffix(".pdf"), out_prefix.with_suffix(".pdf"))
+
     print(f"Wrote figure: {out_prefix.with_suffix('.png')}")
     print(f"Wrote figure: {out_prefix.with_suffix('.pdf')}")
+    print(f"Wrote grouped figure: {grouped_prefix.with_suffix('.png')}")
+    print(f"Wrote grouped figure: {grouped_prefix.with_suffix('.pdf')}")
     print(f"Wrote table:  {out_tex}")
 
 
