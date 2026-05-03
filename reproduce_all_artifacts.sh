@@ -9,9 +9,9 @@ N_END="${N_END:-61}"
 
 RUN_CORE_PACKAGE="${RUN_CORE_PACKAGE:-0}"
 
-ABC_BIN="${ABC_BIN:-/home/mrunal/abc/abc}"
-CIRKIT_PY="${CIRKIT_PY:-/home/mrunal/Mockturtle-mMIG-main/experiments-dac19-flow/.venv/bin/python}"
-VIVADO_BIN="${VIVADO_BIN:-/tools/Xilinx/Vivado/2024.2/bin/vivado}"
+ABC_BIN="${ABC_BIN:-abc}"
+CIRKIT_PY="${CIRKIT_PY:-python3}"
+VIVADO_BIN="${VIVADO_BIN:-vivado}"
 FPGA_PART="${FPGA_PART:-xc7a100tcsg324-1}"
 RUN_VIVADO="${RUN_VIVADO:-0}"
 

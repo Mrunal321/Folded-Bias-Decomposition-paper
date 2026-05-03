@@ -1,0 +1,7 @@
+The motivation for folded-bias decomposition is architectural.
+In the baseline flow, CSA-based accumulation is followed by an explicit comparator add with $-Th$, whose carry-out
+gives the final decision bit.
+Folded-bias instead injects $K$ directly in CSA columns and obtains the same decision bit without a separate
+comparator stage.
+A small example at $n=13$ illustrates the effect: FA count decreases by $\Delta\mathrm{FA}=4$ (26.7\%),
+and raw $k$-LUT structural size decreases by $\Delta\mathrm{raw\text{-}}k\mathrm{\text{-}LUT}=12$ (26.1\%) versus baseline.

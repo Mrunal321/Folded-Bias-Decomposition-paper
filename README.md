@@ -1,187 +1,114 @@
-## Paper Reproduction (Start Here)
+# Folded-Bias Decomposition Artifact
 
-For manuscript artifact reproduction, use:
+This repository contains the implementation, scripts, and committed result
+files used for the TCAD manuscript on folded-bias decomposition for
+odd-input majority functions.
+
+The main reproducibility entry point is:
 
 ```bash
+./reproduce_all_artifacts.sh
+```
+
+The default command uses the committed CSV files and regenerates the
+paper-level Vivado package without requiring ABC, CirKit, Vivado, or
+mockturtle.  Tool-based regeneration can be enabled with environment
+variables; see `REPRODUCIBILITY.md`.
+
+## Quick Start
+
+```bash
+git clone https://github.com/Mrunal321/Folded-Bias-Decomposition-paper.git
+cd Folded-Bias-Decomposition-paper
+
+python3 -m pip install -r requirements.txt
 chmod +x reproduce_all_artifacts.sh
 ./reproduce_all_artifacts.sh
 ```
 
-Detailed stage controls and thorough modes are documented in
-`REPRODUCIBILITY.md`.
+Expected default outputs:
 
----
+```text
+results/vivado_paper_package_5_61/
+results/paper_package_5_61/
+```
 
-## `final_generator.py`
-
-This script is the single entry point used to emit both Verilog and BLIF
-netlists for all majority designs evaluated in the project.  It lives in  
-`verilog n-input files/verilog to blif/final_generator.py` and can be run
-directly with Python 3:
+To also regenerate the cross-target W/T/L figure/table and the introduction
+motivation figure from committed CSVs:
 
 ```bash
-python3 final_generator.py         # uses the parameters defined in the file
+RUN_CROSS_TOOL_WLT=1 RUN_INTRO_MOTIVATION=1 ./reproduce_all_artifacts.sh
 ```
 
-Running the script produces (i) a bundled Verilog file containing the
-configured majority architectures, and (ii) canonical BLIF netlists for each
-architecture.  It also prints per‑architecture statistics (FA counts, depth,
-etc.) to the terminal.
+## Repository Layout
 
----
-
-### 1.  Configurable Parameters
-
-The configuration block near the top of the file controls everything:
-
-| Name | Description |
-|------|-------------|
-| `N` | Majority input size `n` (must be odd and ≥ 3). A single run synthesizes `n`-input majority logic for this setting. |
-| `OUTPUT_DIR` | Filesystem directory where the Verilog bundle and BLIFs are written. |
-| `OUTPUT_NAME` | Base filename for the Verilog bundle. |
-| `INCLUDE_FOLDED_BIAS` | Emit the folded-bias CSA-only implementation `maj_fb_<n>` and its BLIF. |
-| `INCLUDE_BASELINE_STRICT` | Emit the baseline “HW + threshold compare” implementation `maj_baseline_strict_<n>` and its BLIF. |
-| `MAJ_ONLY_FA` | Controls how each full adder is expanded inside the BLIF (MAJ+NOT only vs XOR/MAJ). |
-
-Changing any knob requires re-running the script.
-
----
-
-### 2.  Architecture Summary
-
-`final_generator.py` implements two majority constructions, both of which share
-the same CSA backbone implemented by `csa_macro_schedule_all_columns()`:
-
-1. **Folded-Bias (`maj_fb_<n>`).**  
-   * Runs the CSA tree directly on the true `n` inputs.  
-   * Injects the folded-bias constant `K = 2^w - th` (where `th = ceil((n+1)/2)`
-     and `w = ceil(log2(th))`) directly into the relevant columns.  
-   * The majority output is the carry produced at column `w-1`; no comparator or
-     ripple adder is added after the CSA tree.
-
-2. **Baseline STRICT (`maj_baseline_strict_<n>`).**  
-   * Embeds the `n` inputs into the next “full” scaffold `N = 2^p - 1`.  
-   * CSA stage collapses all `N` inputs into `p` single-rail HW bits.  
-   * A ripple comparator of width `p` adds `(th_N - 1)` with `Cin = 1` and uses
-     the final carry-out as the majority decision.
-
-Both flavors rely on a generic FA primitive:
-
-```verilog
-module fa(input a, input b, input cin,
-          output sum, output cout);
-  assign {cout,sum} = a + b + cin;
-endmodule
+```text
+final_generator.py                  Core folded-bias and baseline generator
+compare_raw_light_metrics.py        Raw structural and mockturtle-light metrics
+compare_abc_mapped_metrics.py       ABC LUT6 and genlib mapping metrics
+compare_cirkit_qca_stmg.py          CirKit QCA/STMG metric collection
+compare_vivado_stats.py             Vivado synthesis comparison
+generate_paper_package.py           Core CSV/table/figure package builder
+generate_vivado_paper_package.py    Vivado table/figure package builder
+generate_cross_tool_wlt.py          Cross-target W/T/L summary builder
+generate_intro_motivation_artifact.py
+                                    Introduction motivation figure builder
+reproduce_all_artifacts.sh          Main wrapper script
+results/                            Committed CSVs, tables, figures, and packages
 ```
 
-No vendor-specific primitives are assumed.
+## Generator
 
----
+`final_generator.py` emits both Verilog and BLIF netlists for the two majority
+implementations evaluated in the manuscript:
 
-### 3.  Generated Outputs
+- `maj_fb_<n>`: folded-bias CSA construction.
+- `maj_baseline_strict_<n>`: baseline CSA plus explicit threshold-comparator
+  construction.
 
-Each run creates the following artifacts under `OUTPUT_DIR`:
-
-| File | Contents |
-|------|----------|
-| `maj<n>_generated_canon.v` | Verilog bundle containing the enabled modules (folded-bias, baseline, optional wrappers). |
-| `maj_fb_<n>.blif` | Canonical folded-bias BLIF using MAJ3/NOT/XOR3 encodings. |
-| `maj_baseline_strict_<n>.blif` | Canonical baseline BLIF. |
-
-BLIF emission is fully canonicalized (sorted inputs, deduplicated cubes, and
-explicit constants), which keeps downstream tools deterministic.
-
----
-
-### 4.  Printed Statistics
-
-After writing the files, the script prints per-architecture summaries, e.g.
-
-```
-FA count [folded_bias]: 9
-FA count [baseline_strict]: 15
-
-[Folded-Bias Stats]
-  n: 9
-  threshold: 5
-  w_bits: 3
-  bias_K: 3
-  K_bits_set: 0, 1
-  fa_count: 9
-  fa_levels: 6
-  maj_signal: c_c2_8
-
-[Baseline STRICT Stats]
-  n: 9
-  threshold: 5
-  scaffold_p: 4
-  scaffold_inputs: 15
-  scaffold_threshold: 8
-  comparator_width: 4
-  num_fixed_pairs: 3
-  cin_init: 1
-  csa_fa_count: 11
-  comparator_fa_count: 4
-  total_fa_count: 15
-  csa_levels: 5
-  total_levels: 9
-  maj_signal: c2_4
-```
-
-Key metrics:
-
-* **`fa_count`** – Total number of instantiated FAs in the CSA tree (folded-bias)
-  or CSA+comparator (baseline).
-* **`fa_levels` / `csa_levels`** – Maximum FA depth measured by propagating
-  levels through the actual netlist.  Baseline also reports `total_levels =
-  csa_levels + comparator_width`.
-* **Threshold/bias parameters** – `th`, `w`, `K`, `popcount(K)`, scaffold size `N`, etc.
-
-These numbers come directly from the constructed netlist, so they can be used
-as ground truth in tables/plots.
-
----
-
-### 5.  Implementation Notes
-
-* `csa_macro_schedule_all_columns()` performs the column-by-column scheduling:
-  it greedily forms FA triples, handles leftover pairs with a hard-wired zero,
-  and pushes carries to the next column.  This exact sequence determines the
-  FA counts and levels printed by the script.
-
-* `build_*_netlist()` functions reconstruct the FA op lists used for BLIF
-  emission.  They share the same scheduling logic, ensuring consistency between
-  Verilog, BLIF, and the printed stats.
-
-* Canonical BLIF writing (`_write_blif_from_fas_canonical`) supports both MAJ-only
-  FA expansion and the MAJ/XOR hybrid, controlled by `MAJ_ONLY_FA`.
-
-* The “majpath” wrappers are optional modules that map an `n`-input design onto
-  the next scaffold size by transparently inserting constant 0/1 inputs.  They
-  are disabled unless one of the `INCLUDE_*_MAJP` flags is set.
-
----
-
-### 6.  Typical Workflow
-
-1. Edit `final_generator.py` to set `N`, output directory/name, and the desired
-   architecture flags.
-2. Run `python3 final_generator.py`.
-3. Consume `maj<n>_generated_canon.v` in simulation or synthesis, and/or feed
-   the canonical BLIFs to downstream logic optimization or FPGA mapping tools.
-4. Record the printed FA counts and depth numbers for reporting.
-
-For visualization, the separate helper `verilog_draw.py` can draw either module
-directly from the emitted Verilog:
+A direct run uses the parameters defined near the top of the file:
 
 ```bash
-python3 verilog_draw.py \
-  "/path/to/maj9_generated_canon.v" \
-  --top maj_baseline_strict_9 \
-  --out-img figures/maj_baseline_strict_9.png
+python3 final_generator.py
 ```
 
----
+Important parameters:
 
-This document should serve as a quick reference for collaborators who need to
-understand or tweak the majority generator without reading the entire source.
+| Name | Meaning |
+|---|---|
+| `N` | Odd majority input size. |
+| `OUTPUT_DIR` | Directory for generated Verilog and BLIF files. |
+| `INCLUDE_FOLDED_BIAS` | Emit folded-bias implementation. |
+| `INCLUDE_BASELINE_STRICT` | Emit baseline strict implementation. |
+| `MAJ_ONLY_FA` | Select MAJ/NOT-only full-adder expansion for BLIF output. |
+
+The script prints FA counts, FA levels, threshold/bias parameters, and output
+signal names for the constructed netlist.  The same scheduling logic is used for
+Verilog and BLIF emission.
+
+## Full Tool Regeneration
+
+The committed results can be checked without external EDA tools.  To regenerate
+the main tool-derived data, provide the tool paths and enable the corresponding
+stages:
+
+```bash
+ABC_BIN=/path/to/abc \
+CIRKIT_PY=/path/to/python-with-cirkit \
+VIVADO_BIN=/path/to/vivado \
+RUN_CORE_PACKAGE=1 \
+RUN_VIVADO=1 \
+RUN_CROSS_TOOL_WLT=1 \
+RUN_INTRO_MOTIVATION=1 \
+RUN_PACKAGE_ZIP=1 \
+./reproduce_all_artifacts.sh
+```
+
+Large-`n` and mockturtle-based ablations are optional and require the
+mockturtle helper binary under `tools/mockturtle_mig_opt/`:
+
+```bash
+RUN_LARGE_N=1 ./reproduce_all_artifacts.sh
+```
+
+See `REPRODUCIBILITY.md` for the full list of switches and output files.

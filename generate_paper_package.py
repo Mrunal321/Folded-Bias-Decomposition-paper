@@ -362,10 +362,10 @@ def main():
     parser = argparse.ArgumentParser(description="Generate full paper-ready stats/tables/figures package.")
     parser.add_argument("--n-start", type=int, default=5)
     parser.add_argument("--n-end", type=int, default=61)
-    parser.add_argument("--abc-bin", default="/home/mrunal/abc/abc")
+    parser.add_argument("--abc-bin", default="abc")
     parser.add_argument(
         "--cirkit-python",
-        default="/home/mrunal/Mockturtle-mMIG-main/experiments-dac19-flow/.venv/bin/python",
+        default="python3",
         help="Python executable with CirKit installed for QCA/STMG metrics.",
     )
     parser.add_argument(

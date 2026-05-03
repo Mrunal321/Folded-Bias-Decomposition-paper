@@ -1,15 +1,18 @@
-# Reproducibility Guide (Paper Artifacts)
+# Reproducibility Guide
 
-## 1. One-Command Entry Point
+This guide documents how to regenerate the committed paper artifacts.  The
+default flow is intentionally lightweight: it uses the CSV files already stored
+in the repository and does not require commercial or specialized EDA tools.
 
-Use the wrapper:
+## 1. Reviewer Check
 
 ```bash
+python3 -m pip install -r requirements.txt
 chmod +x reproduce_all_artifacts.sh
 ./reproduce_all_artifacts.sh
 ```
 
-Default behavior is conservative/reviewer-friendly:
+Default switches:
 
 - `RUN_CORE_PACKAGE=0`
 - `RUN_VIVADO=0`
@@ -18,20 +21,37 @@ Default behavior is conservative/reviewer-friendly:
 - `RUN_LARGE_N=0`
 - `RUN_PACKAGE_ZIP=0`
 
-So by default it does not require ABC/CirKit/Vivado/mockturtle.
+This command checks that the committed Vivado CSVs can be consumed and that the
+paper-level Vivado tables/figures can be regenerated.
+
+To regenerate the paper-level cross-target W/T/L figure/table and the
+introduction motivation figure from committed CSVs:
+
+```bash
+RUN_CROSS_TOOL_WLT=1 RUN_INTRO_MOTIVATION=1 ./reproduce_all_artifacts.sh
+```
 
 ## 2. Full Regeneration (Author Mode)
 
-To regenerate all major paper artifacts from tools:
+To regenerate the tool-derived data, install the external tools and provide
+their paths explicitly:
 
 ```bash
+ABC_BIN=/path/to/abc \
+CIRKIT_PY=/path/to/python-with-cirkit \
+VIVADO_BIN=/path/to/vivado \
 RUN_CORE_PACKAGE=1 \
 RUN_VIVADO=1 \
 RUN_CROSS_TOOL_WLT=1 \
 RUN_INTRO_MOTIVATION=1 \
-RUN_LARGE_N=1 \
 RUN_PACKAGE_ZIP=1 \
 ./reproduce_all_artifacts.sh
+```
+
+Large-`n` and mockturtle-dependent experiments are optional:
+
+```bash
+ABC_BIN=/path/to/abc RUN_LARGE_N=1 ./reproduce_all_artifacts.sh
 ```
 
 ## 3. Environment Variables
@@ -40,9 +60,9 @@ Core range and tool paths:
 
 - `N_START` (default: `5`)
 - `N_END` (default: `61`)
-- `ABC_BIN` (default: `/home/mrunal/abc/abc`)
-- `CIRKIT_PY` (default: `/home/mrunal/Mockturtle-mMIG-main/experiments-dac19-flow/.venv/bin/python`)
-- `VIVADO_BIN` (default: `/tools/Xilinx/Vivado/2024.2/bin/vivado`)
+- `ABC_BIN` (default: `abc`)
+- `CIRKIT_PY` (default: `python3`; set this to a Python executable with CirKit installed)
+- `VIVADO_BIN` (default: `vivado`)
 - `FPGA_PART` (default: `xc7a100tcsg324-1`)
 - `ASIC_LIB` (default: `mcnc.genlib`)
 - `LARGE_N_VALUES` (default: `513,1025,2049,4097,5001`)
@@ -67,6 +87,12 @@ Execution switches:
 - `RUN_LARGE_N=1` requires:
   - mockturtle binary
   - ABC (`ABC_BIN`)
+
+The mockturtle helper is expected at:
+
+```text
+tools/mockturtle_mig_opt/build/mockturtle_mig_opt
+```
 
 ## 5. Expected Outputs
 
@@ -97,6 +123,8 @@ Optional outputs when enabled:
   - Fix: build `tools/mockturtle_mig_opt` and ensure resolver can find the binary.
 - Missing ABC/CirKit when `RUN_CORE_PACKAGE=1`:
   - Fix: set `ABC_BIN`/`CIRKIT_PY` correctly or disable core rebuild.
+- Missing Python plotting dependency:
+  - Fix: run `python3 -m pip install -r requirements.txt`.
 
 ## 7. Minimal Reviewer Command (No External EDA Tools)
 
