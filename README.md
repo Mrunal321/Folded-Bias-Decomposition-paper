@@ -15,6 +15,15 @@ paper-level Vivado package without requiring ABC, CirKit, Vivado, or
 mockturtle.  Tool-based regeneration can be enabled with environment
 variables; see `REPRODUCIBILITY.md`.
 
+For Code Ocean capsules, use:
+
+```bash
+bash run.sh
+```
+
+The Code Ocean runner copies generated outputs to `/results`, the directory
+preserved by Code Ocean after execution.  See `CODE_OCEAN.md`.
+
 ## Quick Start
 
 ```bash
