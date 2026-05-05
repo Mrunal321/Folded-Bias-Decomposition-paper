@@ -1,0 +1,46 @@
+.model maj_fb_carryonly_7
+.inputs x0 x1 x2 x3 x4 x5 x6
+.outputs maj
+.names x0 x1 x2 raw_c_c0_0
+011 1
+101 1
+110 1
+111 1
+.names x0 x1 x2 fa0_op1
+001 1
+010 1
+011 1
+111 1
+.names fa0_op1 raw_c_c0_0 x0 raw_s_c0_0
+001 1
+100 1
+101 1
+111 1
+.names x3 x4 x5 raw_c_c0_1
+011 1
+101 1
+110 1
+111 1
+.names x3 x4 x5 fa1_op1
+001 1
+010 1
+011 1
+111 1
+.names fa1_op1 raw_c_c0_1 x3 raw_s_c0_1
+001 1
+100 1
+101 1
+111 1
+.names raw_s_c0_0 raw_s_c0_1 x6 m_decision_0
+011 1
+101 1
+110 1
+111 1
+.names m_decision_0 raw_c_c0_0 raw_c_c0_1 m_decision_1
+011 1
+101 1
+110 1
+111 1
+.names m_decision_1 maj
+1 1
+.end

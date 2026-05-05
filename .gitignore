@@ -1,4 +1,6 @@
 __pycache__/
+*.py[cod]
 .Xil/
 abc.history
+tools/mockturtle_mig_opt/build/
 results/*/runs/

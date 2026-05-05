@@ -1,0 +1,696 @@
+.model maj_baseline_strict_33
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 x16 x17 x18 x19 x20 x21 x22 x23 x24 x25 x26 x27 x28 x29 x30 x31 x32
+.outputs maj
+.names T0
+1
+.names T1
+1
+.names T2
+1
+.names T3
+1
+.names T4
+1
+.names c2_0
+1
+.names x30 x31 x32 raw_c_c0_10
+011 1
+101 1
+110 1
+111 1
+.names x30 x31 x32 fa0_op1
+010 1
+100 1
+110 1
+111 1
+.names fa0_op1 raw_c_c0_10 x32 raw_s_c0_10
+001 1
+100 1
+101 1
+111 1
+.names x27 x28 x29 raw_c_c0_11
+011 1
+101 1
+110 1
+111 1
+.names x27 x28 x29 fa1_op1
+010 1
+100 1
+110 1
+111 1
+.names fa1_op1 raw_c_c0_11 x29 raw_s_c0_11
+001 1
+100 1
+101 1
+111 1
+.names x24 x25 x26 raw_c_c0_12
+011 1
+101 1
+110 1
+111 1
+.names x24 x25 x26 fa2_op1
+010 1
+100 1
+110 1
+111 1
+.names fa2_op1 raw_c_c0_12 x26 raw_s_c0_12
+001 1
+100 1
+101 1
+111 1
+.names x21 x22 x23 raw_c_c0_13
+011 1
+101 1
+110 1
+111 1
+.names x21 x22 x23 fa3_op1
+010 1
+100 1
+110 1
+111 1
+.names fa3_op1 raw_c_c0_13 x23 raw_s_c0_13
+001 1
+100 1
+101 1
+111 1
+.names x18 x19 x20 raw_c_c0_14
+011 1
+101 1
+110 1
+111 1
+.names x18 x19 x20 fa4_op1
+010 1
+100 1
+110 1
+111 1
+.names fa4_op1 raw_c_c0_14 x20 raw_s_c0_14
+001 1
+100 1
+101 1
+111 1
+.names x15 x16 x17 raw_c_c0_15
+011 1
+101 1
+110 1
+111 1
+.names x15 x16 x17 fa5_op1
+010 1
+100 1
+110 1
+111 1
+.names fa5_op1 raw_c_c0_15 x17 raw_s_c0_15
+001 1
+100 1
+101 1
+111 1
+.names x12 x13 x14 raw_c_c0_16
+011 1
+101 1
+110 1
+111 1
+.names x12 x13 x14 fa6_op1
+010 1
+100 1
+110 1
+111 1
+.names fa6_op1 raw_c_c0_16 x14 raw_s_c0_16
+001 1
+100 1
+101 1
+111 1
+.names x10 x11 x9 raw_c_c0_17
+011 1
+101 1
+110 1
+111 1
+.names x10 x11 x9 fa7_op1
+001 1
+100 1
+101 1
+111 1
+.names fa7_op1 raw_c_c0_17 x11 raw_s_c0_17
+001 1
+100 1
+101 1
+111 1
+.names x6 x7 x8 raw_c_c0_18
+011 1
+101 1
+110 1
+111 1
+.names x6 x7 x8 fa8_op1
+010 1
+100 1
+110 1
+111 1
+.names fa8_op1 raw_c_c0_18 x8 raw_s_c0_18
+001 1
+100 1
+101 1
+111 1
+.names x3 x4 x5 raw_c_c0_19
+011 1
+101 1
+110 1
+111 1
+.names x3 x4 x5 fa9_op1
+010 1
+100 1
+110 1
+111 1
+.names fa9_op1 raw_c_c0_19 x5 raw_s_c0_19
+001 1
+100 1
+101 1
+111 1
+.names x0 x1 x2 raw_c_c0_20
+011 1
+101 1
+110 1
+111 1
+.names x0 x1 x2 fa10_op1
+010 1
+100 1
+110 1
+111 1
+.names fa10_op1 raw_c_c0_20 x2 raw_s_c0_20
+001 1
+100 1
+101 1
+111 1
+.names CONST1 raw_s_c0_10 raw_s_c0_11 d2_c_c0_25
+011 1
+101 1
+110 1
+111 1
+.names CONST1 raw_s_c0_10 raw_s_c0_11 fa11_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST1 d2_c_c0_25 fa11_op1 d2_s_c0_25
+001 1
+100 1
+101 1
+111 1
+.names CONST0 d2_s_c0_25 raw_s_c0_12 d3_c_c0_26
+011 1
+101 1
+110 1
+111 1
+.names CONST0 d2_s_c0_25 raw_s_c0_12 fa12_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 d3_c_c0_26 fa12_op1 d3_s_c0_26
+001 1
+100 1
+101 1
+111 1
+.names raw_s_c0_13 raw_s_c0_14 raw_s_c0_15 d3_c_c0_27
+011 1
+101 1
+110 1
+111 1
+.names raw_s_c0_13 raw_s_c0_14 raw_s_c0_15 fa13_op1
+001 1
+010 1
+011 1
+111 1
+.names d3_c_c0_27 fa13_op1 raw_s_c0_13 d3_s_c0_27
+001 1
+010 1
+011 1
+111 1
+.names d3_s_c0_26 d3_s_c0_27 raw_s_c0_16 d4_c_c0_28
+011 1
+101 1
+110 1
+111 1
+.names d3_s_c0_26 d3_s_c0_27 raw_s_c0_16 fa14_op1
+001 1
+010 1
+011 1
+111 1
+.names d3_s_c0_26 d4_c_c0_28 fa14_op1 d4_s_c0_28
+001 1
+100 1
+101 1
+111 1
+.names d4_s_c0_28 raw_s_c0_17 raw_s_c0_18 d5_c_c0_29
+011 1
+101 1
+110 1
+111 1
+.names d4_s_c0_28 raw_s_c0_17 raw_s_c0_18 fa15_op1
+001 1
+010 1
+011 1
+111 1
+.names d4_s_c0_28 d5_c_c0_29 fa15_op1 d5_s_c0_29
+001 1
+100 1
+101 1
+111 1
+.names d5_s_c0_29 raw_s_c0_19 raw_s_c0_20 d6_c_c0_30
+011 1
+101 1
+110 1
+111 1
+.names d5_s_c0_29 raw_s_c0_19 raw_s_c0_20 fa16_op1
+001 1
+010 1
+011 1
+111 1
+.names d5_s_c0_29 d6_c_c0_30 fa16_op1 d6_s_c0_30
+001 1
+100 1
+101 1
+111 1
+.names CONST1 CONST1 raw_c_c0_10 d1_c_c1_34
+011 1
+101 1
+110 1
+111 1
+.names CONST1 CONST1 raw_c_c0_10 fa17_op1
+000 1
+001 1
+011 1
+101 1
+.names CONST1 d1_c_c1_34 fa17_op1 d1_s_c1_34
+001 1
+100 1
+101 1
+111 1
+.names raw_c_c0_11 raw_c_c0_12 raw_c_c0_13 d1_c_c1_35
+011 1
+101 1
+110 1
+111 1
+.names raw_c_c0_11 raw_c_c0_12 raw_c_c0_13 fa18_op1
+001 1
+010 1
+011 1
+111 1
+.names d1_c_c1_35 fa18_op1 raw_c_c0_11 d1_s_c1_35
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST1 d1_s_c1_34 d2_c_c1_36
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST1 d1_s_c1_34 fa19_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 d2_c_c1_36 fa19_op1 d2_s_c1_36
+001 1
+100 1
+101 1
+111 1
+.names d1_s_c1_35 raw_c_c0_14 raw_c_c0_15 d2_c_c1_37
+011 1
+101 1
+110 1
+111 1
+.names d1_s_c1_35 raw_c_c0_14 raw_c_c0_15 fa20_op1
+001 1
+010 1
+011 1
+111 1
+.names d1_s_c1_35 d2_c_c1_37 fa20_op1 d2_s_c1_37
+001 1
+100 1
+101 1
+111 1
+.names raw_c_c0_16 raw_c_c0_17 raw_c_c0_18 d2_c_c1_38
+011 1
+101 1
+110 1
+111 1
+.names raw_c_c0_16 raw_c_c0_17 raw_c_c0_18 fa21_op1
+001 1
+010 1
+011 1
+111 1
+.names d2_c_c1_38 fa21_op1 raw_c_c0_16 d2_s_c1_38
+001 1
+010 1
+011 1
+111 1
+.names d2_s_c1_36 d2_s_c1_37 d2_s_c1_38 d3_c_c1_39
+011 1
+101 1
+110 1
+111 1
+.names d2_s_c1_36 d2_s_c1_37 d2_s_c1_38 fa22_op1
+001 1
+010 1
+011 1
+111 1
+.names d2_s_c1_36 d3_c_c1_39 fa22_op1 d3_s_c1_39
+001 1
+100 1
+101 1
+111 1
+.names CONST0 raw_c_c0_19 raw_c_c0_20 d3_c_c1_40
+011 1
+101 1
+110 1
+111 1
+.names CONST0 raw_c_c0_19 raw_c_c0_20 fa23_op1
+001 1
+100 1
+101 1
+111 1
+.names d3_c_c1_40 fa23_op1 raw_c_c0_19 d3_s_c1_40
+001 1
+010 1
+011 1
+111 1
+.names CONST0 d3_s_c1_39 d3_s_c1_40 d4_c_c1_41
+011 1
+101 1
+110 1
+111 1
+.names CONST0 d3_s_c1_39 d3_s_c1_40 fa24_op1
+001 1
+100 1
+101 1
+111 1
+.names d3_s_c1_39 d4_c_c1_41 fa24_op1 d4_s_c1_41
+001 1
+100 1
+101 1
+111 1
+.names CONST1 CONST1 d2_c_c0_25 d4_c_c1_42
+011 1
+101 1
+110 1
+111 1
+.names CONST1 CONST1 d2_c_c0_25 fa25_op1
+000 1
+001 1
+011 1
+101 1
+.names CONST1 d4_c_c1_42 fa25_op1 d4_s_c1_42
+001 1
+100 1
+101 1
+111 1
+.names d3_c_c0_26 d4_s_c1_41 d4_s_c1_42 d5_c_c1_43
+011 1
+101 1
+110 1
+111 1
+.names d3_c_c0_26 d4_s_c1_41 d4_s_c1_42 fa26_op1
+001 1
+100 1
+101 1
+111 1
+.names d4_s_c1_41 d5_c_c1_43 fa26_op1 d5_s_c1_43
+001 1
+100 1
+101 1
+111 1
+.names d3_c_c0_27 d4_c_c0_28 d5_s_c1_43 d6_c_c1_44
+011 1
+101 1
+110 1
+111 1
+.names d3_c_c0_27 d4_c_c0_28 d5_s_c1_43 fa27_op1
+010 1
+100 1
+110 1
+111 1
+.names d5_s_c1_43 d6_c_c1_44 fa27_op1 d6_s_c1_44
+001 1
+100 1
+101 1
+111 1
+.names d5_c_c0_29 d6_c_c0_30 d6_s_c1_44 d7_c_c1_45
+011 1
+101 1
+110 1
+111 1
+.names d5_c_c0_29 d6_c_c0_30 d6_s_c1_44 fa28_op1
+010 1
+100 1
+110 1
+111 1
+.names d6_s_c1_44 d7_c_c1_45 fa28_op1 d7_s_c1_45
+001 1
+100 1
+101 1
+111 1
+.names CONST1 d1_c_c1_34 d1_c_c1_35 d1_c_c2_47
+011 1
+101 1
+110 1
+111 1
+.names CONST1 d1_c_c1_34 d1_c_c1_35 fa29_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST1 d1_c_c2_47 fa29_op1 d1_s_c2_47
+001 1
+100 1
+101 1
+111 1
+.names d2_c_c1_36 d2_c_c1_37 d2_c_c1_38 d1_c_c2_48
+011 1
+101 1
+110 1
+111 1
+.names d2_c_c1_36 d2_c_c1_37 d2_c_c1_38 fa30_op1
+001 1
+010 1
+011 1
+111 1
+.names d1_c_c2_48 d2_c_c1_36 fa30_op1 d1_s_c2_48
+001 1
+010 1
+011 1
+111 1
+.names d1_s_c2_47 d1_s_c2_48 d3_c_c1_39 d2_c_c2_49
+011 1
+101 1
+110 1
+111 1
+.names d1_s_c2_47 d1_s_c2_48 d3_c_c1_39 fa31_op1
+001 1
+010 1
+011 1
+111 1
+.names d1_s_c2_47 d2_c_c2_49 fa31_op1 d2_s_c2_49
+001 1
+100 1
+101 1
+111 1
+.names d2_s_c2_49 d3_c_c1_40 d4_c_c1_41 d3_c_c2_50
+011 1
+101 1
+110 1
+111 1
+.names d2_s_c2_49 d3_c_c1_40 d4_c_c1_41 fa32_op1
+001 1
+010 1
+011 1
+111 1
+.names d2_s_c2_49 d3_c_c2_50 fa32_op1 d3_s_c2_50
+001 1
+100 1
+101 1
+111 1
+.names d3_s_c2_50 d4_c_c1_42 d5_c_c1_43 d4_c_c2_51
+011 1
+101 1
+110 1
+111 1
+.names d3_s_c2_50 d4_c_c1_42 d5_c_c1_43 fa33_op1
+001 1
+010 1
+011 1
+111 1
+.names d3_s_c2_50 d4_c_c2_51 fa33_op1 d4_s_c2_51
+001 1
+100 1
+101 1
+111 1
+.names d4_s_c2_51 d6_c_c1_44 d7_c_c1_45 d5_c_c2_52
+011 1
+101 1
+110 1
+111 1
+.names d4_s_c2_51 d6_c_c1_44 d7_c_c1_45 fa34_op1
+001 1
+010 1
+011 1
+111 1
+.names d4_s_c2_51 d5_c_c2_52 fa34_op1 d5_s_c2_52
+001 1
+100 1
+101 1
+111 1
+.names CONST0 d1_c_c2_47 d1_c_c2_48 d0_c_c3_53
+011 1
+101 1
+110 1
+111 1
+.names CONST0 d1_c_c2_47 d1_c_c2_48 fa35_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 d0_c_c3_53 fa35_op1 d0_s_c3_53
+001 1
+100 1
+101 1
+111 1
+.names d0_s_c3_53 d2_c_c2_49 d3_c_c2_50 d1_c_c3_54
+011 1
+101 1
+110 1
+111 1
+.names d0_s_c3_53 d2_c_c2_49 d3_c_c2_50 fa36_op1
+001 1
+010 1
+011 1
+111 1
+.names d0_s_c3_53 d1_c_c3_54 fa36_op1 d1_s_c3_54
+001 1
+100 1
+101 1
+111 1
+.names d1_s_c3_54 d4_c_c2_51 d5_c_c2_52 d3_c_c3_55
+011 1
+101 1
+110 1
+111 1
+.names d1_s_c3_54 d4_c_c2_51 d5_c_c2_52 fa37_op1
+001 1
+010 1
+011 1
+111 1
+.names d1_s_c3_54 d3_c_c3_55 fa37_op1 d3_s_c3_55
+001 1
+100 1
+101 1
+111 1
+.names d0_c_c3_53 d1_c_c3_54 d3_c_c3_55 d0_c_c4_56
+011 1
+101 1
+110 1
+111 1
+.names d0_c_c3_53 d1_c_c3_54 d3_c_c3_55 fa38_op1
+001 1
+010 1
+011 1
+111 1
+.names d0_c_c3_53 d0_c_c4_56 fa38_op1 d0_s_c4_56
+001 1
+100 1
+101 1
+111 1
+.names T0 c2_0 d6_s_c0_30 c2_1
+011 1
+101 1
+110 1
+111 1
+.names T0 c2_0 d6_s_c0_30 fa39_op1
+010 1
+100 1
+110 1
+111 1
+.names c2_1 d6_s_c0_30 fa39_op1 s2_0
+001 1
+010 1
+011 1
+111 1
+.names T1 c2_1 d7_s_c1_45 c2_2
+011 1
+101 1
+110 1
+111 1
+.names T1 c2_1 d7_s_c1_45 fa40_op1
+010 1
+100 1
+110 1
+111 1
+.names c2_2 d7_s_c1_45 fa40_op1 s2_1
+001 1
+010 1
+011 1
+111 1
+.names T2 c2_2 d5_s_c2_52 c2_3
+011 1
+101 1
+110 1
+111 1
+.names T2 c2_2 d5_s_c2_52 fa41_op1
+010 1
+100 1
+110 1
+111 1
+.names c2_3 d5_s_c2_52 fa41_op1 s2_2
+001 1
+010 1
+011 1
+111 1
+.names T3 c2_3 d3_s_c3_55 c2_4
+011 1
+101 1
+110 1
+111 1
+.names T3 c2_3 d3_s_c3_55 fa42_op1
+010 1
+100 1
+110 1
+111 1
+.names c2_4 d3_s_c3_55 fa42_op1 s2_3
+001 1
+010 1
+011 1
+111 1
+.names T4 c2_4 d0_s_c4_56 c2_5
+011 1
+101 1
+110 1
+111 1
+.names T4 c2_4 d0_s_c4_56 fa43_op1
+010 1
+100 1
+110 1
+111 1
+.names c2_5 d0_s_c4_56 fa43_op1 s2_4
+001 1
+010 1
+011 1
+111 1
+.names CONST0 c2_5 d0_c_c4_56 c2_6
+011 1
+101 1
+110 1
+111 1
+.names CONST0 c2_5 d0_c_c4_56 fa44_op1
+010 1
+100 1
+110 1
+111 1
+.names c2_6 d0_c_c4_56 fa44_op1 s2_5
+001 1
+010 1
+011 1
+111 1
+.names CONST1
+1
+.names CONST0
+.names c2_6 maj
+1 1
+.end
