@@ -81,6 +81,18 @@ def archive_generated(path: Path) -> bool:
     return relative.name in ARCHIVE_GENERATED_FILES or relative.suffix in {".pyc", ".pyo"}
 
 
+def archived_raw_data(path: Path) -> bool:
+    """Allow only the curated, checksummed public numerical archive."""
+
+    relative = path.relative_to(REPO_ROOT)
+    return (
+        relative.parts[:2] == ("archive", "paper-results-v5.61")
+        and len(relative.parts) == 4
+        and relative.parts[2] == "raw-data"
+        and relative.suffix == ".csv"
+    )
+
+
 def release_files() -> list[Path]:
     # A Git checkout needs Git-aware enumeration so ignored build products do not
     # make an otherwise clean working tree fail the release gate.  GitHub source
@@ -158,7 +170,10 @@ def main() -> int:
             problems.append(f"forbidden directory: {relative}")
         if any(word in lowered_name for word in FORBIDDEN_WORDS):
             problems.append(f"paper-writing material: {relative}")
-        if any(lowered_name.endswith(suffix) for suffix in FORBIDDEN_SUFFIXES):
+        if (
+            any(lowered_name.endswith(suffix) for suffix in FORBIDDEN_SUFFIXES)
+            and not archived_raw_data(path)
+        ):
             problems.append(f"forbidden generated/document format: {relative}")
         if path.stat().st_size > MAX_FILE_BYTES:
             problems.append(f"file exceeds 5 MiB: {relative}")
