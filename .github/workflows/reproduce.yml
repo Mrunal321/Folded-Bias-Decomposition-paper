@@ -1,0 +1,28 @@
+name: Reproduce core artifacts
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    strategy:
+      fail-fast: false
+      matrix:
+        profile: [quick, paper]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Generate and verify
+        env:
+          REPRO_PROFILE: ${{ matrix.profile }}
+          RUN_ABC: "0"
+          RUN_THRESHOLD_ABC: "0"
+          RUN_MOCKTURTLE: "0"
+        run: ./reproduce_all_artifacts.sh

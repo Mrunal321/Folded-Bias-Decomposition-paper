@@ -12,17 +12,21 @@ This mirrors the pass pattern used in mockturtle experiments/docs.
 
 ## Build
 
+From the repository root:
+
 ```bash
-cd tools/mockturtle_mig_opt
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
-cmake --build build -j
+cmake -S tools/mockturtle_mig_opt -B tools/mockturtle_mig_opt/build \
+  -DCMAKE_BUILD_TYPE=Release
+cmake --build tools/mockturtle_mig_opt/build -j
 ```
+
+The build fetches the pinned Mockturtle revision recorded in `CMakeLists.txt`.
 
 ## Run
 
 ```bash
-./build/mockturtle_mig_opt \
-  --input ../../results/baseline_threshold/maj_baseline_strict_7.blif \
+tools/mockturtle_mig_opt/build/mockturtle_mig_opt \
+  --input artifacts/examples/n7/baseline/maj_baseline_strict_7.blif \
   --recipe resub_depth_resub2 \
   --rounds 3 \
   --max-pis 8 \
@@ -32,7 +36,7 @@ cmake --build build -j
 Optional output BLIF:
 
 ```bash
-./build/mockturtle_mig_opt \
+tools/mockturtle_mig_opt/build/mockturtle_mig_opt \
   --input in.blif \
   --output out_opt.blif \
   --rounds 4
@@ -43,3 +47,17 @@ Expected stdout format:
 ```text
 RESULT klut_gates=<...> mig_before=<...> mig_after=<...> depth_before=<...> depth_after=<...> rounds=<...> max_pis=<...> max_inserts=<...> recipe=<...>
 ```
+
+## Native BLIF equivalence check
+
+The same build also creates `mockturtle_blif_cec`. It constructs a miter and
+runs Mockturtle's native equivalence checker without a conflict limit:
+
+```bash
+tools/mockturtle_mig_opt/build/mockturtle_blif_cec \
+  artifacts/examples/n7/baseline/maj_baseline_strict_7.blif \
+  artifacts/examples/n7/folded_bias/maj_fb_7.blif
+```
+
+Only `RESULT=EQUIVALENT` is an equivalence proof. `RESULT=UNDECIDED` must not be
+reported as a pass.
