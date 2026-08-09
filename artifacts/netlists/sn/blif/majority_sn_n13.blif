@@ -1,0 +1,407 @@
+.model piestrak_sorting_network_13_7
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12
+.outputs maj
+.names CONST0
+.names x0 x1 sort_c0_or
+1- 1
+-1 1
+.names x0 x1 sort_c0_and
+11 1
+.names x2 x3 sort_c1_or
+1- 1
+-1 1
+.names x2 x3 sort_c1_and
+11 1
+.names sort_c0_or sort_c1_and sort_c2_or
+1- 1
+-1 1
+.names sort_c0_or sort_c1_and sort_c2_and
+11 1
+.names sort_c0_and sort_c1_or sort_c3_or
+1- 1
+-1 1
+.names sort_c0_and sort_c1_or sort_c3_and
+11 1
+.names sort_c2_or sort_c3_or sort_c4_or
+1- 1
+-1 1
+.names sort_c2_or sort_c3_or sort_c4_and
+11 1
+.names sort_c2_and sort_c3_and sort_c5_or
+1- 1
+-1 1
+.names sort_c2_and sort_c3_and sort_c5_and
+11 1
+.names x4 x5 sort_c6_or
+1- 1
+-1 1
+.names x4 x5 sort_c6_and
+11 1
+.names x6 x7 sort_c7_or
+1- 1
+-1 1
+.names x6 x7 sort_c7_and
+11 1
+.names sort_c6_or sort_c7_and sort_c8_or
+1- 1
+-1 1
+.names sort_c6_or sort_c7_and sort_c8_and
+11 1
+.names sort_c6_and sort_c7_or sort_c9_or
+1- 1
+-1 1
+.names sort_c6_and sort_c7_or sort_c9_and
+11 1
+.names sort_c8_and sort_c9_and sort_c10_or
+1- 1
+-1 1
+.names sort_c8_and sort_c9_and sort_c10_and
+11 1
+.names sort_c8_or sort_c9_or sort_c11_or
+1- 1
+-1 1
+.names sort_c8_or sort_c9_or sort_c11_and
+11 1
+.names sort_c4_or sort_c10_and sort_c12_or
+1- 1
+-1 1
+.names sort_c4_or sort_c10_and sort_c12_and
+11 1
+.names sort_c4_and sort_c10_or sort_c13_or
+1- 1
+-1 1
+.names sort_c4_and sort_c10_or sort_c13_and
+11 1
+.names sort_c5_or sort_c11_and sort_c14_or
+1- 1
+-1 1
+.names sort_c5_or sort_c11_and sort_c14_and
+11 1
+.names sort_c5_and sort_c11_or sort_c15_or
+1- 1
+-1 1
+.names sort_c5_and sort_c11_or sort_c15_and
+11 1
+.names sort_c12_or sort_c14_or sort_c16_or
+1- 1
+-1 1
+.names sort_c12_or sort_c14_or sort_c16_and
+11 1
+.names sort_c13_or sort_c15_or sort_c17_or
+1- 1
+-1 1
+.names sort_c13_or sort_c15_or sort_c17_and
+11 1
+.names sort_c16_or sort_c17_or sort_c18_or
+1- 1
+-1 1
+.names sort_c16_or sort_c17_or sort_c18_and
+11 1
+.names sort_c16_and sort_c17_and sort_c19_or
+1- 1
+-1 1
+.names sort_c16_and sort_c17_and sort_c19_and
+11 1
+.names sort_c12_and sort_c14_and sort_c20_or
+1- 1
+-1 1
+.names sort_c12_and sort_c14_and sort_c20_and
+11 1
+.names sort_c13_and sort_c15_and sort_c21_or
+1- 1
+-1 1
+.names sort_c13_and sort_c15_and sort_c21_and
+11 1
+.names sort_c20_or sort_c21_or sort_c22_or
+1- 1
+-1 1
+.names sort_c20_or sort_c21_or sort_c22_and
+11 1
+.names sort_c20_and sort_c21_and sort_c23_or
+1- 1
+-1 1
+.names sort_c20_and sort_c21_and sort_c23_and
+11 1
+.names x8 x9 sort_c24_or
+1- 1
+-1 1
+.names x8 x9 sort_c24_and
+11 1
+.names x10 x11 sort_c25_or
+1- 1
+-1 1
+.names x10 x11 sort_c25_and
+11 1
+.names sort_c24_or sort_c25_and sort_c26_or
+1- 1
+-1 1
+.names sort_c24_or sort_c25_and sort_c26_and
+11 1
+.names sort_c24_and sort_c25_or sort_c27_or
+1- 1
+-1 1
+.names sort_c24_and sort_c25_or sort_c27_and
+11 1
+.names sort_c26_or sort_c27_or sort_c28_or
+1- 1
+-1 1
+.names sort_c26_or sort_c27_or sort_c28_and
+11 1
+.names sort_c26_and sort_c27_and sort_c29_or
+1- 1
+-1 1
+.names sort_c26_and sort_c27_and sort_c29_and
+11 1
+.names x12 CONST0 sort_c30_or
+1- 1
+-1 1
+.names x12 CONST0 sort_c30_and
+11 1
+.names CONST0 CONST0 sort_c31_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c31_and
+11 1
+.names sort_c30_or sort_c31_and sort_c32_or
+1- 1
+-1 1
+.names sort_c30_or sort_c31_and sort_c32_and
+11 1
+.names sort_c30_and sort_c31_or sort_c33_or
+1- 1
+-1 1
+.names sort_c30_and sort_c31_or sort_c33_and
+11 1
+.names sort_c32_and sort_c33_and sort_c34_or
+1- 1
+-1 1
+.names sort_c32_and sort_c33_and sort_c34_and
+11 1
+.names sort_c32_or sort_c33_or sort_c35_or
+1- 1
+-1 1
+.names sort_c32_or sort_c33_or sort_c35_and
+11 1
+.names sort_c28_or sort_c34_and sort_c36_or
+1- 1
+-1 1
+.names sort_c28_or sort_c34_and sort_c36_and
+11 1
+.names sort_c28_and sort_c34_or sort_c37_or
+1- 1
+-1 1
+.names sort_c28_and sort_c34_or sort_c37_and
+11 1
+.names sort_c29_or sort_c35_and sort_c38_or
+1- 1
+-1 1
+.names sort_c29_or sort_c35_and sort_c38_and
+11 1
+.names sort_c29_and sort_c35_or sort_c39_or
+1- 1
+-1 1
+.names sort_c29_and sort_c35_or sort_c39_and
+11 1
+.names sort_c36_and sort_c38_and sort_c40_or
+1- 1
+-1 1
+.names sort_c36_and sort_c38_and sort_c40_and
+11 1
+.names sort_c37_and sort_c39_and sort_c41_or
+1- 1
+-1 1
+.names sort_c37_and sort_c39_and sort_c41_and
+11 1
+.names sort_c40_and sort_c41_and sort_c42_or
+1- 1
+-1 1
+.names sort_c40_and sort_c41_and sort_c42_and
+11 1
+.names sort_c40_or sort_c41_or sort_c43_or
+1- 1
+-1 1
+.names sort_c40_or sort_c41_or sort_c43_and
+11 1
+.names sort_c36_or sort_c38_or sort_c44_or
+1- 1
+-1 1
+.names sort_c36_or sort_c38_or sort_c44_and
+11 1
+.names sort_c37_or sort_c39_or sort_c45_or
+1- 1
+-1 1
+.names sort_c37_or sort_c39_or sort_c45_and
+11 1
+.names sort_c44_and sort_c45_and sort_c46_or
+1- 1
+-1 1
+.names sort_c44_and sort_c45_and sort_c46_and
+11 1
+.names sort_c44_or sort_c45_or sort_c47_or
+1- 1
+-1 1
+.names sort_c44_or sort_c45_or sort_c47_and
+11 1
+.names sort_c18_or sort_c42_and sort_c48_or
+1- 1
+-1 1
+.names sort_c18_or sort_c42_and sort_c48_and
+11 1
+.names sort_c18_and sort_c42_or sort_c49_or
+1- 1
+-1 1
+.names sort_c18_and sort_c42_or sort_c49_and
+11 1
+.names sort_c19_or sort_c43_and sort_c50_or
+1- 1
+-1 1
+.names sort_c19_or sort_c43_and sort_c50_and
+11 1
+.names sort_c19_and sort_c43_or sort_c51_or
+1- 1
+-1 1
+.names sort_c19_and sort_c43_or sort_c51_and
+11 1
+.names sort_c22_or sort_c46_and sort_c52_or
+1- 1
+-1 1
+.names sort_c22_or sort_c46_and sort_c52_and
+11 1
+.names sort_c22_and sort_c46_or sort_c53_or
+1- 1
+-1 1
+.names sort_c22_and sort_c46_or sort_c53_and
+11 1
+.names sort_c23_or sort_c47_and sort_c54_or
+1- 1
+-1 1
+.names sort_c23_or sort_c47_and sort_c54_and
+11 1
+.names sort_c23_and sort_c47_or sort_c55_or
+1- 1
+-1 1
+.names sort_c23_and sort_c47_or sort_c55_and
+11 1
+.names sort_c48_or sort_c52_or sort_c56_or
+1- 1
+-1 1
+.names sort_c48_or sort_c52_or sort_c56_and
+11 1
+.names sort_c49_or sort_c53_or sort_c57_or
+1- 1
+-1 1
+.names sort_c49_or sort_c53_or sort_c57_and
+11 1
+.names sort_c50_or sort_c54_or sort_c58_or
+1- 1
+-1 1
+.names sort_c50_or sort_c54_or sort_c58_and
+11 1
+.names sort_c51_or sort_c55_or sort_c59_or
+1- 1
+-1 1
+.names sort_c51_or sort_c55_or sort_c59_and
+11 1
+.names sort_c56_or sort_c58_or sort_c60_or
+1- 1
+-1 1
+.names sort_c56_or sort_c58_or sort_c60_and
+11 1
+.names sort_c57_or sort_c59_or sort_c61_or
+1- 1
+-1 1
+.names sort_c57_or sort_c59_or sort_c61_and
+11 1
+.names sort_c60_or sort_c61_or sort_c62_or
+1- 1
+-1 1
+.names sort_c60_or sort_c61_or sort_c62_and
+11 1
+.names sort_c60_and sort_c61_and sort_c63_or
+1- 1
+-1 1
+.names sort_c60_and sort_c61_and sort_c63_and
+11 1
+.names sort_c56_and sort_c58_and sort_c64_or
+1- 1
+-1 1
+.names sort_c56_and sort_c58_and sort_c64_and
+11 1
+.names sort_c57_and sort_c59_and sort_c65_or
+1- 1
+-1 1
+.names sort_c57_and sort_c59_and sort_c65_and
+11 1
+.names sort_c64_or sort_c65_or sort_c66_or
+1- 1
+-1 1
+.names sort_c64_or sort_c65_or sort_c66_and
+11 1
+.names sort_c64_and sort_c65_and sort_c67_or
+1- 1
+-1 1
+.names sort_c64_and sort_c65_and sort_c67_and
+11 1
+.names sort_c48_and sort_c52_and sort_c68_or
+1- 1
+-1 1
+.names sort_c48_and sort_c52_and sort_c68_and
+11 1
+.names sort_c49_and sort_c53_and sort_c69_or
+1- 1
+-1 1
+.names sort_c49_and sort_c53_and sort_c69_and
+11 1
+.names sort_c50_and sort_c54_and sort_c70_or
+1- 1
+-1 1
+.names sort_c50_and sort_c54_and sort_c70_and
+11 1
+.names sort_c51_and sort_c55_and sort_c71_or
+1- 1
+-1 1
+.names sort_c51_and sort_c55_and sort_c71_and
+11 1
+.names sort_c68_or sort_c70_or sort_c72_or
+1- 1
+-1 1
+.names sort_c68_or sort_c70_or sort_c72_and
+11 1
+.names sort_c69_or sort_c71_or sort_c73_or
+1- 1
+-1 1
+.names sort_c69_or sort_c71_or sort_c73_and
+11 1
+.names sort_c72_or sort_c73_or sort_c74_or
+1- 1
+-1 1
+.names sort_c72_or sort_c73_or sort_c74_and
+11 1
+.names sort_c72_and sort_c73_and sort_c75_or
+1- 1
+-1 1
+.names sort_c72_and sort_c73_and sort_c75_and
+11 1
+.names sort_c68_and sort_c70_and sort_c76_or
+1- 1
+-1 1
+.names sort_c68_and sort_c70_and sort_c76_and
+11 1
+.names sort_c69_and sort_c71_and sort_c77_or
+1- 1
+-1 1
+.names sort_c69_and sort_c71_and sort_c77_and
+11 1
+.names sort_c76_or sort_c77_or sort_c78_or
+1- 1
+-1 1
+.names sort_c76_or sort_c77_or sort_c78_and
+11 1
+.names sort_c76_and sort_c77_and sort_c79_or
+1- 1
+-1 1
+.names sort_c76_and sort_c77_and sort_c79_and
+11 1
+.names sort_c67_or maj
+1 1
+.end

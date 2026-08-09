@@ -1,0 +1,127 @@
+.model piestrak_sorting_network_7_4
+.inputs x0 x1 x2 x3 x4 x5 x6
+.outputs maj
+.names CONST0
+.names x0 x1 sort_c0_or
+1- 1
+-1 1
+.names x0 x1 sort_c0_and
+11 1
+.names x2 x3 sort_c1_or
+1- 1
+-1 1
+.names x2 x3 sort_c1_and
+11 1
+.names sort_c0_or sort_c1_and sort_c2_or
+1- 1
+-1 1
+.names sort_c0_or sort_c1_and sort_c2_and
+11 1
+.names sort_c0_and sort_c1_or sort_c3_or
+1- 1
+-1 1
+.names sort_c0_and sort_c1_or sort_c3_and
+11 1
+.names sort_c2_or sort_c3_or sort_c4_or
+1- 1
+-1 1
+.names sort_c2_or sort_c3_or sort_c4_and
+11 1
+.names sort_c2_and sort_c3_and sort_c5_or
+1- 1
+-1 1
+.names sort_c2_and sort_c3_and sort_c5_and
+11 1
+.names x4 x5 sort_c6_or
+1- 1
+-1 1
+.names x4 x5 sort_c6_and
+11 1
+.names x6 CONST0 sort_c7_or
+1- 1
+-1 1
+.names x6 CONST0 sort_c7_and
+11 1
+.names sort_c6_or sort_c7_and sort_c8_or
+1- 1
+-1 1
+.names sort_c6_or sort_c7_and sort_c8_and
+11 1
+.names sort_c6_and sort_c7_or sort_c9_or
+1- 1
+-1 1
+.names sort_c6_and sort_c7_or sort_c9_and
+11 1
+.names sort_c8_and sort_c9_and sort_c10_or
+1- 1
+-1 1
+.names sort_c8_and sort_c9_and sort_c10_and
+11 1
+.names sort_c8_or sort_c9_or sort_c11_or
+1- 1
+-1 1
+.names sort_c8_or sort_c9_or sort_c11_and
+11 1
+.names sort_c4_or sort_c10_and sort_c12_or
+1- 1
+-1 1
+.names sort_c4_or sort_c10_and sort_c12_and
+11 1
+.names sort_c4_and sort_c10_or sort_c13_or
+1- 1
+-1 1
+.names sort_c4_and sort_c10_or sort_c13_and
+11 1
+.names sort_c5_or sort_c11_and sort_c14_or
+1- 1
+-1 1
+.names sort_c5_or sort_c11_and sort_c14_and
+11 1
+.names sort_c5_and sort_c11_or sort_c15_or
+1- 1
+-1 1
+.names sort_c5_and sort_c11_or sort_c15_and
+11 1
+.names sort_c12_or sort_c14_or sort_c16_or
+1- 1
+-1 1
+.names sort_c12_or sort_c14_or sort_c16_and
+11 1
+.names sort_c13_or sort_c15_or sort_c17_or
+1- 1
+-1 1
+.names sort_c13_or sort_c15_or sort_c17_and
+11 1
+.names sort_c16_or sort_c17_or sort_c18_or
+1- 1
+-1 1
+.names sort_c16_or sort_c17_or sort_c18_and
+11 1
+.names sort_c16_and sort_c17_and sort_c19_or
+1- 1
+-1 1
+.names sort_c16_and sort_c17_and sort_c19_and
+11 1
+.names sort_c12_and sort_c14_and sort_c20_or
+1- 1
+-1 1
+.names sort_c12_and sort_c14_and sort_c20_and
+11 1
+.names sort_c13_and sort_c15_and sort_c21_or
+1- 1
+-1 1
+.names sort_c13_and sort_c15_and sort_c21_and
+11 1
+.names sort_c20_or sort_c21_or sort_c22_or
+1- 1
+-1 1
+.names sort_c20_or sort_c21_or sort_c22_and
+11 1
+.names sort_c20_and sort_c21_and sort_c23_or
+1- 1
+-1 1
+.names sort_c20_and sort_c21_and sort_c23_and
+11 1
+.names sort_c19_and maj
+1 1
+.end

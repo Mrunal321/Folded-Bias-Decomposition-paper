@@ -1,0 +1,3367 @@
+.model piestrak_sorting_network_43_22
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 x16 x17 x18 x19 x20 x21 x22 x23 x24 x25 x26 x27 x28 x29 x30 x31 x32 x33 x34 x35 x36 x37 x38 x39 x40 x41 x42
+.outputs maj
+.names CONST0
+.names x0 x1 sort_c0_or
+1- 1
+-1 1
+.names x0 x1 sort_c0_and
+11 1
+.names x2 x3 sort_c1_or
+1- 1
+-1 1
+.names x2 x3 sort_c1_and
+11 1
+.names sort_c0_or sort_c1_and sort_c2_or
+1- 1
+-1 1
+.names sort_c0_or sort_c1_and sort_c2_and
+11 1
+.names sort_c0_and sort_c1_or sort_c3_or
+1- 1
+-1 1
+.names sort_c0_and sort_c1_or sort_c3_and
+11 1
+.names sort_c2_or sort_c3_or sort_c4_or
+1- 1
+-1 1
+.names sort_c2_or sort_c3_or sort_c4_and
+11 1
+.names sort_c2_and sort_c3_and sort_c5_or
+1- 1
+-1 1
+.names sort_c2_and sort_c3_and sort_c5_and
+11 1
+.names x4 x5 sort_c6_or
+1- 1
+-1 1
+.names x4 x5 sort_c6_and
+11 1
+.names x6 x7 sort_c7_or
+1- 1
+-1 1
+.names x6 x7 sort_c7_and
+11 1
+.names sort_c6_or sort_c7_and sort_c8_or
+1- 1
+-1 1
+.names sort_c6_or sort_c7_and sort_c8_and
+11 1
+.names sort_c6_and sort_c7_or sort_c9_or
+1- 1
+-1 1
+.names sort_c6_and sort_c7_or sort_c9_and
+11 1
+.names sort_c8_and sort_c9_and sort_c10_or
+1- 1
+-1 1
+.names sort_c8_and sort_c9_and sort_c10_and
+11 1
+.names sort_c8_or sort_c9_or sort_c11_or
+1- 1
+-1 1
+.names sort_c8_or sort_c9_or sort_c11_and
+11 1
+.names sort_c4_or sort_c10_and sort_c12_or
+1- 1
+-1 1
+.names sort_c4_or sort_c10_and sort_c12_and
+11 1
+.names sort_c4_and sort_c10_or sort_c13_or
+1- 1
+-1 1
+.names sort_c4_and sort_c10_or sort_c13_and
+11 1
+.names sort_c5_or sort_c11_and sort_c14_or
+1- 1
+-1 1
+.names sort_c5_or sort_c11_and sort_c14_and
+11 1
+.names sort_c5_and sort_c11_or sort_c15_or
+1- 1
+-1 1
+.names sort_c5_and sort_c11_or sort_c15_and
+11 1
+.names sort_c12_or sort_c14_or sort_c16_or
+1- 1
+-1 1
+.names sort_c12_or sort_c14_or sort_c16_and
+11 1
+.names sort_c13_or sort_c15_or sort_c17_or
+1- 1
+-1 1
+.names sort_c13_or sort_c15_or sort_c17_and
+11 1
+.names sort_c16_or sort_c17_or sort_c18_or
+1- 1
+-1 1
+.names sort_c16_or sort_c17_or sort_c18_and
+11 1
+.names sort_c16_and sort_c17_and sort_c19_or
+1- 1
+-1 1
+.names sort_c16_and sort_c17_and sort_c19_and
+11 1
+.names sort_c12_and sort_c14_and sort_c20_or
+1- 1
+-1 1
+.names sort_c12_and sort_c14_and sort_c20_and
+11 1
+.names sort_c13_and sort_c15_and sort_c21_or
+1- 1
+-1 1
+.names sort_c13_and sort_c15_and sort_c21_and
+11 1
+.names sort_c20_or sort_c21_or sort_c22_or
+1- 1
+-1 1
+.names sort_c20_or sort_c21_or sort_c22_and
+11 1
+.names sort_c20_and sort_c21_and sort_c23_or
+1- 1
+-1 1
+.names sort_c20_and sort_c21_and sort_c23_and
+11 1
+.names x8 x9 sort_c24_or
+1- 1
+-1 1
+.names x8 x9 sort_c24_and
+11 1
+.names x10 x11 sort_c25_or
+1- 1
+-1 1
+.names x10 x11 sort_c25_and
+11 1
+.names sort_c24_or sort_c25_and sort_c26_or
+1- 1
+-1 1
+.names sort_c24_or sort_c25_and sort_c26_and
+11 1
+.names sort_c24_and sort_c25_or sort_c27_or
+1- 1
+-1 1
+.names sort_c24_and sort_c25_or sort_c27_and
+11 1
+.names sort_c26_or sort_c27_or sort_c28_or
+1- 1
+-1 1
+.names sort_c26_or sort_c27_or sort_c28_and
+11 1
+.names sort_c26_and sort_c27_and sort_c29_or
+1- 1
+-1 1
+.names sort_c26_and sort_c27_and sort_c29_and
+11 1
+.names x12 x13 sort_c30_or
+1- 1
+-1 1
+.names x12 x13 sort_c30_and
+11 1
+.names x14 x15 sort_c31_or
+1- 1
+-1 1
+.names x14 x15 sort_c31_and
+11 1
+.names sort_c30_or sort_c31_and sort_c32_or
+1- 1
+-1 1
+.names sort_c30_or sort_c31_and sort_c32_and
+11 1
+.names sort_c30_and sort_c31_or sort_c33_or
+1- 1
+-1 1
+.names sort_c30_and sort_c31_or sort_c33_and
+11 1
+.names sort_c32_and sort_c33_and sort_c34_or
+1- 1
+-1 1
+.names sort_c32_and sort_c33_and sort_c34_and
+11 1
+.names sort_c32_or sort_c33_or sort_c35_or
+1- 1
+-1 1
+.names sort_c32_or sort_c33_or sort_c35_and
+11 1
+.names sort_c28_or sort_c34_and sort_c36_or
+1- 1
+-1 1
+.names sort_c28_or sort_c34_and sort_c36_and
+11 1
+.names sort_c28_and sort_c34_or sort_c37_or
+1- 1
+-1 1
+.names sort_c28_and sort_c34_or sort_c37_and
+11 1
+.names sort_c29_or sort_c35_and sort_c38_or
+1- 1
+-1 1
+.names sort_c29_or sort_c35_and sort_c38_and
+11 1
+.names sort_c29_and sort_c35_or sort_c39_or
+1- 1
+-1 1
+.names sort_c29_and sort_c35_or sort_c39_and
+11 1
+.names sort_c36_and sort_c38_and sort_c40_or
+1- 1
+-1 1
+.names sort_c36_and sort_c38_and sort_c40_and
+11 1
+.names sort_c37_and sort_c39_and sort_c41_or
+1- 1
+-1 1
+.names sort_c37_and sort_c39_and sort_c41_and
+11 1
+.names sort_c40_and sort_c41_and sort_c42_or
+1- 1
+-1 1
+.names sort_c40_and sort_c41_and sort_c42_and
+11 1
+.names sort_c40_or sort_c41_or sort_c43_or
+1- 1
+-1 1
+.names sort_c40_or sort_c41_or sort_c43_and
+11 1
+.names sort_c36_or sort_c38_or sort_c44_or
+1- 1
+-1 1
+.names sort_c36_or sort_c38_or sort_c44_and
+11 1
+.names sort_c37_or sort_c39_or sort_c45_or
+1- 1
+-1 1
+.names sort_c37_or sort_c39_or sort_c45_and
+11 1
+.names sort_c44_and sort_c45_and sort_c46_or
+1- 1
+-1 1
+.names sort_c44_and sort_c45_and sort_c46_and
+11 1
+.names sort_c44_or sort_c45_or sort_c47_or
+1- 1
+-1 1
+.names sort_c44_or sort_c45_or sort_c47_and
+11 1
+.names sort_c18_or sort_c42_and sort_c48_or
+1- 1
+-1 1
+.names sort_c18_or sort_c42_and sort_c48_and
+11 1
+.names sort_c18_and sort_c42_or sort_c49_or
+1- 1
+-1 1
+.names sort_c18_and sort_c42_or sort_c49_and
+11 1
+.names sort_c19_or sort_c43_and sort_c50_or
+1- 1
+-1 1
+.names sort_c19_or sort_c43_and sort_c50_and
+11 1
+.names sort_c19_and sort_c43_or sort_c51_or
+1- 1
+-1 1
+.names sort_c19_and sort_c43_or sort_c51_and
+11 1
+.names sort_c22_or sort_c46_and sort_c52_or
+1- 1
+-1 1
+.names sort_c22_or sort_c46_and sort_c52_and
+11 1
+.names sort_c22_and sort_c46_or sort_c53_or
+1- 1
+-1 1
+.names sort_c22_and sort_c46_or sort_c53_and
+11 1
+.names sort_c23_or sort_c47_and sort_c54_or
+1- 1
+-1 1
+.names sort_c23_or sort_c47_and sort_c54_and
+11 1
+.names sort_c23_and sort_c47_or sort_c55_or
+1- 1
+-1 1
+.names sort_c23_and sort_c47_or sort_c55_and
+11 1
+.names sort_c48_or sort_c52_or sort_c56_or
+1- 1
+-1 1
+.names sort_c48_or sort_c52_or sort_c56_and
+11 1
+.names sort_c49_or sort_c53_or sort_c57_or
+1- 1
+-1 1
+.names sort_c49_or sort_c53_or sort_c57_and
+11 1
+.names sort_c50_or sort_c54_or sort_c58_or
+1- 1
+-1 1
+.names sort_c50_or sort_c54_or sort_c58_and
+11 1
+.names sort_c51_or sort_c55_or sort_c59_or
+1- 1
+-1 1
+.names sort_c51_or sort_c55_or sort_c59_and
+11 1
+.names sort_c56_or sort_c58_or sort_c60_or
+1- 1
+-1 1
+.names sort_c56_or sort_c58_or sort_c60_and
+11 1
+.names sort_c57_or sort_c59_or sort_c61_or
+1- 1
+-1 1
+.names sort_c57_or sort_c59_or sort_c61_and
+11 1
+.names sort_c60_or sort_c61_or sort_c62_or
+1- 1
+-1 1
+.names sort_c60_or sort_c61_or sort_c62_and
+11 1
+.names sort_c60_and sort_c61_and sort_c63_or
+1- 1
+-1 1
+.names sort_c60_and sort_c61_and sort_c63_and
+11 1
+.names sort_c56_and sort_c58_and sort_c64_or
+1- 1
+-1 1
+.names sort_c56_and sort_c58_and sort_c64_and
+11 1
+.names sort_c57_and sort_c59_and sort_c65_or
+1- 1
+-1 1
+.names sort_c57_and sort_c59_and sort_c65_and
+11 1
+.names sort_c64_or sort_c65_or sort_c66_or
+1- 1
+-1 1
+.names sort_c64_or sort_c65_or sort_c66_and
+11 1
+.names sort_c64_and sort_c65_and sort_c67_or
+1- 1
+-1 1
+.names sort_c64_and sort_c65_and sort_c67_and
+11 1
+.names sort_c48_and sort_c52_and sort_c68_or
+1- 1
+-1 1
+.names sort_c48_and sort_c52_and sort_c68_and
+11 1
+.names sort_c49_and sort_c53_and sort_c69_or
+1- 1
+-1 1
+.names sort_c49_and sort_c53_and sort_c69_and
+11 1
+.names sort_c50_and sort_c54_and sort_c70_or
+1- 1
+-1 1
+.names sort_c50_and sort_c54_and sort_c70_and
+11 1
+.names sort_c51_and sort_c55_and sort_c71_or
+1- 1
+-1 1
+.names sort_c51_and sort_c55_and sort_c71_and
+11 1
+.names sort_c68_or sort_c70_or sort_c72_or
+1- 1
+-1 1
+.names sort_c68_or sort_c70_or sort_c72_and
+11 1
+.names sort_c69_or sort_c71_or sort_c73_or
+1- 1
+-1 1
+.names sort_c69_or sort_c71_or sort_c73_and
+11 1
+.names sort_c72_or sort_c73_or sort_c74_or
+1- 1
+-1 1
+.names sort_c72_or sort_c73_or sort_c74_and
+11 1
+.names sort_c72_and sort_c73_and sort_c75_or
+1- 1
+-1 1
+.names sort_c72_and sort_c73_and sort_c75_and
+11 1
+.names sort_c68_and sort_c70_and sort_c76_or
+1- 1
+-1 1
+.names sort_c68_and sort_c70_and sort_c76_and
+11 1
+.names sort_c69_and sort_c71_and sort_c77_or
+1- 1
+-1 1
+.names sort_c69_and sort_c71_and sort_c77_and
+11 1
+.names sort_c76_or sort_c77_or sort_c78_or
+1- 1
+-1 1
+.names sort_c76_or sort_c77_or sort_c78_and
+11 1
+.names sort_c76_and sort_c77_and sort_c79_or
+1- 1
+-1 1
+.names sort_c76_and sort_c77_and sort_c79_and
+11 1
+.names x16 x17 sort_c80_or
+1- 1
+-1 1
+.names x16 x17 sort_c80_and
+11 1
+.names x18 x19 sort_c81_or
+1- 1
+-1 1
+.names x18 x19 sort_c81_and
+11 1
+.names sort_c80_or sort_c81_and sort_c82_or
+1- 1
+-1 1
+.names sort_c80_or sort_c81_and sort_c82_and
+11 1
+.names sort_c80_and sort_c81_or sort_c83_or
+1- 1
+-1 1
+.names sort_c80_and sort_c81_or sort_c83_and
+11 1
+.names sort_c82_or sort_c83_or sort_c84_or
+1- 1
+-1 1
+.names sort_c82_or sort_c83_or sort_c84_and
+11 1
+.names sort_c82_and sort_c83_and sort_c85_or
+1- 1
+-1 1
+.names sort_c82_and sort_c83_and sort_c85_and
+11 1
+.names x20 x21 sort_c86_or
+1- 1
+-1 1
+.names x20 x21 sort_c86_and
+11 1
+.names x22 x23 sort_c87_or
+1- 1
+-1 1
+.names x22 x23 sort_c87_and
+11 1
+.names sort_c86_or sort_c87_and sort_c88_or
+1- 1
+-1 1
+.names sort_c86_or sort_c87_and sort_c88_and
+11 1
+.names sort_c86_and sort_c87_or sort_c89_or
+1- 1
+-1 1
+.names sort_c86_and sort_c87_or sort_c89_and
+11 1
+.names sort_c88_and sort_c89_and sort_c90_or
+1- 1
+-1 1
+.names sort_c88_and sort_c89_and sort_c90_and
+11 1
+.names sort_c88_or sort_c89_or sort_c91_or
+1- 1
+-1 1
+.names sort_c88_or sort_c89_or sort_c91_and
+11 1
+.names sort_c84_or sort_c90_and sort_c92_or
+1- 1
+-1 1
+.names sort_c84_or sort_c90_and sort_c92_and
+11 1
+.names sort_c84_and sort_c90_or sort_c93_or
+1- 1
+-1 1
+.names sort_c84_and sort_c90_or sort_c93_and
+11 1
+.names sort_c85_or sort_c91_and sort_c94_or
+1- 1
+-1 1
+.names sort_c85_or sort_c91_and sort_c94_and
+11 1
+.names sort_c85_and sort_c91_or sort_c95_or
+1- 1
+-1 1
+.names sort_c85_and sort_c91_or sort_c95_and
+11 1
+.names sort_c92_or sort_c94_or sort_c96_or
+1- 1
+-1 1
+.names sort_c92_or sort_c94_or sort_c96_and
+11 1
+.names sort_c93_or sort_c95_or sort_c97_or
+1- 1
+-1 1
+.names sort_c93_or sort_c95_or sort_c97_and
+11 1
+.names sort_c96_or sort_c97_or sort_c98_or
+1- 1
+-1 1
+.names sort_c96_or sort_c97_or sort_c98_and
+11 1
+.names sort_c96_and sort_c97_and sort_c99_or
+1- 1
+-1 1
+.names sort_c96_and sort_c97_and sort_c99_and
+11 1
+.names sort_c92_and sort_c94_and sort_c100_or
+1- 1
+-1 1
+.names sort_c92_and sort_c94_and sort_c100_and
+11 1
+.names sort_c93_and sort_c95_and sort_c101_or
+1- 1
+-1 1
+.names sort_c93_and sort_c95_and sort_c101_and
+11 1
+.names sort_c100_or sort_c101_or sort_c102_or
+1- 1
+-1 1
+.names sort_c100_or sort_c101_or sort_c102_and
+11 1
+.names sort_c100_and sort_c101_and sort_c103_or
+1- 1
+-1 1
+.names sort_c100_and sort_c101_and sort_c103_and
+11 1
+.names x24 x25 sort_c104_or
+1- 1
+-1 1
+.names x24 x25 sort_c104_and
+11 1
+.names x26 x27 sort_c105_or
+1- 1
+-1 1
+.names x26 x27 sort_c105_and
+11 1
+.names sort_c104_or sort_c105_and sort_c106_or
+1- 1
+-1 1
+.names sort_c104_or sort_c105_and sort_c106_and
+11 1
+.names sort_c104_and sort_c105_or sort_c107_or
+1- 1
+-1 1
+.names sort_c104_and sort_c105_or sort_c107_and
+11 1
+.names sort_c106_or sort_c107_or sort_c108_or
+1- 1
+-1 1
+.names sort_c106_or sort_c107_or sort_c108_and
+11 1
+.names sort_c106_and sort_c107_and sort_c109_or
+1- 1
+-1 1
+.names sort_c106_and sort_c107_and sort_c109_and
+11 1
+.names x28 x29 sort_c110_or
+1- 1
+-1 1
+.names x28 x29 sort_c110_and
+11 1
+.names x30 x31 sort_c111_or
+1- 1
+-1 1
+.names x30 x31 sort_c111_and
+11 1
+.names sort_c110_or sort_c111_and sort_c112_or
+1- 1
+-1 1
+.names sort_c110_or sort_c111_and sort_c112_and
+11 1
+.names sort_c110_and sort_c111_or sort_c113_or
+1- 1
+-1 1
+.names sort_c110_and sort_c111_or sort_c113_and
+11 1
+.names sort_c112_and sort_c113_and sort_c114_or
+1- 1
+-1 1
+.names sort_c112_and sort_c113_and sort_c114_and
+11 1
+.names sort_c112_or sort_c113_or sort_c115_or
+1- 1
+-1 1
+.names sort_c112_or sort_c113_or sort_c115_and
+11 1
+.names sort_c108_or sort_c114_and sort_c116_or
+1- 1
+-1 1
+.names sort_c108_or sort_c114_and sort_c116_and
+11 1
+.names sort_c108_and sort_c114_or sort_c117_or
+1- 1
+-1 1
+.names sort_c108_and sort_c114_or sort_c117_and
+11 1
+.names sort_c109_or sort_c115_and sort_c118_or
+1- 1
+-1 1
+.names sort_c109_or sort_c115_and sort_c118_and
+11 1
+.names sort_c109_and sort_c115_or sort_c119_or
+1- 1
+-1 1
+.names sort_c109_and sort_c115_or sort_c119_and
+11 1
+.names sort_c116_and sort_c118_and sort_c120_or
+1- 1
+-1 1
+.names sort_c116_and sort_c118_and sort_c120_and
+11 1
+.names sort_c117_and sort_c119_and sort_c121_or
+1- 1
+-1 1
+.names sort_c117_and sort_c119_and sort_c121_and
+11 1
+.names sort_c120_and sort_c121_and sort_c122_or
+1- 1
+-1 1
+.names sort_c120_and sort_c121_and sort_c122_and
+11 1
+.names sort_c120_or sort_c121_or sort_c123_or
+1- 1
+-1 1
+.names sort_c120_or sort_c121_or sort_c123_and
+11 1
+.names sort_c116_or sort_c118_or sort_c124_or
+1- 1
+-1 1
+.names sort_c116_or sort_c118_or sort_c124_and
+11 1
+.names sort_c117_or sort_c119_or sort_c125_or
+1- 1
+-1 1
+.names sort_c117_or sort_c119_or sort_c125_and
+11 1
+.names sort_c124_and sort_c125_and sort_c126_or
+1- 1
+-1 1
+.names sort_c124_and sort_c125_and sort_c126_and
+11 1
+.names sort_c124_or sort_c125_or sort_c127_or
+1- 1
+-1 1
+.names sort_c124_or sort_c125_or sort_c127_and
+11 1
+.names sort_c98_or sort_c122_and sort_c128_or
+1- 1
+-1 1
+.names sort_c98_or sort_c122_and sort_c128_and
+11 1
+.names sort_c98_and sort_c122_or sort_c129_or
+1- 1
+-1 1
+.names sort_c98_and sort_c122_or sort_c129_and
+11 1
+.names sort_c99_or sort_c123_and sort_c130_or
+1- 1
+-1 1
+.names sort_c99_or sort_c123_and sort_c130_and
+11 1
+.names sort_c99_and sort_c123_or sort_c131_or
+1- 1
+-1 1
+.names sort_c99_and sort_c123_or sort_c131_and
+11 1
+.names sort_c102_or sort_c126_and sort_c132_or
+1- 1
+-1 1
+.names sort_c102_or sort_c126_and sort_c132_and
+11 1
+.names sort_c102_and sort_c126_or sort_c133_or
+1- 1
+-1 1
+.names sort_c102_and sort_c126_or sort_c133_and
+11 1
+.names sort_c103_or sort_c127_and sort_c134_or
+1- 1
+-1 1
+.names sort_c103_or sort_c127_and sort_c134_and
+11 1
+.names sort_c103_and sort_c127_or sort_c135_or
+1- 1
+-1 1
+.names sort_c103_and sort_c127_or sort_c135_and
+11 1
+.names sort_c128_and sort_c132_and sort_c136_or
+1- 1
+-1 1
+.names sort_c128_and sort_c132_and sort_c136_and
+11 1
+.names sort_c129_and sort_c133_and sort_c137_or
+1- 1
+-1 1
+.names sort_c129_and sort_c133_and sort_c137_and
+11 1
+.names sort_c130_and sort_c134_and sort_c138_or
+1- 1
+-1 1
+.names sort_c130_and sort_c134_and sort_c138_and
+11 1
+.names sort_c131_and sort_c135_and sort_c139_or
+1- 1
+-1 1
+.names sort_c131_and sort_c135_and sort_c139_and
+11 1
+.names sort_c136_and sort_c138_and sort_c140_or
+1- 1
+-1 1
+.names sort_c136_and sort_c138_and sort_c140_and
+11 1
+.names sort_c137_and sort_c139_and sort_c141_or
+1- 1
+-1 1
+.names sort_c137_and sort_c139_and sort_c141_and
+11 1
+.names sort_c140_and sort_c141_and sort_c142_or
+1- 1
+-1 1
+.names sort_c140_and sort_c141_and sort_c142_and
+11 1
+.names sort_c140_or sort_c141_or sort_c143_or
+1- 1
+-1 1
+.names sort_c140_or sort_c141_or sort_c143_and
+11 1
+.names sort_c136_or sort_c138_or sort_c144_or
+1- 1
+-1 1
+.names sort_c136_or sort_c138_or sort_c144_and
+11 1
+.names sort_c137_or sort_c139_or sort_c145_or
+1- 1
+-1 1
+.names sort_c137_or sort_c139_or sort_c145_and
+11 1
+.names sort_c144_and sort_c145_and sort_c146_or
+1- 1
+-1 1
+.names sort_c144_and sort_c145_and sort_c146_and
+11 1
+.names sort_c144_or sort_c145_or sort_c147_or
+1- 1
+-1 1
+.names sort_c144_or sort_c145_or sort_c147_and
+11 1
+.names sort_c128_or sort_c132_or sort_c148_or
+1- 1
+-1 1
+.names sort_c128_or sort_c132_or sort_c148_and
+11 1
+.names sort_c129_or sort_c133_or sort_c149_or
+1- 1
+-1 1
+.names sort_c129_or sort_c133_or sort_c149_and
+11 1
+.names sort_c130_or sort_c134_or sort_c150_or
+1- 1
+-1 1
+.names sort_c130_or sort_c134_or sort_c150_and
+11 1
+.names sort_c131_or sort_c135_or sort_c151_or
+1- 1
+-1 1
+.names sort_c131_or sort_c135_or sort_c151_and
+11 1
+.names sort_c148_and sort_c150_and sort_c152_or
+1- 1
+-1 1
+.names sort_c148_and sort_c150_and sort_c152_and
+11 1
+.names sort_c149_and sort_c151_and sort_c153_or
+1- 1
+-1 1
+.names sort_c149_and sort_c151_and sort_c153_and
+11 1
+.names sort_c152_and sort_c153_and sort_c154_or
+1- 1
+-1 1
+.names sort_c152_and sort_c153_and sort_c154_and
+11 1
+.names sort_c152_or sort_c153_or sort_c155_or
+1- 1
+-1 1
+.names sort_c152_or sort_c153_or sort_c155_and
+11 1
+.names sort_c148_or sort_c150_or sort_c156_or
+1- 1
+-1 1
+.names sort_c148_or sort_c150_or sort_c156_and
+11 1
+.names sort_c149_or sort_c151_or sort_c157_or
+1- 1
+-1 1
+.names sort_c149_or sort_c151_or sort_c157_and
+11 1
+.names sort_c156_and sort_c157_and sort_c158_or
+1- 1
+-1 1
+.names sort_c156_and sort_c157_and sort_c158_and
+11 1
+.names sort_c156_or sort_c157_or sort_c159_or
+1- 1
+-1 1
+.names sort_c156_or sort_c157_or sort_c159_and
+11 1
+.names sort_c62_or sort_c142_and sort_c160_or
+1- 1
+-1 1
+.names sort_c62_or sort_c142_and sort_c160_and
+11 1
+.names sort_c62_and sort_c142_or sort_c161_or
+1- 1
+-1 1
+.names sort_c62_and sort_c142_or sort_c161_and
+11 1
+.names sort_c63_or sort_c143_and sort_c162_or
+1- 1
+-1 1
+.names sort_c63_or sort_c143_and sort_c162_and
+11 1
+.names sort_c63_and sort_c143_or sort_c163_or
+1- 1
+-1 1
+.names sort_c63_and sort_c143_or sort_c163_and
+11 1
+.names sort_c66_or sort_c146_and sort_c164_or
+1- 1
+-1 1
+.names sort_c66_or sort_c146_and sort_c164_and
+11 1
+.names sort_c66_and sort_c146_or sort_c165_or
+1- 1
+-1 1
+.names sort_c66_and sort_c146_or sort_c165_and
+11 1
+.names sort_c67_or sort_c147_and sort_c166_or
+1- 1
+-1 1
+.names sort_c67_or sort_c147_and sort_c166_and
+11 1
+.names sort_c67_and sort_c147_or sort_c167_or
+1- 1
+-1 1
+.names sort_c67_and sort_c147_or sort_c167_and
+11 1
+.names sort_c74_or sort_c154_and sort_c168_or
+1- 1
+-1 1
+.names sort_c74_or sort_c154_and sort_c168_and
+11 1
+.names sort_c74_and sort_c154_or sort_c169_or
+1- 1
+-1 1
+.names sort_c74_and sort_c154_or sort_c169_and
+11 1
+.names sort_c75_or sort_c155_and sort_c170_or
+1- 1
+-1 1
+.names sort_c75_or sort_c155_and sort_c170_and
+11 1
+.names sort_c75_and sort_c155_or sort_c171_or
+1- 1
+-1 1
+.names sort_c75_and sort_c155_or sort_c171_and
+11 1
+.names sort_c78_or sort_c158_and sort_c172_or
+1- 1
+-1 1
+.names sort_c78_or sort_c158_and sort_c172_and
+11 1
+.names sort_c78_and sort_c158_or sort_c173_or
+1- 1
+-1 1
+.names sort_c78_and sort_c158_or sort_c173_and
+11 1
+.names sort_c79_or sort_c159_and sort_c174_or
+1- 1
+-1 1
+.names sort_c79_or sort_c159_and sort_c174_and
+11 1
+.names sort_c79_and sort_c159_or sort_c175_or
+1- 1
+-1 1
+.names sort_c79_and sort_c159_or sort_c175_and
+11 1
+.names sort_c160_or sort_c168_or sort_c176_or
+1- 1
+-1 1
+.names sort_c160_or sort_c168_or sort_c176_and
+11 1
+.names sort_c161_or sort_c169_or sort_c177_or
+1- 1
+-1 1
+.names sort_c161_or sort_c169_or sort_c177_and
+11 1
+.names sort_c162_or sort_c170_or sort_c178_or
+1- 1
+-1 1
+.names sort_c162_or sort_c170_or sort_c178_and
+11 1
+.names sort_c163_or sort_c171_or sort_c179_or
+1- 1
+-1 1
+.names sort_c163_or sort_c171_or sort_c179_and
+11 1
+.names sort_c164_or sort_c172_or sort_c180_or
+1- 1
+-1 1
+.names sort_c164_or sort_c172_or sort_c180_and
+11 1
+.names sort_c165_or sort_c173_or sort_c181_or
+1- 1
+-1 1
+.names sort_c165_or sort_c173_or sort_c181_and
+11 1
+.names sort_c166_or sort_c174_or sort_c182_or
+1- 1
+-1 1
+.names sort_c166_or sort_c174_or sort_c182_and
+11 1
+.names sort_c167_or sort_c175_or sort_c183_or
+1- 1
+-1 1
+.names sort_c167_or sort_c175_or sort_c183_and
+11 1
+.names sort_c176_or sort_c180_or sort_c184_or
+1- 1
+-1 1
+.names sort_c176_or sort_c180_or sort_c184_and
+11 1
+.names sort_c177_or sort_c181_or sort_c185_or
+1- 1
+-1 1
+.names sort_c177_or sort_c181_or sort_c185_and
+11 1
+.names sort_c178_or sort_c182_or sort_c186_or
+1- 1
+-1 1
+.names sort_c178_or sort_c182_or sort_c186_and
+11 1
+.names sort_c179_or sort_c183_or sort_c187_or
+1- 1
+-1 1
+.names sort_c179_or sort_c183_or sort_c187_and
+11 1
+.names sort_c184_or sort_c186_or sort_c188_or
+1- 1
+-1 1
+.names sort_c184_or sort_c186_or sort_c188_and
+11 1
+.names sort_c185_or sort_c187_or sort_c189_or
+1- 1
+-1 1
+.names sort_c185_or sort_c187_or sort_c189_and
+11 1
+.names sort_c188_or sort_c189_or sort_c190_or
+1- 1
+-1 1
+.names sort_c188_or sort_c189_or sort_c190_and
+11 1
+.names sort_c188_and sort_c189_and sort_c191_or
+1- 1
+-1 1
+.names sort_c188_and sort_c189_and sort_c191_and
+11 1
+.names sort_c184_and sort_c186_and sort_c192_or
+1- 1
+-1 1
+.names sort_c184_and sort_c186_and sort_c192_and
+11 1
+.names sort_c185_and sort_c187_and sort_c193_or
+1- 1
+-1 1
+.names sort_c185_and sort_c187_and sort_c193_and
+11 1
+.names sort_c192_or sort_c193_or sort_c194_or
+1- 1
+-1 1
+.names sort_c192_or sort_c193_or sort_c194_and
+11 1
+.names sort_c192_and sort_c193_and sort_c195_or
+1- 1
+-1 1
+.names sort_c192_and sort_c193_and sort_c195_and
+11 1
+.names sort_c176_and sort_c180_and sort_c196_or
+1- 1
+-1 1
+.names sort_c176_and sort_c180_and sort_c196_and
+11 1
+.names sort_c177_and sort_c181_and sort_c197_or
+1- 1
+-1 1
+.names sort_c177_and sort_c181_and sort_c197_and
+11 1
+.names sort_c178_and sort_c182_and sort_c198_or
+1- 1
+-1 1
+.names sort_c178_and sort_c182_and sort_c198_and
+11 1
+.names sort_c179_and sort_c183_and sort_c199_or
+1- 1
+-1 1
+.names sort_c179_and sort_c183_and sort_c199_and
+11 1
+.names sort_c196_or sort_c198_or sort_c200_or
+1- 1
+-1 1
+.names sort_c196_or sort_c198_or sort_c200_and
+11 1
+.names sort_c197_or sort_c199_or sort_c201_or
+1- 1
+-1 1
+.names sort_c197_or sort_c199_or sort_c201_and
+11 1
+.names sort_c200_or sort_c201_or sort_c202_or
+1- 1
+-1 1
+.names sort_c200_or sort_c201_or sort_c202_and
+11 1
+.names sort_c200_and sort_c201_and sort_c203_or
+1- 1
+-1 1
+.names sort_c200_and sort_c201_and sort_c203_and
+11 1
+.names sort_c196_and sort_c198_and sort_c204_or
+1- 1
+-1 1
+.names sort_c196_and sort_c198_and sort_c204_and
+11 1
+.names sort_c197_and sort_c199_and sort_c205_or
+1- 1
+-1 1
+.names sort_c197_and sort_c199_and sort_c205_and
+11 1
+.names sort_c204_or sort_c205_or sort_c206_or
+1- 1
+-1 1
+.names sort_c204_or sort_c205_or sort_c206_and
+11 1
+.names sort_c204_and sort_c205_and sort_c207_or
+1- 1
+-1 1
+.names sort_c204_and sort_c205_and sort_c207_and
+11 1
+.names sort_c160_and sort_c168_and sort_c208_or
+1- 1
+-1 1
+.names sort_c160_and sort_c168_and sort_c208_and
+11 1
+.names sort_c161_and sort_c169_and sort_c209_or
+1- 1
+-1 1
+.names sort_c161_and sort_c169_and sort_c209_and
+11 1
+.names sort_c162_and sort_c170_and sort_c210_or
+1- 1
+-1 1
+.names sort_c162_and sort_c170_and sort_c210_and
+11 1
+.names sort_c163_and sort_c171_and sort_c211_or
+1- 1
+-1 1
+.names sort_c163_and sort_c171_and sort_c211_and
+11 1
+.names sort_c164_and sort_c172_and sort_c212_or
+1- 1
+-1 1
+.names sort_c164_and sort_c172_and sort_c212_and
+11 1
+.names sort_c165_and sort_c173_and sort_c213_or
+1- 1
+-1 1
+.names sort_c165_and sort_c173_and sort_c213_and
+11 1
+.names sort_c166_and sort_c174_and sort_c214_or
+1- 1
+-1 1
+.names sort_c166_and sort_c174_and sort_c214_and
+11 1
+.names sort_c167_and sort_c175_and sort_c215_or
+1- 1
+-1 1
+.names sort_c167_and sort_c175_and sort_c215_and
+11 1
+.names sort_c208_or sort_c212_or sort_c216_or
+1- 1
+-1 1
+.names sort_c208_or sort_c212_or sort_c216_and
+11 1
+.names sort_c209_or sort_c213_or sort_c217_or
+1- 1
+-1 1
+.names sort_c209_or sort_c213_or sort_c217_and
+11 1
+.names sort_c210_or sort_c214_or sort_c218_or
+1- 1
+-1 1
+.names sort_c210_or sort_c214_or sort_c218_and
+11 1
+.names sort_c211_or sort_c215_or sort_c219_or
+1- 1
+-1 1
+.names sort_c211_or sort_c215_or sort_c219_and
+11 1
+.names sort_c216_or sort_c218_or sort_c220_or
+1- 1
+-1 1
+.names sort_c216_or sort_c218_or sort_c220_and
+11 1
+.names sort_c217_or sort_c219_or sort_c221_or
+1- 1
+-1 1
+.names sort_c217_or sort_c219_or sort_c221_and
+11 1
+.names sort_c220_or sort_c221_or sort_c222_or
+1- 1
+-1 1
+.names sort_c220_or sort_c221_or sort_c222_and
+11 1
+.names sort_c220_and sort_c221_and sort_c223_or
+1- 1
+-1 1
+.names sort_c220_and sort_c221_and sort_c223_and
+11 1
+.names sort_c216_and sort_c218_and sort_c224_or
+1- 1
+-1 1
+.names sort_c216_and sort_c218_and sort_c224_and
+11 1
+.names sort_c217_and sort_c219_and sort_c225_or
+1- 1
+-1 1
+.names sort_c217_and sort_c219_and sort_c225_and
+11 1
+.names sort_c224_or sort_c225_or sort_c226_or
+1- 1
+-1 1
+.names sort_c224_or sort_c225_or sort_c226_and
+11 1
+.names sort_c224_and sort_c225_and sort_c227_or
+1- 1
+-1 1
+.names sort_c224_and sort_c225_and sort_c227_and
+11 1
+.names sort_c208_and sort_c212_and sort_c228_or
+1- 1
+-1 1
+.names sort_c208_and sort_c212_and sort_c228_and
+11 1
+.names sort_c209_and sort_c213_and sort_c229_or
+1- 1
+-1 1
+.names sort_c209_and sort_c213_and sort_c229_and
+11 1
+.names sort_c210_and sort_c214_and sort_c230_or
+1- 1
+-1 1
+.names sort_c210_and sort_c214_and sort_c230_and
+11 1
+.names sort_c211_and sort_c215_and sort_c231_or
+1- 1
+-1 1
+.names sort_c211_and sort_c215_and sort_c231_and
+11 1
+.names sort_c228_or sort_c230_or sort_c232_or
+1- 1
+-1 1
+.names sort_c228_or sort_c230_or sort_c232_and
+11 1
+.names sort_c229_or sort_c231_or sort_c233_or
+1- 1
+-1 1
+.names sort_c229_or sort_c231_or sort_c233_and
+11 1
+.names sort_c232_or sort_c233_or sort_c234_or
+1- 1
+-1 1
+.names sort_c232_or sort_c233_or sort_c234_and
+11 1
+.names sort_c232_and sort_c233_and sort_c235_or
+1- 1
+-1 1
+.names sort_c232_and sort_c233_and sort_c235_and
+11 1
+.names sort_c228_and sort_c230_and sort_c236_or
+1- 1
+-1 1
+.names sort_c228_and sort_c230_and sort_c236_and
+11 1
+.names sort_c229_and sort_c231_and sort_c237_or
+1- 1
+-1 1
+.names sort_c229_and sort_c231_and sort_c237_and
+11 1
+.names sort_c236_or sort_c237_or sort_c238_or
+1- 1
+-1 1
+.names sort_c236_or sort_c237_or sort_c238_and
+11 1
+.names sort_c236_and sort_c237_and sort_c239_or
+1- 1
+-1 1
+.names sort_c236_and sort_c237_and sort_c239_and
+11 1
+.names x32 x33 sort_c240_or
+1- 1
+-1 1
+.names x32 x33 sort_c240_and
+11 1
+.names x34 x35 sort_c241_or
+1- 1
+-1 1
+.names x34 x35 sort_c241_and
+11 1
+.names sort_c240_or sort_c241_and sort_c242_or
+1- 1
+-1 1
+.names sort_c240_or sort_c241_and sort_c242_and
+11 1
+.names sort_c240_and sort_c241_or sort_c243_or
+1- 1
+-1 1
+.names sort_c240_and sort_c241_or sort_c243_and
+11 1
+.names sort_c242_or sort_c243_or sort_c244_or
+1- 1
+-1 1
+.names sort_c242_or sort_c243_or sort_c244_and
+11 1
+.names sort_c242_and sort_c243_and sort_c245_or
+1- 1
+-1 1
+.names sort_c242_and sort_c243_and sort_c245_and
+11 1
+.names x36 x37 sort_c246_or
+1- 1
+-1 1
+.names x36 x37 sort_c246_and
+11 1
+.names x38 x39 sort_c247_or
+1- 1
+-1 1
+.names x38 x39 sort_c247_and
+11 1
+.names sort_c246_or sort_c247_and sort_c248_or
+1- 1
+-1 1
+.names sort_c246_or sort_c247_and sort_c248_and
+11 1
+.names sort_c246_and sort_c247_or sort_c249_or
+1- 1
+-1 1
+.names sort_c246_and sort_c247_or sort_c249_and
+11 1
+.names sort_c248_and sort_c249_and sort_c250_or
+1- 1
+-1 1
+.names sort_c248_and sort_c249_and sort_c250_and
+11 1
+.names sort_c248_or sort_c249_or sort_c251_or
+1- 1
+-1 1
+.names sort_c248_or sort_c249_or sort_c251_and
+11 1
+.names sort_c244_or sort_c250_and sort_c252_or
+1- 1
+-1 1
+.names sort_c244_or sort_c250_and sort_c252_and
+11 1
+.names sort_c244_and sort_c250_or sort_c253_or
+1- 1
+-1 1
+.names sort_c244_and sort_c250_or sort_c253_and
+11 1
+.names sort_c245_or sort_c251_and sort_c254_or
+1- 1
+-1 1
+.names sort_c245_or sort_c251_and sort_c254_and
+11 1
+.names sort_c245_and sort_c251_or sort_c255_or
+1- 1
+-1 1
+.names sort_c245_and sort_c251_or sort_c255_and
+11 1
+.names sort_c252_or sort_c254_or sort_c256_or
+1- 1
+-1 1
+.names sort_c252_or sort_c254_or sort_c256_and
+11 1
+.names sort_c253_or sort_c255_or sort_c257_or
+1- 1
+-1 1
+.names sort_c253_or sort_c255_or sort_c257_and
+11 1
+.names sort_c256_or sort_c257_or sort_c258_or
+1- 1
+-1 1
+.names sort_c256_or sort_c257_or sort_c258_and
+11 1
+.names sort_c256_and sort_c257_and sort_c259_or
+1- 1
+-1 1
+.names sort_c256_and sort_c257_and sort_c259_and
+11 1
+.names sort_c252_and sort_c254_and sort_c260_or
+1- 1
+-1 1
+.names sort_c252_and sort_c254_and sort_c260_and
+11 1
+.names sort_c253_and sort_c255_and sort_c261_or
+1- 1
+-1 1
+.names sort_c253_and sort_c255_and sort_c261_and
+11 1
+.names sort_c260_or sort_c261_or sort_c262_or
+1- 1
+-1 1
+.names sort_c260_or sort_c261_or sort_c262_and
+11 1
+.names sort_c260_and sort_c261_and sort_c263_or
+1- 1
+-1 1
+.names sort_c260_and sort_c261_and sort_c263_and
+11 1
+.names x40 x41 sort_c264_or
+1- 1
+-1 1
+.names x40 x41 sort_c264_and
+11 1
+.names x42 CONST0 sort_c265_or
+1- 1
+-1 1
+.names x42 CONST0 sort_c265_and
+11 1
+.names sort_c264_or sort_c265_and sort_c266_or
+1- 1
+-1 1
+.names sort_c264_or sort_c265_and sort_c266_and
+11 1
+.names sort_c264_and sort_c265_or sort_c267_or
+1- 1
+-1 1
+.names sort_c264_and sort_c265_or sort_c267_and
+11 1
+.names sort_c266_or sort_c267_or sort_c268_or
+1- 1
+-1 1
+.names sort_c266_or sort_c267_or sort_c268_and
+11 1
+.names sort_c266_and sort_c267_and sort_c269_or
+1- 1
+-1 1
+.names sort_c266_and sort_c267_and sort_c269_and
+11 1
+.names CONST0 CONST0 sort_c270_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c270_and
+11 1
+.names CONST0 CONST0 sort_c271_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c271_and
+11 1
+.names sort_c270_or sort_c271_and sort_c272_or
+1- 1
+-1 1
+.names sort_c270_or sort_c271_and sort_c272_and
+11 1
+.names sort_c270_and sort_c271_or sort_c273_or
+1- 1
+-1 1
+.names sort_c270_and sort_c271_or sort_c273_and
+11 1
+.names sort_c272_and sort_c273_and sort_c274_or
+1- 1
+-1 1
+.names sort_c272_and sort_c273_and sort_c274_and
+11 1
+.names sort_c272_or sort_c273_or sort_c275_or
+1- 1
+-1 1
+.names sort_c272_or sort_c273_or sort_c275_and
+11 1
+.names sort_c268_or sort_c274_and sort_c276_or
+1- 1
+-1 1
+.names sort_c268_or sort_c274_and sort_c276_and
+11 1
+.names sort_c268_and sort_c274_or sort_c277_or
+1- 1
+-1 1
+.names sort_c268_and sort_c274_or sort_c277_and
+11 1
+.names sort_c269_or sort_c275_and sort_c278_or
+1- 1
+-1 1
+.names sort_c269_or sort_c275_and sort_c278_and
+11 1
+.names sort_c269_and sort_c275_or sort_c279_or
+1- 1
+-1 1
+.names sort_c269_and sort_c275_or sort_c279_and
+11 1
+.names sort_c276_and sort_c278_and sort_c280_or
+1- 1
+-1 1
+.names sort_c276_and sort_c278_and sort_c280_and
+11 1
+.names sort_c277_and sort_c279_and sort_c281_or
+1- 1
+-1 1
+.names sort_c277_and sort_c279_and sort_c281_and
+11 1
+.names sort_c280_and sort_c281_and sort_c282_or
+1- 1
+-1 1
+.names sort_c280_and sort_c281_and sort_c282_and
+11 1
+.names sort_c280_or sort_c281_or sort_c283_or
+1- 1
+-1 1
+.names sort_c280_or sort_c281_or sort_c283_and
+11 1
+.names sort_c276_or sort_c278_or sort_c284_or
+1- 1
+-1 1
+.names sort_c276_or sort_c278_or sort_c284_and
+11 1
+.names sort_c277_or sort_c279_or sort_c285_or
+1- 1
+-1 1
+.names sort_c277_or sort_c279_or sort_c285_and
+11 1
+.names sort_c284_and sort_c285_and sort_c286_or
+1- 1
+-1 1
+.names sort_c284_and sort_c285_and sort_c286_and
+11 1
+.names sort_c284_or sort_c285_or sort_c287_or
+1- 1
+-1 1
+.names sort_c284_or sort_c285_or sort_c287_and
+11 1
+.names sort_c258_or sort_c282_and sort_c288_or
+1- 1
+-1 1
+.names sort_c258_or sort_c282_and sort_c288_and
+11 1
+.names sort_c258_and sort_c282_or sort_c289_or
+1- 1
+-1 1
+.names sort_c258_and sort_c282_or sort_c289_and
+11 1
+.names sort_c259_or sort_c283_and sort_c290_or
+1- 1
+-1 1
+.names sort_c259_or sort_c283_and sort_c290_and
+11 1
+.names sort_c259_and sort_c283_or sort_c291_or
+1- 1
+-1 1
+.names sort_c259_and sort_c283_or sort_c291_and
+11 1
+.names sort_c262_or sort_c286_and sort_c292_or
+1- 1
+-1 1
+.names sort_c262_or sort_c286_and sort_c292_and
+11 1
+.names sort_c262_and sort_c286_or sort_c293_or
+1- 1
+-1 1
+.names sort_c262_and sort_c286_or sort_c293_and
+11 1
+.names sort_c263_or sort_c287_and sort_c294_or
+1- 1
+-1 1
+.names sort_c263_or sort_c287_and sort_c294_and
+11 1
+.names sort_c263_and sort_c287_or sort_c295_or
+1- 1
+-1 1
+.names sort_c263_and sort_c287_or sort_c295_and
+11 1
+.names sort_c288_or sort_c292_or sort_c296_or
+1- 1
+-1 1
+.names sort_c288_or sort_c292_or sort_c296_and
+11 1
+.names sort_c289_or sort_c293_or sort_c297_or
+1- 1
+-1 1
+.names sort_c289_or sort_c293_or sort_c297_and
+11 1
+.names sort_c290_or sort_c294_or sort_c298_or
+1- 1
+-1 1
+.names sort_c290_or sort_c294_or sort_c298_and
+11 1
+.names sort_c291_or sort_c295_or sort_c299_or
+1- 1
+-1 1
+.names sort_c291_or sort_c295_or sort_c299_and
+11 1
+.names sort_c296_or sort_c298_or sort_c300_or
+1- 1
+-1 1
+.names sort_c296_or sort_c298_or sort_c300_and
+11 1
+.names sort_c297_or sort_c299_or sort_c301_or
+1- 1
+-1 1
+.names sort_c297_or sort_c299_or sort_c301_and
+11 1
+.names sort_c300_or sort_c301_or sort_c302_or
+1- 1
+-1 1
+.names sort_c300_or sort_c301_or sort_c302_and
+11 1
+.names sort_c300_and sort_c301_and sort_c303_or
+1- 1
+-1 1
+.names sort_c300_and sort_c301_and sort_c303_and
+11 1
+.names sort_c296_and sort_c298_and sort_c304_or
+1- 1
+-1 1
+.names sort_c296_and sort_c298_and sort_c304_and
+11 1
+.names sort_c297_and sort_c299_and sort_c305_or
+1- 1
+-1 1
+.names sort_c297_and sort_c299_and sort_c305_and
+11 1
+.names sort_c304_or sort_c305_or sort_c306_or
+1- 1
+-1 1
+.names sort_c304_or sort_c305_or sort_c306_and
+11 1
+.names sort_c304_and sort_c305_and sort_c307_or
+1- 1
+-1 1
+.names sort_c304_and sort_c305_and sort_c307_and
+11 1
+.names sort_c288_and sort_c292_and sort_c308_or
+1- 1
+-1 1
+.names sort_c288_and sort_c292_and sort_c308_and
+11 1
+.names sort_c289_and sort_c293_and sort_c309_or
+1- 1
+-1 1
+.names sort_c289_and sort_c293_and sort_c309_and
+11 1
+.names sort_c290_and sort_c294_and sort_c310_or
+1- 1
+-1 1
+.names sort_c290_and sort_c294_and sort_c310_and
+11 1
+.names sort_c291_and sort_c295_and sort_c311_or
+1- 1
+-1 1
+.names sort_c291_and sort_c295_and sort_c311_and
+11 1
+.names sort_c308_or sort_c310_or sort_c312_or
+1- 1
+-1 1
+.names sort_c308_or sort_c310_or sort_c312_and
+11 1
+.names sort_c309_or sort_c311_or sort_c313_or
+1- 1
+-1 1
+.names sort_c309_or sort_c311_or sort_c313_and
+11 1
+.names sort_c312_or sort_c313_or sort_c314_or
+1- 1
+-1 1
+.names sort_c312_or sort_c313_or sort_c314_and
+11 1
+.names sort_c312_and sort_c313_and sort_c315_or
+1- 1
+-1 1
+.names sort_c312_and sort_c313_and sort_c315_and
+11 1
+.names sort_c308_and sort_c310_and sort_c316_or
+1- 1
+-1 1
+.names sort_c308_and sort_c310_and sort_c316_and
+11 1
+.names sort_c309_and sort_c311_and sort_c317_or
+1- 1
+-1 1
+.names sort_c309_and sort_c311_and sort_c317_and
+11 1
+.names sort_c316_or sort_c317_or sort_c318_or
+1- 1
+-1 1
+.names sort_c316_or sort_c317_or sort_c318_and
+11 1
+.names sort_c316_and sort_c317_and sort_c319_or
+1- 1
+-1 1
+.names sort_c316_and sort_c317_and sort_c319_and
+11 1
+.names CONST0 CONST0 sort_c320_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c320_and
+11 1
+.names CONST0 CONST0 sort_c321_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c321_and
+11 1
+.names sort_c320_or sort_c321_and sort_c322_or
+1- 1
+-1 1
+.names sort_c320_or sort_c321_and sort_c322_and
+11 1
+.names sort_c320_and sort_c321_or sort_c323_or
+1- 1
+-1 1
+.names sort_c320_and sort_c321_or sort_c323_and
+11 1
+.names sort_c322_or sort_c323_or sort_c324_or
+1- 1
+-1 1
+.names sort_c322_or sort_c323_or sort_c324_and
+11 1
+.names sort_c322_and sort_c323_and sort_c325_or
+1- 1
+-1 1
+.names sort_c322_and sort_c323_and sort_c325_and
+11 1
+.names CONST0 CONST0 sort_c326_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c326_and
+11 1
+.names CONST0 CONST0 sort_c327_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c327_and
+11 1
+.names sort_c326_or sort_c327_and sort_c328_or
+1- 1
+-1 1
+.names sort_c326_or sort_c327_and sort_c328_and
+11 1
+.names sort_c326_and sort_c327_or sort_c329_or
+1- 1
+-1 1
+.names sort_c326_and sort_c327_or sort_c329_and
+11 1
+.names sort_c328_and sort_c329_and sort_c330_or
+1- 1
+-1 1
+.names sort_c328_and sort_c329_and sort_c330_and
+11 1
+.names sort_c328_or sort_c329_or sort_c331_or
+1- 1
+-1 1
+.names sort_c328_or sort_c329_or sort_c331_and
+11 1
+.names sort_c324_or sort_c330_and sort_c332_or
+1- 1
+-1 1
+.names sort_c324_or sort_c330_and sort_c332_and
+11 1
+.names sort_c324_and sort_c330_or sort_c333_or
+1- 1
+-1 1
+.names sort_c324_and sort_c330_or sort_c333_and
+11 1
+.names sort_c325_or sort_c331_and sort_c334_or
+1- 1
+-1 1
+.names sort_c325_or sort_c331_and sort_c334_and
+11 1
+.names sort_c325_and sort_c331_or sort_c335_or
+1- 1
+-1 1
+.names sort_c325_and sort_c331_or sort_c335_and
+11 1
+.names sort_c332_or sort_c334_or sort_c336_or
+1- 1
+-1 1
+.names sort_c332_or sort_c334_or sort_c336_and
+11 1
+.names sort_c333_or sort_c335_or sort_c337_or
+1- 1
+-1 1
+.names sort_c333_or sort_c335_or sort_c337_and
+11 1
+.names sort_c336_or sort_c337_or sort_c338_or
+1- 1
+-1 1
+.names sort_c336_or sort_c337_or sort_c338_and
+11 1
+.names sort_c336_and sort_c337_and sort_c339_or
+1- 1
+-1 1
+.names sort_c336_and sort_c337_and sort_c339_and
+11 1
+.names sort_c332_and sort_c334_and sort_c340_or
+1- 1
+-1 1
+.names sort_c332_and sort_c334_and sort_c340_and
+11 1
+.names sort_c333_and sort_c335_and sort_c341_or
+1- 1
+-1 1
+.names sort_c333_and sort_c335_and sort_c341_and
+11 1
+.names sort_c340_or sort_c341_or sort_c342_or
+1- 1
+-1 1
+.names sort_c340_or sort_c341_or sort_c342_and
+11 1
+.names sort_c340_and sort_c341_and sort_c343_or
+1- 1
+-1 1
+.names sort_c340_and sort_c341_and sort_c343_and
+11 1
+.names CONST0 CONST0 sort_c344_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c344_and
+11 1
+.names CONST0 CONST0 sort_c345_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c345_and
+11 1
+.names sort_c344_or sort_c345_and sort_c346_or
+1- 1
+-1 1
+.names sort_c344_or sort_c345_and sort_c346_and
+11 1
+.names sort_c344_and sort_c345_or sort_c347_or
+1- 1
+-1 1
+.names sort_c344_and sort_c345_or sort_c347_and
+11 1
+.names sort_c346_or sort_c347_or sort_c348_or
+1- 1
+-1 1
+.names sort_c346_or sort_c347_or sort_c348_and
+11 1
+.names sort_c346_and sort_c347_and sort_c349_or
+1- 1
+-1 1
+.names sort_c346_and sort_c347_and sort_c349_and
+11 1
+.names CONST0 CONST0 sort_c350_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c350_and
+11 1
+.names CONST0 CONST0 sort_c351_or
+1- 1
+-1 1
+.names CONST0 CONST0 sort_c351_and
+11 1
+.names sort_c350_or sort_c351_and sort_c352_or
+1- 1
+-1 1
+.names sort_c350_or sort_c351_and sort_c352_and
+11 1
+.names sort_c350_and sort_c351_or sort_c353_or
+1- 1
+-1 1
+.names sort_c350_and sort_c351_or sort_c353_and
+11 1
+.names sort_c352_and sort_c353_and sort_c354_or
+1- 1
+-1 1
+.names sort_c352_and sort_c353_and sort_c354_and
+11 1
+.names sort_c352_or sort_c353_or sort_c355_or
+1- 1
+-1 1
+.names sort_c352_or sort_c353_or sort_c355_and
+11 1
+.names sort_c348_or sort_c354_and sort_c356_or
+1- 1
+-1 1
+.names sort_c348_or sort_c354_and sort_c356_and
+11 1
+.names sort_c348_and sort_c354_or sort_c357_or
+1- 1
+-1 1
+.names sort_c348_and sort_c354_or sort_c357_and
+11 1
+.names sort_c349_or sort_c355_and sort_c358_or
+1- 1
+-1 1
+.names sort_c349_or sort_c355_and sort_c358_and
+11 1
+.names sort_c349_and sort_c355_or sort_c359_or
+1- 1
+-1 1
+.names sort_c349_and sort_c355_or sort_c359_and
+11 1
+.names sort_c356_and sort_c358_and sort_c360_or
+1- 1
+-1 1
+.names sort_c356_and sort_c358_and sort_c360_and
+11 1
+.names sort_c357_and sort_c359_and sort_c361_or
+1- 1
+-1 1
+.names sort_c357_and sort_c359_and sort_c361_and
+11 1
+.names sort_c360_and sort_c361_and sort_c362_or
+1- 1
+-1 1
+.names sort_c360_and sort_c361_and sort_c362_and
+11 1
+.names sort_c360_or sort_c361_or sort_c363_or
+1- 1
+-1 1
+.names sort_c360_or sort_c361_or sort_c363_and
+11 1
+.names sort_c356_or sort_c358_or sort_c364_or
+1- 1
+-1 1
+.names sort_c356_or sort_c358_or sort_c364_and
+11 1
+.names sort_c357_or sort_c359_or sort_c365_or
+1- 1
+-1 1
+.names sort_c357_or sort_c359_or sort_c365_and
+11 1
+.names sort_c364_and sort_c365_and sort_c366_or
+1- 1
+-1 1
+.names sort_c364_and sort_c365_and sort_c366_and
+11 1
+.names sort_c364_or sort_c365_or sort_c367_or
+1- 1
+-1 1
+.names sort_c364_or sort_c365_or sort_c367_and
+11 1
+.names sort_c338_or sort_c362_and sort_c368_or
+1- 1
+-1 1
+.names sort_c338_or sort_c362_and sort_c368_and
+11 1
+.names sort_c338_and sort_c362_or sort_c369_or
+1- 1
+-1 1
+.names sort_c338_and sort_c362_or sort_c369_and
+11 1
+.names sort_c339_or sort_c363_and sort_c370_or
+1- 1
+-1 1
+.names sort_c339_or sort_c363_and sort_c370_and
+11 1
+.names sort_c339_and sort_c363_or sort_c371_or
+1- 1
+-1 1
+.names sort_c339_and sort_c363_or sort_c371_and
+11 1
+.names sort_c342_or sort_c366_and sort_c372_or
+1- 1
+-1 1
+.names sort_c342_or sort_c366_and sort_c372_and
+11 1
+.names sort_c342_and sort_c366_or sort_c373_or
+1- 1
+-1 1
+.names sort_c342_and sort_c366_or sort_c373_and
+11 1
+.names sort_c343_or sort_c367_and sort_c374_or
+1- 1
+-1 1
+.names sort_c343_or sort_c367_and sort_c374_and
+11 1
+.names sort_c343_and sort_c367_or sort_c375_or
+1- 1
+-1 1
+.names sort_c343_and sort_c367_or sort_c375_and
+11 1
+.names sort_c368_and sort_c372_and sort_c376_or
+1- 1
+-1 1
+.names sort_c368_and sort_c372_and sort_c376_and
+11 1
+.names sort_c369_and sort_c373_and sort_c377_or
+1- 1
+-1 1
+.names sort_c369_and sort_c373_and sort_c377_and
+11 1
+.names sort_c370_and sort_c374_and sort_c378_or
+1- 1
+-1 1
+.names sort_c370_and sort_c374_and sort_c378_and
+11 1
+.names sort_c371_and sort_c375_and sort_c379_or
+1- 1
+-1 1
+.names sort_c371_and sort_c375_and sort_c379_and
+11 1
+.names sort_c376_and sort_c378_and sort_c380_or
+1- 1
+-1 1
+.names sort_c376_and sort_c378_and sort_c380_and
+11 1
+.names sort_c377_and sort_c379_and sort_c381_or
+1- 1
+-1 1
+.names sort_c377_and sort_c379_and sort_c381_and
+11 1
+.names sort_c380_and sort_c381_and sort_c382_or
+1- 1
+-1 1
+.names sort_c380_and sort_c381_and sort_c382_and
+11 1
+.names sort_c380_or sort_c381_or sort_c383_or
+1- 1
+-1 1
+.names sort_c380_or sort_c381_or sort_c383_and
+11 1
+.names sort_c376_or sort_c378_or sort_c384_or
+1- 1
+-1 1
+.names sort_c376_or sort_c378_or sort_c384_and
+11 1
+.names sort_c377_or sort_c379_or sort_c385_or
+1- 1
+-1 1
+.names sort_c377_or sort_c379_or sort_c385_and
+11 1
+.names sort_c384_and sort_c385_and sort_c386_or
+1- 1
+-1 1
+.names sort_c384_and sort_c385_and sort_c386_and
+11 1
+.names sort_c384_or sort_c385_or sort_c387_or
+1- 1
+-1 1
+.names sort_c384_or sort_c385_or sort_c387_and
+11 1
+.names sort_c368_or sort_c372_or sort_c388_or
+1- 1
+-1 1
+.names sort_c368_or sort_c372_or sort_c388_and
+11 1
+.names sort_c369_or sort_c373_or sort_c389_or
+1- 1
+-1 1
+.names sort_c369_or sort_c373_or sort_c389_and
+11 1
+.names sort_c370_or sort_c374_or sort_c390_or
+1- 1
+-1 1
+.names sort_c370_or sort_c374_or sort_c390_and
+11 1
+.names sort_c371_or sort_c375_or sort_c391_or
+1- 1
+-1 1
+.names sort_c371_or sort_c375_or sort_c391_and
+11 1
+.names sort_c388_and sort_c390_and sort_c392_or
+1- 1
+-1 1
+.names sort_c388_and sort_c390_and sort_c392_and
+11 1
+.names sort_c389_and sort_c391_and sort_c393_or
+1- 1
+-1 1
+.names sort_c389_and sort_c391_and sort_c393_and
+11 1
+.names sort_c392_and sort_c393_and sort_c394_or
+1- 1
+-1 1
+.names sort_c392_and sort_c393_and sort_c394_and
+11 1
+.names sort_c392_or sort_c393_or sort_c395_or
+1- 1
+-1 1
+.names sort_c392_or sort_c393_or sort_c395_and
+11 1
+.names sort_c388_or sort_c390_or sort_c396_or
+1- 1
+-1 1
+.names sort_c388_or sort_c390_or sort_c396_and
+11 1
+.names sort_c389_or sort_c391_or sort_c397_or
+1- 1
+-1 1
+.names sort_c389_or sort_c391_or sort_c397_and
+11 1
+.names sort_c396_and sort_c397_and sort_c398_or
+1- 1
+-1 1
+.names sort_c396_and sort_c397_and sort_c398_and
+11 1
+.names sort_c396_or sort_c397_or sort_c399_or
+1- 1
+-1 1
+.names sort_c396_or sort_c397_or sort_c399_and
+11 1
+.names sort_c302_or sort_c382_and sort_c400_or
+1- 1
+-1 1
+.names sort_c302_or sort_c382_and sort_c400_and
+11 1
+.names sort_c302_and sort_c382_or sort_c401_or
+1- 1
+-1 1
+.names sort_c302_and sort_c382_or sort_c401_and
+11 1
+.names sort_c303_or sort_c383_and sort_c402_or
+1- 1
+-1 1
+.names sort_c303_or sort_c383_and sort_c402_and
+11 1
+.names sort_c303_and sort_c383_or sort_c403_or
+1- 1
+-1 1
+.names sort_c303_and sort_c383_or sort_c403_and
+11 1
+.names sort_c306_or sort_c386_and sort_c404_or
+1- 1
+-1 1
+.names sort_c306_or sort_c386_and sort_c404_and
+11 1
+.names sort_c306_and sort_c386_or sort_c405_or
+1- 1
+-1 1
+.names sort_c306_and sort_c386_or sort_c405_and
+11 1
+.names sort_c307_or sort_c387_and sort_c406_or
+1- 1
+-1 1
+.names sort_c307_or sort_c387_and sort_c406_and
+11 1
+.names sort_c307_and sort_c387_or sort_c407_or
+1- 1
+-1 1
+.names sort_c307_and sort_c387_or sort_c407_and
+11 1
+.names sort_c314_or sort_c394_and sort_c408_or
+1- 1
+-1 1
+.names sort_c314_or sort_c394_and sort_c408_and
+11 1
+.names sort_c314_and sort_c394_or sort_c409_or
+1- 1
+-1 1
+.names sort_c314_and sort_c394_or sort_c409_and
+11 1
+.names sort_c315_or sort_c395_and sort_c410_or
+1- 1
+-1 1
+.names sort_c315_or sort_c395_and sort_c410_and
+11 1
+.names sort_c315_and sort_c395_or sort_c411_or
+1- 1
+-1 1
+.names sort_c315_and sort_c395_or sort_c411_and
+11 1
+.names sort_c318_or sort_c398_and sort_c412_or
+1- 1
+-1 1
+.names sort_c318_or sort_c398_and sort_c412_and
+11 1
+.names sort_c318_and sort_c398_or sort_c413_or
+1- 1
+-1 1
+.names sort_c318_and sort_c398_or sort_c413_and
+11 1
+.names sort_c319_or sort_c399_and sort_c414_or
+1- 1
+-1 1
+.names sort_c319_or sort_c399_and sort_c414_and
+11 1
+.names sort_c319_and sort_c399_or sort_c415_or
+1- 1
+-1 1
+.names sort_c319_and sort_c399_or sort_c415_and
+11 1
+.names sort_c400_and sort_c408_and sort_c416_or
+1- 1
+-1 1
+.names sort_c400_and sort_c408_and sort_c416_and
+11 1
+.names sort_c401_and sort_c409_and sort_c417_or
+1- 1
+-1 1
+.names sort_c401_and sort_c409_and sort_c417_and
+11 1
+.names sort_c402_and sort_c410_and sort_c418_or
+1- 1
+-1 1
+.names sort_c402_and sort_c410_and sort_c418_and
+11 1
+.names sort_c403_and sort_c411_and sort_c419_or
+1- 1
+-1 1
+.names sort_c403_and sort_c411_and sort_c419_and
+11 1
+.names sort_c404_and sort_c412_and sort_c420_or
+1- 1
+-1 1
+.names sort_c404_and sort_c412_and sort_c420_and
+11 1
+.names sort_c405_and sort_c413_and sort_c421_or
+1- 1
+-1 1
+.names sort_c405_and sort_c413_and sort_c421_and
+11 1
+.names sort_c406_and sort_c414_and sort_c422_or
+1- 1
+-1 1
+.names sort_c406_and sort_c414_and sort_c422_and
+11 1
+.names sort_c407_and sort_c415_and sort_c423_or
+1- 1
+-1 1
+.names sort_c407_and sort_c415_and sort_c423_and
+11 1
+.names sort_c416_and sort_c420_and sort_c424_or
+1- 1
+-1 1
+.names sort_c416_and sort_c420_and sort_c424_and
+11 1
+.names sort_c417_and sort_c421_and sort_c425_or
+1- 1
+-1 1
+.names sort_c417_and sort_c421_and sort_c425_and
+11 1
+.names sort_c418_and sort_c422_and sort_c426_or
+1- 1
+-1 1
+.names sort_c418_and sort_c422_and sort_c426_and
+11 1
+.names sort_c419_and sort_c423_and sort_c427_or
+1- 1
+-1 1
+.names sort_c419_and sort_c423_and sort_c427_and
+11 1
+.names sort_c424_and sort_c426_and sort_c428_or
+1- 1
+-1 1
+.names sort_c424_and sort_c426_and sort_c428_and
+11 1
+.names sort_c425_and sort_c427_and sort_c429_or
+1- 1
+-1 1
+.names sort_c425_and sort_c427_and sort_c429_and
+11 1
+.names sort_c428_and sort_c429_and sort_c430_or
+1- 1
+-1 1
+.names sort_c428_and sort_c429_and sort_c430_and
+11 1
+.names sort_c428_or sort_c429_or sort_c431_or
+1- 1
+-1 1
+.names sort_c428_or sort_c429_or sort_c431_and
+11 1
+.names sort_c424_or sort_c426_or sort_c432_or
+1- 1
+-1 1
+.names sort_c424_or sort_c426_or sort_c432_and
+11 1
+.names sort_c425_or sort_c427_or sort_c433_or
+1- 1
+-1 1
+.names sort_c425_or sort_c427_or sort_c433_and
+11 1
+.names sort_c432_and sort_c433_and sort_c434_or
+1- 1
+-1 1
+.names sort_c432_and sort_c433_and sort_c434_and
+11 1
+.names sort_c432_or sort_c433_or sort_c435_or
+1- 1
+-1 1
+.names sort_c432_or sort_c433_or sort_c435_and
+11 1
+.names sort_c416_or sort_c420_or sort_c436_or
+1- 1
+-1 1
+.names sort_c416_or sort_c420_or sort_c436_and
+11 1
+.names sort_c417_or sort_c421_or sort_c437_or
+1- 1
+-1 1
+.names sort_c417_or sort_c421_or sort_c437_and
+11 1
+.names sort_c418_or sort_c422_or sort_c438_or
+1- 1
+-1 1
+.names sort_c418_or sort_c422_or sort_c438_and
+11 1
+.names sort_c419_or sort_c423_or sort_c439_or
+1- 1
+-1 1
+.names sort_c419_or sort_c423_or sort_c439_and
+11 1
+.names sort_c436_and sort_c438_and sort_c440_or
+1- 1
+-1 1
+.names sort_c436_and sort_c438_and sort_c440_and
+11 1
+.names sort_c437_and sort_c439_and sort_c441_or
+1- 1
+-1 1
+.names sort_c437_and sort_c439_and sort_c441_and
+11 1
+.names sort_c440_and sort_c441_and sort_c442_or
+1- 1
+-1 1
+.names sort_c440_and sort_c441_and sort_c442_and
+11 1
+.names sort_c440_or sort_c441_or sort_c443_or
+1- 1
+-1 1
+.names sort_c440_or sort_c441_or sort_c443_and
+11 1
+.names sort_c436_or sort_c438_or sort_c444_or
+1- 1
+-1 1
+.names sort_c436_or sort_c438_or sort_c444_and
+11 1
+.names sort_c437_or sort_c439_or sort_c445_or
+1- 1
+-1 1
+.names sort_c437_or sort_c439_or sort_c445_and
+11 1
+.names sort_c444_and sort_c445_and sort_c446_or
+1- 1
+-1 1
+.names sort_c444_and sort_c445_and sort_c446_and
+11 1
+.names sort_c444_or sort_c445_or sort_c447_or
+1- 1
+-1 1
+.names sort_c444_or sort_c445_or sort_c447_and
+11 1
+.names sort_c400_or sort_c408_or sort_c448_or
+1- 1
+-1 1
+.names sort_c400_or sort_c408_or sort_c448_and
+11 1
+.names sort_c401_or sort_c409_or sort_c449_or
+1- 1
+-1 1
+.names sort_c401_or sort_c409_or sort_c449_and
+11 1
+.names sort_c402_or sort_c410_or sort_c450_or
+1- 1
+-1 1
+.names sort_c402_or sort_c410_or sort_c450_and
+11 1
+.names sort_c403_or sort_c411_or sort_c451_or
+1- 1
+-1 1
+.names sort_c403_or sort_c411_or sort_c451_and
+11 1
+.names sort_c404_or sort_c412_or sort_c452_or
+1- 1
+-1 1
+.names sort_c404_or sort_c412_or sort_c452_and
+11 1
+.names sort_c405_or sort_c413_or sort_c453_or
+1- 1
+-1 1
+.names sort_c405_or sort_c413_or sort_c453_and
+11 1
+.names sort_c406_or sort_c414_or sort_c454_or
+1- 1
+-1 1
+.names sort_c406_or sort_c414_or sort_c454_and
+11 1
+.names sort_c407_or sort_c415_or sort_c455_or
+1- 1
+-1 1
+.names sort_c407_or sort_c415_or sort_c455_and
+11 1
+.names sort_c448_and sort_c452_and sort_c456_or
+1- 1
+-1 1
+.names sort_c448_and sort_c452_and sort_c456_and
+11 1
+.names sort_c449_and sort_c453_and sort_c457_or
+1- 1
+-1 1
+.names sort_c449_and sort_c453_and sort_c457_and
+11 1
+.names sort_c450_and sort_c454_and sort_c458_or
+1- 1
+-1 1
+.names sort_c450_and sort_c454_and sort_c458_and
+11 1
+.names sort_c451_and sort_c455_and sort_c459_or
+1- 1
+-1 1
+.names sort_c451_and sort_c455_and sort_c459_and
+11 1
+.names sort_c456_and sort_c458_and sort_c460_or
+1- 1
+-1 1
+.names sort_c456_and sort_c458_and sort_c460_and
+11 1
+.names sort_c457_and sort_c459_and sort_c461_or
+1- 1
+-1 1
+.names sort_c457_and sort_c459_and sort_c461_and
+11 1
+.names sort_c460_and sort_c461_and sort_c462_or
+1- 1
+-1 1
+.names sort_c460_and sort_c461_and sort_c462_and
+11 1
+.names sort_c460_or sort_c461_or sort_c463_or
+1- 1
+-1 1
+.names sort_c460_or sort_c461_or sort_c463_and
+11 1
+.names sort_c456_or sort_c458_or sort_c464_or
+1- 1
+-1 1
+.names sort_c456_or sort_c458_or sort_c464_and
+11 1
+.names sort_c457_or sort_c459_or sort_c465_or
+1- 1
+-1 1
+.names sort_c457_or sort_c459_or sort_c465_and
+11 1
+.names sort_c464_and sort_c465_and sort_c466_or
+1- 1
+-1 1
+.names sort_c464_and sort_c465_and sort_c466_and
+11 1
+.names sort_c464_or sort_c465_or sort_c467_or
+1- 1
+-1 1
+.names sort_c464_or sort_c465_or sort_c467_and
+11 1
+.names sort_c448_or sort_c452_or sort_c468_or
+1- 1
+-1 1
+.names sort_c448_or sort_c452_or sort_c468_and
+11 1
+.names sort_c449_or sort_c453_or sort_c469_or
+1- 1
+-1 1
+.names sort_c449_or sort_c453_or sort_c469_and
+11 1
+.names sort_c450_or sort_c454_or sort_c470_or
+1- 1
+-1 1
+.names sort_c450_or sort_c454_or sort_c470_and
+11 1
+.names sort_c451_or sort_c455_or sort_c471_or
+1- 1
+-1 1
+.names sort_c451_or sort_c455_or sort_c471_and
+11 1
+.names sort_c468_and sort_c470_and sort_c472_or
+1- 1
+-1 1
+.names sort_c468_and sort_c470_and sort_c472_and
+11 1
+.names sort_c469_and sort_c471_and sort_c473_or
+1- 1
+-1 1
+.names sort_c469_and sort_c471_and sort_c473_and
+11 1
+.names sort_c472_and sort_c473_and sort_c474_or
+1- 1
+-1 1
+.names sort_c472_and sort_c473_and sort_c474_and
+11 1
+.names sort_c472_or sort_c473_or sort_c475_or
+1- 1
+-1 1
+.names sort_c472_or sort_c473_or sort_c475_and
+11 1
+.names sort_c468_or sort_c470_or sort_c476_or
+1- 1
+-1 1
+.names sort_c468_or sort_c470_or sort_c476_and
+11 1
+.names sort_c469_or sort_c471_or sort_c477_or
+1- 1
+-1 1
+.names sort_c469_or sort_c471_or sort_c477_and
+11 1
+.names sort_c476_and sort_c477_and sort_c478_or
+1- 1
+-1 1
+.names sort_c476_and sort_c477_and sort_c478_and
+11 1
+.names sort_c476_or sort_c477_or sort_c479_or
+1- 1
+-1 1
+.names sort_c476_or sort_c477_or sort_c479_and
+11 1
+.names sort_c190_or sort_c430_and sort_c480_or
+1- 1
+-1 1
+.names sort_c190_or sort_c430_and sort_c480_and
+11 1
+.names sort_c190_and sort_c430_or sort_c481_or
+1- 1
+-1 1
+.names sort_c190_and sort_c430_or sort_c481_and
+11 1
+.names sort_c191_or sort_c431_and sort_c482_or
+1- 1
+-1 1
+.names sort_c191_or sort_c431_and sort_c482_and
+11 1
+.names sort_c191_and sort_c431_or sort_c483_or
+1- 1
+-1 1
+.names sort_c191_and sort_c431_or sort_c483_and
+11 1
+.names sort_c194_or sort_c434_and sort_c484_or
+1- 1
+-1 1
+.names sort_c194_or sort_c434_and sort_c484_and
+11 1
+.names sort_c194_and sort_c434_or sort_c485_or
+1- 1
+-1 1
+.names sort_c194_and sort_c434_or sort_c485_and
+11 1
+.names sort_c195_or sort_c435_and sort_c486_or
+1- 1
+-1 1
+.names sort_c195_or sort_c435_and sort_c486_and
+11 1
+.names sort_c195_and sort_c435_or sort_c487_or
+1- 1
+-1 1
+.names sort_c195_and sort_c435_or sort_c487_and
+11 1
+.names sort_c202_or sort_c442_and sort_c488_or
+1- 1
+-1 1
+.names sort_c202_or sort_c442_and sort_c488_and
+11 1
+.names sort_c202_and sort_c442_or sort_c489_or
+1- 1
+-1 1
+.names sort_c202_and sort_c442_or sort_c489_and
+11 1
+.names sort_c203_or sort_c443_and sort_c490_or
+1- 1
+-1 1
+.names sort_c203_or sort_c443_and sort_c490_and
+11 1
+.names sort_c203_and sort_c443_or sort_c491_or
+1- 1
+-1 1
+.names sort_c203_and sort_c443_or sort_c491_and
+11 1
+.names sort_c206_or sort_c446_and sort_c492_or
+1- 1
+-1 1
+.names sort_c206_or sort_c446_and sort_c492_and
+11 1
+.names sort_c206_and sort_c446_or sort_c493_or
+1- 1
+-1 1
+.names sort_c206_and sort_c446_or sort_c493_and
+11 1
+.names sort_c207_or sort_c447_and sort_c494_or
+1- 1
+-1 1
+.names sort_c207_or sort_c447_and sort_c494_and
+11 1
+.names sort_c207_and sort_c447_or sort_c495_or
+1- 1
+-1 1
+.names sort_c207_and sort_c447_or sort_c495_and
+11 1
+.names sort_c222_or sort_c462_and sort_c496_or
+1- 1
+-1 1
+.names sort_c222_or sort_c462_and sort_c496_and
+11 1
+.names sort_c222_and sort_c462_or sort_c497_or
+1- 1
+-1 1
+.names sort_c222_and sort_c462_or sort_c497_and
+11 1
+.names sort_c223_or sort_c463_and sort_c498_or
+1- 1
+-1 1
+.names sort_c223_or sort_c463_and sort_c498_and
+11 1
+.names sort_c223_and sort_c463_or sort_c499_or
+1- 1
+-1 1
+.names sort_c223_and sort_c463_or sort_c499_and
+11 1
+.names sort_c226_or sort_c466_and sort_c500_or
+1- 1
+-1 1
+.names sort_c226_or sort_c466_and sort_c500_and
+11 1
+.names sort_c226_and sort_c466_or sort_c501_or
+1- 1
+-1 1
+.names sort_c226_and sort_c466_or sort_c501_and
+11 1
+.names sort_c227_or sort_c467_and sort_c502_or
+1- 1
+-1 1
+.names sort_c227_or sort_c467_and sort_c502_and
+11 1
+.names sort_c227_and sort_c467_or sort_c503_or
+1- 1
+-1 1
+.names sort_c227_and sort_c467_or sort_c503_and
+11 1
+.names sort_c234_or sort_c474_and sort_c504_or
+1- 1
+-1 1
+.names sort_c234_or sort_c474_and sort_c504_and
+11 1
+.names sort_c234_and sort_c474_or sort_c505_or
+1- 1
+-1 1
+.names sort_c234_and sort_c474_or sort_c505_and
+11 1
+.names sort_c235_or sort_c475_and sort_c506_or
+1- 1
+-1 1
+.names sort_c235_or sort_c475_and sort_c506_and
+11 1
+.names sort_c235_and sort_c475_or sort_c507_or
+1- 1
+-1 1
+.names sort_c235_and sort_c475_or sort_c507_and
+11 1
+.names sort_c238_or sort_c478_and sort_c508_or
+1- 1
+-1 1
+.names sort_c238_or sort_c478_and sort_c508_and
+11 1
+.names sort_c238_and sort_c478_or sort_c509_or
+1- 1
+-1 1
+.names sort_c238_and sort_c478_or sort_c509_and
+11 1
+.names sort_c239_or sort_c479_and sort_c510_or
+1- 1
+-1 1
+.names sort_c239_or sort_c479_and sort_c510_and
+11 1
+.names sort_c239_and sort_c479_or sort_c511_or
+1- 1
+-1 1
+.names sort_c239_and sort_c479_or sort_c511_and
+11 1
+.names sort_c480_or sort_c496_or sort_c512_or
+1- 1
+-1 1
+.names sort_c480_or sort_c496_or sort_c512_and
+11 1
+.names sort_c481_or sort_c497_or sort_c513_or
+1- 1
+-1 1
+.names sort_c481_or sort_c497_or sort_c513_and
+11 1
+.names sort_c482_or sort_c498_or sort_c514_or
+1- 1
+-1 1
+.names sort_c482_or sort_c498_or sort_c514_and
+11 1
+.names sort_c483_or sort_c499_or sort_c515_or
+1- 1
+-1 1
+.names sort_c483_or sort_c499_or sort_c515_and
+11 1
+.names sort_c484_or sort_c500_or sort_c516_or
+1- 1
+-1 1
+.names sort_c484_or sort_c500_or sort_c516_and
+11 1
+.names sort_c485_or sort_c501_or sort_c517_or
+1- 1
+-1 1
+.names sort_c485_or sort_c501_or sort_c517_and
+11 1
+.names sort_c486_or sort_c502_or sort_c518_or
+1- 1
+-1 1
+.names sort_c486_or sort_c502_or sort_c518_and
+11 1
+.names sort_c487_or sort_c503_or sort_c519_or
+1- 1
+-1 1
+.names sort_c487_or sort_c503_or sort_c519_and
+11 1
+.names sort_c488_or sort_c504_or sort_c520_or
+1- 1
+-1 1
+.names sort_c488_or sort_c504_or sort_c520_and
+11 1
+.names sort_c489_or sort_c505_or sort_c521_or
+1- 1
+-1 1
+.names sort_c489_or sort_c505_or sort_c521_and
+11 1
+.names sort_c490_or sort_c506_or sort_c522_or
+1- 1
+-1 1
+.names sort_c490_or sort_c506_or sort_c522_and
+11 1
+.names sort_c491_or sort_c507_or sort_c523_or
+1- 1
+-1 1
+.names sort_c491_or sort_c507_or sort_c523_and
+11 1
+.names sort_c492_or sort_c508_or sort_c524_or
+1- 1
+-1 1
+.names sort_c492_or sort_c508_or sort_c524_and
+11 1
+.names sort_c493_or sort_c509_or sort_c525_or
+1- 1
+-1 1
+.names sort_c493_or sort_c509_or sort_c525_and
+11 1
+.names sort_c494_or sort_c510_or sort_c526_or
+1- 1
+-1 1
+.names sort_c494_or sort_c510_or sort_c526_and
+11 1
+.names sort_c495_or sort_c511_or sort_c527_or
+1- 1
+-1 1
+.names sort_c495_or sort_c511_or sort_c527_and
+11 1
+.names sort_c512_or sort_c520_or sort_c528_or
+1- 1
+-1 1
+.names sort_c512_or sort_c520_or sort_c528_and
+11 1
+.names sort_c513_or sort_c521_or sort_c529_or
+1- 1
+-1 1
+.names sort_c513_or sort_c521_or sort_c529_and
+11 1
+.names sort_c514_or sort_c522_or sort_c530_or
+1- 1
+-1 1
+.names sort_c514_or sort_c522_or sort_c530_and
+11 1
+.names sort_c515_or sort_c523_or sort_c531_or
+1- 1
+-1 1
+.names sort_c515_or sort_c523_or sort_c531_and
+11 1
+.names sort_c516_or sort_c524_or sort_c532_or
+1- 1
+-1 1
+.names sort_c516_or sort_c524_or sort_c532_and
+11 1
+.names sort_c517_or sort_c525_or sort_c533_or
+1- 1
+-1 1
+.names sort_c517_or sort_c525_or sort_c533_and
+11 1
+.names sort_c518_or sort_c526_or sort_c534_or
+1- 1
+-1 1
+.names sort_c518_or sort_c526_or sort_c534_and
+11 1
+.names sort_c519_or sort_c527_or sort_c535_or
+1- 1
+-1 1
+.names sort_c519_or sort_c527_or sort_c535_and
+11 1
+.names sort_c528_or sort_c532_or sort_c536_or
+1- 1
+-1 1
+.names sort_c528_or sort_c532_or sort_c536_and
+11 1
+.names sort_c529_or sort_c533_or sort_c537_or
+1- 1
+-1 1
+.names sort_c529_or sort_c533_or sort_c537_and
+11 1
+.names sort_c530_or sort_c534_or sort_c538_or
+1- 1
+-1 1
+.names sort_c530_or sort_c534_or sort_c538_and
+11 1
+.names sort_c531_or sort_c535_or sort_c539_or
+1- 1
+-1 1
+.names sort_c531_or sort_c535_or sort_c539_and
+11 1
+.names sort_c536_or sort_c538_or sort_c540_or
+1- 1
+-1 1
+.names sort_c536_or sort_c538_or sort_c540_and
+11 1
+.names sort_c537_or sort_c539_or sort_c541_or
+1- 1
+-1 1
+.names sort_c537_or sort_c539_or sort_c541_and
+11 1
+.names sort_c540_or sort_c541_or sort_c542_or
+1- 1
+-1 1
+.names sort_c540_or sort_c541_or sort_c542_and
+11 1
+.names sort_c540_and sort_c541_and sort_c543_or
+1- 1
+-1 1
+.names sort_c540_and sort_c541_and sort_c543_and
+11 1
+.names sort_c536_and sort_c538_and sort_c544_or
+1- 1
+-1 1
+.names sort_c536_and sort_c538_and sort_c544_and
+11 1
+.names sort_c537_and sort_c539_and sort_c545_or
+1- 1
+-1 1
+.names sort_c537_and sort_c539_and sort_c545_and
+11 1
+.names sort_c544_or sort_c545_or sort_c546_or
+1- 1
+-1 1
+.names sort_c544_or sort_c545_or sort_c546_and
+11 1
+.names sort_c544_and sort_c545_and sort_c547_or
+1- 1
+-1 1
+.names sort_c544_and sort_c545_and sort_c547_and
+11 1
+.names sort_c528_and sort_c532_and sort_c548_or
+1- 1
+-1 1
+.names sort_c528_and sort_c532_and sort_c548_and
+11 1
+.names sort_c529_and sort_c533_and sort_c549_or
+1- 1
+-1 1
+.names sort_c529_and sort_c533_and sort_c549_and
+11 1
+.names sort_c530_and sort_c534_and sort_c550_or
+1- 1
+-1 1
+.names sort_c530_and sort_c534_and sort_c550_and
+11 1
+.names sort_c531_and sort_c535_and sort_c551_or
+1- 1
+-1 1
+.names sort_c531_and sort_c535_and sort_c551_and
+11 1
+.names sort_c548_or sort_c550_or sort_c552_or
+1- 1
+-1 1
+.names sort_c548_or sort_c550_or sort_c552_and
+11 1
+.names sort_c549_or sort_c551_or sort_c553_or
+1- 1
+-1 1
+.names sort_c549_or sort_c551_or sort_c553_and
+11 1
+.names sort_c552_or sort_c553_or sort_c554_or
+1- 1
+-1 1
+.names sort_c552_or sort_c553_or sort_c554_and
+11 1
+.names sort_c552_and sort_c553_and sort_c555_or
+1- 1
+-1 1
+.names sort_c552_and sort_c553_and sort_c555_and
+11 1
+.names sort_c548_and sort_c550_and sort_c556_or
+1- 1
+-1 1
+.names sort_c548_and sort_c550_and sort_c556_and
+11 1
+.names sort_c549_and sort_c551_and sort_c557_or
+1- 1
+-1 1
+.names sort_c549_and sort_c551_and sort_c557_and
+11 1
+.names sort_c556_or sort_c557_or sort_c558_or
+1- 1
+-1 1
+.names sort_c556_or sort_c557_or sort_c558_and
+11 1
+.names sort_c556_and sort_c557_and sort_c559_or
+1- 1
+-1 1
+.names sort_c556_and sort_c557_and sort_c559_and
+11 1
+.names sort_c512_and sort_c520_and sort_c560_or
+1- 1
+-1 1
+.names sort_c512_and sort_c520_and sort_c560_and
+11 1
+.names sort_c513_and sort_c521_and sort_c561_or
+1- 1
+-1 1
+.names sort_c513_and sort_c521_and sort_c561_and
+11 1
+.names sort_c514_and sort_c522_and sort_c562_or
+1- 1
+-1 1
+.names sort_c514_and sort_c522_and sort_c562_and
+11 1
+.names sort_c515_and sort_c523_and sort_c563_or
+1- 1
+-1 1
+.names sort_c515_and sort_c523_and sort_c563_and
+11 1
+.names sort_c516_and sort_c524_and sort_c564_or
+1- 1
+-1 1
+.names sort_c516_and sort_c524_and sort_c564_and
+11 1
+.names sort_c517_and sort_c525_and sort_c565_or
+1- 1
+-1 1
+.names sort_c517_and sort_c525_and sort_c565_and
+11 1
+.names sort_c518_and sort_c526_and sort_c566_or
+1- 1
+-1 1
+.names sort_c518_and sort_c526_and sort_c566_and
+11 1
+.names sort_c519_and sort_c527_and sort_c567_or
+1- 1
+-1 1
+.names sort_c519_and sort_c527_and sort_c567_and
+11 1
+.names sort_c560_or sort_c564_or sort_c568_or
+1- 1
+-1 1
+.names sort_c560_or sort_c564_or sort_c568_and
+11 1
+.names sort_c561_or sort_c565_or sort_c569_or
+1- 1
+-1 1
+.names sort_c561_or sort_c565_or sort_c569_and
+11 1
+.names sort_c562_or sort_c566_or sort_c570_or
+1- 1
+-1 1
+.names sort_c562_or sort_c566_or sort_c570_and
+11 1
+.names sort_c563_or sort_c567_or sort_c571_or
+1- 1
+-1 1
+.names sort_c563_or sort_c567_or sort_c571_and
+11 1
+.names sort_c568_or sort_c570_or sort_c572_or
+1- 1
+-1 1
+.names sort_c568_or sort_c570_or sort_c572_and
+11 1
+.names sort_c569_or sort_c571_or sort_c573_or
+1- 1
+-1 1
+.names sort_c569_or sort_c571_or sort_c573_and
+11 1
+.names sort_c572_or sort_c573_or sort_c574_or
+1- 1
+-1 1
+.names sort_c572_or sort_c573_or sort_c574_and
+11 1
+.names sort_c572_and sort_c573_and sort_c575_or
+1- 1
+-1 1
+.names sort_c572_and sort_c573_and sort_c575_and
+11 1
+.names sort_c568_and sort_c570_and sort_c576_or
+1- 1
+-1 1
+.names sort_c568_and sort_c570_and sort_c576_and
+11 1
+.names sort_c569_and sort_c571_and sort_c577_or
+1- 1
+-1 1
+.names sort_c569_and sort_c571_and sort_c577_and
+11 1
+.names sort_c576_or sort_c577_or sort_c578_or
+1- 1
+-1 1
+.names sort_c576_or sort_c577_or sort_c578_and
+11 1
+.names sort_c576_and sort_c577_and sort_c579_or
+1- 1
+-1 1
+.names sort_c576_and sort_c577_and sort_c579_and
+11 1
+.names sort_c560_and sort_c564_and sort_c580_or
+1- 1
+-1 1
+.names sort_c560_and sort_c564_and sort_c580_and
+11 1
+.names sort_c561_and sort_c565_and sort_c581_or
+1- 1
+-1 1
+.names sort_c561_and sort_c565_and sort_c581_and
+11 1
+.names sort_c562_and sort_c566_and sort_c582_or
+1- 1
+-1 1
+.names sort_c562_and sort_c566_and sort_c582_and
+11 1
+.names sort_c563_and sort_c567_and sort_c583_or
+1- 1
+-1 1
+.names sort_c563_and sort_c567_and sort_c583_and
+11 1
+.names sort_c580_or sort_c582_or sort_c584_or
+1- 1
+-1 1
+.names sort_c580_or sort_c582_or sort_c584_and
+11 1
+.names sort_c581_or sort_c583_or sort_c585_or
+1- 1
+-1 1
+.names sort_c581_or sort_c583_or sort_c585_and
+11 1
+.names sort_c584_or sort_c585_or sort_c586_or
+1- 1
+-1 1
+.names sort_c584_or sort_c585_or sort_c586_and
+11 1
+.names sort_c584_and sort_c585_and sort_c587_or
+1- 1
+-1 1
+.names sort_c584_and sort_c585_and sort_c587_and
+11 1
+.names sort_c580_and sort_c582_and sort_c588_or
+1- 1
+-1 1
+.names sort_c580_and sort_c582_and sort_c588_and
+11 1
+.names sort_c581_and sort_c583_and sort_c589_or
+1- 1
+-1 1
+.names sort_c581_and sort_c583_and sort_c589_and
+11 1
+.names sort_c588_or sort_c589_or sort_c590_or
+1- 1
+-1 1
+.names sort_c588_or sort_c589_or sort_c590_and
+11 1
+.names sort_c588_and sort_c589_and sort_c591_or
+1- 1
+-1 1
+.names sort_c588_and sort_c589_and sort_c591_and
+11 1
+.names sort_c480_and sort_c496_and sort_c592_or
+1- 1
+-1 1
+.names sort_c480_and sort_c496_and sort_c592_and
+11 1
+.names sort_c481_and sort_c497_and sort_c593_or
+1- 1
+-1 1
+.names sort_c481_and sort_c497_and sort_c593_and
+11 1
+.names sort_c482_and sort_c498_and sort_c594_or
+1- 1
+-1 1
+.names sort_c482_and sort_c498_and sort_c594_and
+11 1
+.names sort_c483_and sort_c499_and sort_c595_or
+1- 1
+-1 1
+.names sort_c483_and sort_c499_and sort_c595_and
+11 1
+.names sort_c484_and sort_c500_and sort_c596_or
+1- 1
+-1 1
+.names sort_c484_and sort_c500_and sort_c596_and
+11 1
+.names sort_c485_and sort_c501_and sort_c597_or
+1- 1
+-1 1
+.names sort_c485_and sort_c501_and sort_c597_and
+11 1
+.names sort_c486_and sort_c502_and sort_c598_or
+1- 1
+-1 1
+.names sort_c486_and sort_c502_and sort_c598_and
+11 1
+.names sort_c487_and sort_c503_and sort_c599_or
+1- 1
+-1 1
+.names sort_c487_and sort_c503_and sort_c599_and
+11 1
+.names sort_c488_and sort_c504_and sort_c600_or
+1- 1
+-1 1
+.names sort_c488_and sort_c504_and sort_c600_and
+11 1
+.names sort_c489_and sort_c505_and sort_c601_or
+1- 1
+-1 1
+.names sort_c489_and sort_c505_and sort_c601_and
+11 1
+.names sort_c490_and sort_c506_and sort_c602_or
+1- 1
+-1 1
+.names sort_c490_and sort_c506_and sort_c602_and
+11 1
+.names sort_c491_and sort_c507_and sort_c603_or
+1- 1
+-1 1
+.names sort_c491_and sort_c507_and sort_c603_and
+11 1
+.names sort_c492_and sort_c508_and sort_c604_or
+1- 1
+-1 1
+.names sort_c492_and sort_c508_and sort_c604_and
+11 1
+.names sort_c493_and sort_c509_and sort_c605_or
+1- 1
+-1 1
+.names sort_c493_and sort_c509_and sort_c605_and
+11 1
+.names sort_c494_and sort_c510_and sort_c606_or
+1- 1
+-1 1
+.names sort_c494_and sort_c510_and sort_c606_and
+11 1
+.names sort_c495_and sort_c511_and sort_c607_or
+1- 1
+-1 1
+.names sort_c495_and sort_c511_and sort_c607_and
+11 1
+.names sort_c592_or sort_c600_or sort_c608_or
+1- 1
+-1 1
+.names sort_c592_or sort_c600_or sort_c608_and
+11 1
+.names sort_c593_or sort_c601_or sort_c609_or
+1- 1
+-1 1
+.names sort_c593_or sort_c601_or sort_c609_and
+11 1
+.names sort_c594_or sort_c602_or sort_c610_or
+1- 1
+-1 1
+.names sort_c594_or sort_c602_or sort_c610_and
+11 1
+.names sort_c595_or sort_c603_or sort_c611_or
+1- 1
+-1 1
+.names sort_c595_or sort_c603_or sort_c611_and
+11 1
+.names sort_c596_or sort_c604_or sort_c612_or
+1- 1
+-1 1
+.names sort_c596_or sort_c604_or sort_c612_and
+11 1
+.names sort_c597_or sort_c605_or sort_c613_or
+1- 1
+-1 1
+.names sort_c597_or sort_c605_or sort_c613_and
+11 1
+.names sort_c598_or sort_c606_or sort_c614_or
+1- 1
+-1 1
+.names sort_c598_or sort_c606_or sort_c614_and
+11 1
+.names sort_c599_or sort_c607_or sort_c615_or
+1- 1
+-1 1
+.names sort_c599_or sort_c607_or sort_c615_and
+11 1
+.names sort_c608_or sort_c612_or sort_c616_or
+1- 1
+-1 1
+.names sort_c608_or sort_c612_or sort_c616_and
+11 1
+.names sort_c609_or sort_c613_or sort_c617_or
+1- 1
+-1 1
+.names sort_c609_or sort_c613_or sort_c617_and
+11 1
+.names sort_c610_or sort_c614_or sort_c618_or
+1- 1
+-1 1
+.names sort_c610_or sort_c614_or sort_c618_and
+11 1
+.names sort_c611_or sort_c615_or sort_c619_or
+1- 1
+-1 1
+.names sort_c611_or sort_c615_or sort_c619_and
+11 1
+.names sort_c616_or sort_c618_or sort_c620_or
+1- 1
+-1 1
+.names sort_c616_or sort_c618_or sort_c620_and
+11 1
+.names sort_c617_or sort_c619_or sort_c621_or
+1- 1
+-1 1
+.names sort_c617_or sort_c619_or sort_c621_and
+11 1
+.names sort_c620_or sort_c621_or sort_c622_or
+1- 1
+-1 1
+.names sort_c620_or sort_c621_or sort_c622_and
+11 1
+.names sort_c620_and sort_c621_and sort_c623_or
+1- 1
+-1 1
+.names sort_c620_and sort_c621_and sort_c623_and
+11 1
+.names sort_c616_and sort_c618_and sort_c624_or
+1- 1
+-1 1
+.names sort_c616_and sort_c618_and sort_c624_and
+11 1
+.names sort_c617_and sort_c619_and sort_c625_or
+1- 1
+-1 1
+.names sort_c617_and sort_c619_and sort_c625_and
+11 1
+.names sort_c624_or sort_c625_or sort_c626_or
+1- 1
+-1 1
+.names sort_c624_or sort_c625_or sort_c626_and
+11 1
+.names sort_c624_and sort_c625_and sort_c627_or
+1- 1
+-1 1
+.names sort_c624_and sort_c625_and sort_c627_and
+11 1
+.names sort_c608_and sort_c612_and sort_c628_or
+1- 1
+-1 1
+.names sort_c608_and sort_c612_and sort_c628_and
+11 1
+.names sort_c609_and sort_c613_and sort_c629_or
+1- 1
+-1 1
+.names sort_c609_and sort_c613_and sort_c629_and
+11 1
+.names sort_c610_and sort_c614_and sort_c630_or
+1- 1
+-1 1
+.names sort_c610_and sort_c614_and sort_c630_and
+11 1
+.names sort_c611_and sort_c615_and sort_c631_or
+1- 1
+-1 1
+.names sort_c611_and sort_c615_and sort_c631_and
+11 1
+.names sort_c628_or sort_c630_or sort_c632_or
+1- 1
+-1 1
+.names sort_c628_or sort_c630_or sort_c632_and
+11 1
+.names sort_c629_or sort_c631_or sort_c633_or
+1- 1
+-1 1
+.names sort_c629_or sort_c631_or sort_c633_and
+11 1
+.names sort_c632_or sort_c633_or sort_c634_or
+1- 1
+-1 1
+.names sort_c632_or sort_c633_or sort_c634_and
+11 1
+.names sort_c632_and sort_c633_and sort_c635_or
+1- 1
+-1 1
+.names sort_c632_and sort_c633_and sort_c635_and
+11 1
+.names sort_c628_and sort_c630_and sort_c636_or
+1- 1
+-1 1
+.names sort_c628_and sort_c630_and sort_c636_and
+11 1
+.names sort_c629_and sort_c631_and sort_c637_or
+1- 1
+-1 1
+.names sort_c629_and sort_c631_and sort_c637_and
+11 1
+.names sort_c636_or sort_c637_or sort_c638_or
+1- 1
+-1 1
+.names sort_c636_or sort_c637_or sort_c638_and
+11 1
+.names sort_c636_and sort_c637_and sort_c639_or
+1- 1
+-1 1
+.names sort_c636_and sort_c637_and sort_c639_and
+11 1
+.names sort_c592_and sort_c600_and sort_c640_or
+1- 1
+-1 1
+.names sort_c592_and sort_c600_and sort_c640_and
+11 1
+.names sort_c593_and sort_c601_and sort_c641_or
+1- 1
+-1 1
+.names sort_c593_and sort_c601_and sort_c641_and
+11 1
+.names sort_c594_and sort_c602_and sort_c642_or
+1- 1
+-1 1
+.names sort_c594_and sort_c602_and sort_c642_and
+11 1
+.names sort_c595_and sort_c603_and sort_c643_or
+1- 1
+-1 1
+.names sort_c595_and sort_c603_and sort_c643_and
+11 1
+.names sort_c596_and sort_c604_and sort_c644_or
+1- 1
+-1 1
+.names sort_c596_and sort_c604_and sort_c644_and
+11 1
+.names sort_c597_and sort_c605_and sort_c645_or
+1- 1
+-1 1
+.names sort_c597_and sort_c605_and sort_c645_and
+11 1
+.names sort_c598_and sort_c606_and sort_c646_or
+1- 1
+-1 1
+.names sort_c598_and sort_c606_and sort_c646_and
+11 1
+.names sort_c599_and sort_c607_and sort_c647_or
+1- 1
+-1 1
+.names sort_c599_and sort_c607_and sort_c647_and
+11 1
+.names sort_c640_or sort_c644_or sort_c648_or
+1- 1
+-1 1
+.names sort_c640_or sort_c644_or sort_c648_and
+11 1
+.names sort_c641_or sort_c645_or sort_c649_or
+1- 1
+-1 1
+.names sort_c641_or sort_c645_or sort_c649_and
+11 1
+.names sort_c642_or sort_c646_or sort_c650_or
+1- 1
+-1 1
+.names sort_c642_or sort_c646_or sort_c650_and
+11 1
+.names sort_c643_or sort_c647_or sort_c651_or
+1- 1
+-1 1
+.names sort_c643_or sort_c647_or sort_c651_and
+11 1
+.names sort_c648_or sort_c650_or sort_c652_or
+1- 1
+-1 1
+.names sort_c648_or sort_c650_or sort_c652_and
+11 1
+.names sort_c649_or sort_c651_or sort_c653_or
+1- 1
+-1 1
+.names sort_c649_or sort_c651_or sort_c653_and
+11 1
+.names sort_c652_or sort_c653_or sort_c654_or
+1- 1
+-1 1
+.names sort_c652_or sort_c653_or sort_c654_and
+11 1
+.names sort_c652_and sort_c653_and sort_c655_or
+1- 1
+-1 1
+.names sort_c652_and sort_c653_and sort_c655_and
+11 1
+.names sort_c648_and sort_c650_and sort_c656_or
+1- 1
+-1 1
+.names sort_c648_and sort_c650_and sort_c656_and
+11 1
+.names sort_c649_and sort_c651_and sort_c657_or
+1- 1
+-1 1
+.names sort_c649_and sort_c651_and sort_c657_and
+11 1
+.names sort_c656_or sort_c657_or sort_c658_or
+1- 1
+-1 1
+.names sort_c656_or sort_c657_or sort_c658_and
+11 1
+.names sort_c656_and sort_c657_and sort_c659_or
+1- 1
+-1 1
+.names sort_c656_and sort_c657_and sort_c659_and
+11 1
+.names sort_c640_and sort_c644_and sort_c660_or
+1- 1
+-1 1
+.names sort_c640_and sort_c644_and sort_c660_and
+11 1
+.names sort_c641_and sort_c645_and sort_c661_or
+1- 1
+-1 1
+.names sort_c641_and sort_c645_and sort_c661_and
+11 1
+.names sort_c642_and sort_c646_and sort_c662_or
+1- 1
+-1 1
+.names sort_c642_and sort_c646_and sort_c662_and
+11 1
+.names sort_c643_and sort_c647_and sort_c663_or
+1- 1
+-1 1
+.names sort_c643_and sort_c647_and sort_c663_and
+11 1
+.names sort_c660_or sort_c662_or sort_c664_or
+1- 1
+-1 1
+.names sort_c660_or sort_c662_or sort_c664_and
+11 1
+.names sort_c661_or sort_c663_or sort_c665_or
+1- 1
+-1 1
+.names sort_c661_or sort_c663_or sort_c665_and
+11 1
+.names sort_c664_or sort_c665_or sort_c666_or
+1- 1
+-1 1
+.names sort_c664_or sort_c665_or sort_c666_and
+11 1
+.names sort_c664_and sort_c665_and sort_c667_or
+1- 1
+-1 1
+.names sort_c664_and sort_c665_and sort_c667_and
+11 1
+.names sort_c660_and sort_c662_and sort_c668_or
+1- 1
+-1 1
+.names sort_c660_and sort_c662_and sort_c668_and
+11 1
+.names sort_c661_and sort_c663_and sort_c669_or
+1- 1
+-1 1
+.names sort_c661_and sort_c663_and sort_c669_and
+11 1
+.names sort_c668_or sort_c669_or sort_c670_or
+1- 1
+-1 1
+.names sort_c668_or sort_c669_or sort_c670_and
+11 1
+.names sort_c668_and sort_c669_and sort_c671_or
+1- 1
+-1 1
+.names sort_c668_and sort_c669_and sort_c671_and
+11 1
+.names sort_c578_and maj
+1 1
+.end

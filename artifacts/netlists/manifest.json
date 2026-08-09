@@ -1,0 +1,2524 @@
+{
+  "files": [
+    {
+      "blif": {
+        "bytes": 873,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n5.blif",
+        "sha256": "1eca149d0c66eec04d1fa94756bfbf17a7c5876f317a29403bfbe1409844b016"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 5,
+      "threshold": 3,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 681,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n5.v",
+        "sha256": "0d3a397ab3747b2b29df7f86b427f36f726bf55939b56c251615b3bef1153f2c"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 1436,
+        "path": "artifacts/netlists/b/blif/majority_b_n5.blif",
+        "sha256": "71fd2355b0124807c99c100a061deec5bed01b25822fa28dece96e7a51b7c294"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 5,
+      "threshold": 3,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 981,
+        "path": "artifacts/netlists/b/verilog/majority_b_n5.v",
+        "sha256": "6f5f881edde110c3fd2a7daad4b6cc10ec886b65e683336a507192273b23c84a"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 2926,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n5.blif",
+        "sha256": "6d7d0c6c06ca3f5b522c7d961518796a0ec97cd94ff16eafa8b8e1a69ad4c8a8"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 5,
+      "threshold": 3,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 1879,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n5.v",
+        "sha256": "18065da18460c6d0a65d759c23bdc7ef1fcd718b4df9b85a5ad4bcc07652c2ff"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 2426,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n5.blif",
+        "sha256": "b861ad11bf5d08b91d584964236e800d48d500a1d166833325a1152b89d59848"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 5,
+      "threshold": 3,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 3161,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n5.v",
+        "sha256": "505b387b71048eb728efa08640a818536dd6e196bef197eabe42529e7c1bb727"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 1178,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n5.blif",
+        "sha256": "8ca77d5a2c9f2123eefca50975739c504b452d539d73c442ea19d9346ef38e2b"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 5,
+      "threshold": 3,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 1220,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n5.v",
+        "sha256": "ae496f8856fdad8cc99a89a749564bafc43a8a0a03ea69e0034314947e3dcb39"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 835,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n7.blif",
+        "sha256": "c7ac84bc2cef406c77d526d27a72ee8cd6cf4a4b804363aed3b23b7412b168f6"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 7,
+      "threshold": 4,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 655,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n7.v",
+        "sha256": "6de27ab42f17e75235e6eff6a638bfe7dd9bdf8ba9e3476d8c1deb73d8a6c4eb"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 1410,
+        "path": "artifacts/netlists/b/blif/majority_b_n7.blif",
+        "sha256": "ce16fcc1f7467d8b946cfef65a25ba10120abf18db33a876eed97ae1131daad1"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 7,
+      "threshold": 4,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 981,
+        "path": "artifacts/netlists/b/verilog/majority_b_n7.v",
+        "sha256": "166b66c68fc4e3f576514248f51b802a7651a9312a2e60191eff66e97d96992d"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 3776,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n7.blif",
+        "sha256": "bf7965d641a50cd80bdfa52ee036e999fbed6028e6d0674d30c7c09e1cd2d251"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 7,
+      "threshold": 4,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 2337,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n7.v",
+        "sha256": "6e9687b1053bd48c74969580cfc632502804a9a7c10345ee0e5b5e8e969dbe96"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 2417,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n7.blif",
+        "sha256": "1df68ff5a03b31150631f1b9bebf750dbe04aefb07408ead8751c340e0d34e0c"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 7,
+      "threshold": 4,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 3162,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n7.v",
+        "sha256": "7cb956226561f24c71621cb4197df544d2a37d56073f6dba5a120efb6fbe0396"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 1289,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n7.blif",
+        "sha256": "f71f17206dc976436516892e7cfeafbef3c12c9019ef2822b1589099f8b5bb65"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 7,
+      "threshold": 4,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 1213,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n7.v",
+        "sha256": "b99ede2493187504c310ba7c4766351c49d0f107d38eca8ac9877c6c408812a0"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 1876,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n9.blif",
+        "sha256": "86fc59ccde99e4ffd170d01aca2127d14312c520e7bc574690d55162398af541"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 9,
+      "threshold": 5,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 1260,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n9.v",
+        "sha256": "58e265d1c05ced2cb7fce5821bd8d9bc78aac1165fda8be4cfd88adc79ef4e11"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 3040,
+        "path": "artifacts/netlists/b/blif/majority_b_n9.blif",
+        "sha256": "ae0fecd6b28fea818963458342e9ef2d84be8b60daf1455c46cdd85836d576a4"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 9,
+      "threshold": 5,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 1866,
+        "path": "artifacts/netlists/b/verilog/majority_b_n9.v",
+        "sha256": "6668437a58d881b14407261c38c2108932b8a1456c726de3772781b96e1803b5"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 5795,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n9.blif",
+        "sha256": "196753f9d77a7385e1f29771b23c628ead968f956616cfb2d633a43081a96971"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 9,
+      "threshold": 5,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 3524,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n9.v",
+        "sha256": "9d7c92e23f82f431f7d6f135e78c4dbadd8d1e0d07efa963c738f431890a3cfb"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8142,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n9.blif",
+        "sha256": "90b5ca979ca300deb764c605340da27480c2e24ccc36c26c0fb684f1e3b5ce62"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 9,
+      "threshold": 5,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 10328,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n9.v",
+        "sha256": "2970b4dbae876c6a765a699d201aab22b2a41e0f862c2841ab1a63366a73c2e7"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 2283,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n9.blif",
+        "sha256": "fac1aeb2cb0d652e813666c61b9cc3646c4b63e365633abea79242611cdf3577"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 9,
+      "threshold": 5,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 2073,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n9.v",
+        "sha256": "ba3141eed32060450420ca12fc32546af7a8b6b97ebd5e5b97cb3d2d547ddd2a"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 1856,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n11.blif",
+        "sha256": "a8be511d3f02187fe009e1650e374d6ce2140fd643efbec9f846e386c046fedd"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 11,
+      "threshold": 6,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 1231,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n11.v",
+        "sha256": "495b9271831fa8a6988bfd387300b97bc35fc87b3068f43336a0a3dedb9431ce"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 3030,
+        "path": "artifacts/netlists/b/blif/majority_b_n11.blif",
+        "sha256": "8b2bc051f0413f6ce1f97e6d2501d33e1f9bb68c18f8acf6646613f1c4a18c32"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 11,
+      "threshold": 6,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 1869,
+        "path": "artifacts/netlists/b/verilog/majority_b_n11.v",
+        "sha256": "8b55ee898fcc67b643ced59df4ffabcfe655c7da6b1419bc280a40ebe851d978"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6649,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n11.blif",
+        "sha256": "7f131899ee3cd6b32763786041090d770711c24d1746f6b9988ed9da9777ded9"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 11,
+      "threshold": 6,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 3985,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n11.v",
+        "sha256": "a568c301ffdd731bc130a79df1408d9cfe5b71b584de0eb90c9ecda3c2c4129c"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8137,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n11.blif",
+        "sha256": "3cc318beed7f49627375fa6f8c347051239fa649a4123602bf93f1d5fbb3068d"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 11,
+      "threshold": 6,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 10333,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n11.v",
+        "sha256": "e5fd33cac34b5a6fde95e68ca5ee0d0ae306af0a021038a1bca0e1ad5273185d"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 2400,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n11.blif",
+        "sha256": "467aeac4a12deb235e1de38c11db951228f6d50ec9a23ef47ac7af92d5d27426"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 11,
+      "threshold": 6,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 2067,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n11.v",
+        "sha256": "a28550c65c539fb3ce18125791fd29d43f20b8aa89bf640381432cae85471969"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 2264,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n13.blif",
+        "sha256": "932efb946b1ea7db448bb2e5eb09587abd0315ac14f61e52c7f71ee6f410b32b"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 13,
+      "threshold": 7,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 1461,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n13.v",
+        "sha256": "d55a0b20da25a68f48d5bf84138eebb770f86933d673272505ee262685ab8ad5"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 3023,
+        "path": "artifacts/netlists/b/blif/majority_b_n13.blif",
+        "sha256": "e4839695aca8958d8c985be0c35bee3c53d068fa55b5c82338e196f12cd45218"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 13,
+      "threshold": 7,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 1871,
+        "path": "artifacts/netlists/b/verilog/majority_b_n13.v",
+        "sha256": "d21f33a01a6e398784abb0c1b10a6b9568f8f7e8f85d22cd0313c76e065278ad"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 7974,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n13.blif",
+        "sha256": "af9870784f674ed3cf29a42c6afe0b443d032386668c84846ff08897d5e3a070"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 13,
+      "threshold": 7,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 4733,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n13.v",
+        "sha256": "4f99a908f2e5ccbd3e364d303bc180d894e18d96c41e5ee39137e49c453fbef2"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8132,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n13.blif",
+        "sha256": "cf22a936c6c6c03206af5136816de071b1f0e4baf991e5c19cf0980981272bcd"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 13,
+      "threshold": 7,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 10336,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n13.v",
+        "sha256": "9708464f29833721dd4904e515c9ab07091b5c90d196a97fb00a148f4ba2d369"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 2806,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n13.blif",
+        "sha256": "74da515f79a62fb6d159cf4b895e7a5052d4e8fad89f7b6ac10c5583923e13a2"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 13,
+      "threshold": 7,
+      "verification": "exhaustive",
+      "verilog": {
+        "bytes": 2293,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n13.v",
+        "sha256": "593fa36bb34412384b5cd556914cff026cbc36ebe798eb527e129141645aa537"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 2233,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n15.blif",
+        "sha256": "9ea9c800dd672f0891b35aadc6c23ecc97e9acbc6e71a07331c272f467338c67"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 15,
+      "threshold": 8,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 1437,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n15.v",
+        "sha256": "787b3c1774bb128bbe5490d9d03e20484865695bf52241469247f064f5517209"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 3003,
+        "path": "artifacts/netlists/b/blif/majority_b_n15.blif",
+        "sha256": "6a06c7bac418aa264d83a0a7de80f1fd5dd947ea0d643a24b1057b8469d516c9"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 15,
+      "threshold": 8,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 1873,
+        "path": "artifacts/netlists/b/verilog/majority_b_n15.v",
+        "sha256": "d350db0eeeba925f80347f5fff5fe0d475bc46f1de3801e0a9e7a386f85f4db2"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8831,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n15.blif",
+        "sha256": "aaa420490bd674998dcbd5c1dcdee0fb16e63f43d64d8e319f880990e435da48"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 15,
+      "threshold": 8,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 5193,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n15.v",
+        "sha256": "3eed3196d866992d3b869d584577e7c7d1cffb1252b4b54ca3e66bcbae66c6fe"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8129,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n15.blif",
+        "sha256": "5100c3ed96fda3f5b7893bd617256b138bbee54835ba6e278de5b2e094f5bb54"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 15,
+      "threshold": 8,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 10341,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n15.v",
+        "sha256": "61651115ae28d49e1bc12e5602098d8160e6af1eb09c3526d3bc4c55fa13323b"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 2934,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n15.blif",
+        "sha256": "180f1215aac933dd08d6ccbc10db4161fa6fd2e33797338ac86a867e8790fe92"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 15,
+      "threshold": 8,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 2300,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n15.v",
+        "sha256": "0128963bcc54398e12d1ae41f03bde2efc86af6034e7b48bd7d88b4c89587644"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 3765,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n17.blif",
+        "sha256": "32a58f81f85ff03dff1dc74515d569a7034561e1ac8e5a4d9b4e530e7ec8d6c1"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 17,
+      "threshold": 9,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 2333,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n17.v",
+        "sha256": "c3843e3336639cfb30eb9622df889beaf744b0b62c3ac16642e11ae08e40f524"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6407,
+        "path": "artifacts/netlists/b/blif/majority_b_n17.blif",
+        "sha256": "1c593ddbd9362a9379317508822c38ce2ac33280a5ce8589718e17c1db476472"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 17,
+      "threshold": 9,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3731,
+        "path": "artifacts/netlists/b/verilog/majority_b_n17.v",
+        "sha256": "839b95ee5b58ed22ac04f3b14a222a06b4dfa61c4600cf9ff98bb4b5f0ee7378"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 11325,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n17.blif",
+        "sha256": "ee58d395e65a9f9cfa6cb6417df167bbee76be841d7b53f2a9fc8b12be23c127"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 17,
+      "threshold": 9,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6677,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n17.v",
+        "sha256": "5152e0d6db8e301ce736db168d88c81e451d81bfcdbe261ef796eea32430adb2"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 25365,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n17.blif",
+        "sha256": "4106d7f905be21b2d5882f288ac63d4c5be9b8efd2790c71e370fce412964dfc"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 17,
+      "threshold": 9,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 31982,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n17.v",
+        "sha256": "f1d434a58191edc4a76e2c7b0d720b8c1e151bf2eeafe84bb219fa84774c5fd8"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 4368,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n17.blif",
+        "sha256": "bda3692f8437b940a6e450b653c185fe5dd616dc4375fa4f3693d5c610da3c93"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 17,
+      "threshold": 9,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3554,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n17.v",
+        "sha256": "0962d96488fe1e0549265b0cece413054b4bd8da9a0a77df3072a82608f001ef"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 3749,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n19.blif",
+        "sha256": "130121748aee3ae10d720c1e74cbec9658af26d230b6d18bf178e4fe075c8caf"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 19,
+      "threshold": 10,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 2309,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n19.v",
+        "sha256": "6d7911a0c10e0a9a8f9bff14fd2bef5c8bc0e0ca20fb7ae00990521d371c3d2c"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6401,
+        "path": "artifacts/netlists/b/blif/majority_b_n19.blif",
+        "sha256": "9fc5592f9cb4f9d62b02e7cd84096102d55110b21fc7e23e3973e8e4865618fd"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 19,
+      "threshold": 10,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3733,
+        "path": "artifacts/netlists/b/verilog/majority_b_n19.v",
+        "sha256": "2783e9fa500c59194a5caa06a6023e2ceb1c11d46277a7e26b093f3962aef710"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 12183,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n19.blif",
+        "sha256": "dc4c1b3aadbe12ac55814075df7d2e05d605975edb3e31c2149d25b08cf23417"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 19,
+      "threshold": 10,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7137,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n19.v",
+        "sha256": "cd6a14c15acb87f0a22457e08c7dee25c1a4d0a87eb80e841e761e41297a0eb4"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 25363,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n19.blif",
+        "sha256": "7a203925de1f5a09b1c05ff88f27c5ab02eb2c42b6a62a82a3fa842ae865ae3e"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 19,
+      "threshold": 10,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 31987,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n19.v",
+        "sha256": "dfdcbda69cfa564b221d53d996a058e2eda74d0adbbc98e9d9afd0006428cf44"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 4504,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n19.blif",
+        "sha256": "ff9e7d385de53fdb663d5cfd98071241cf2149ec1617f28fd2572929bce6a312"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 19,
+      "threshold": 10,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3563,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n19.v",
+        "sha256": "d370e1937256f7b69a94e4509152347890c754b1a5240f50dbea4afd54f55a02"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 4170,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n21.blif",
+        "sha256": "e4b260811a156e0de4d53ce257bf963783a0238c0c80fbbcee0c9be3db67b205"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 21,
+      "threshold": 11,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 2546,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n21.v",
+        "sha256": "49e87d026d028edb9f79906789bd44206487dde277538dbdcf19a3b4c1dbd206"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6397,
+        "path": "artifacts/netlists/b/blif/majority_b_n21.blif",
+        "sha256": "e097a473a4412ee31aef6f855a84774eaae31ad1e47670539404ff7ce1b2a889"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 21,
+      "threshold": 11,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3735,
+        "path": "artifacts/netlists/b/verilog/majority_b_n21.v",
+        "sha256": "edeae99cecdd6c4a871ab763a39580836c583e96612c7687bc0bc3eb4484e47e"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13508,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n21.blif",
+        "sha256": "f3ec9b68e1e329acac4fda5e359a8e594a1db0e8fbe732a459d636c9501e2727"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 21,
+      "threshold": 11,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7885,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n21.v",
+        "sha256": "530016c81681e4bfa2f425980ee2531f52fd0bd31dfcd5ad14e2f1698fe14a28"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 25358,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n21.blif",
+        "sha256": "d20fdb03c191b8261f320a1a9ca0ac4daf3274d7e9117c9d253bc8959397584d"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 21,
+      "threshold": 11,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 31990,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n21.v",
+        "sha256": "d6b6a55d3ba0a90072778b3c26c09b534bb77d6a1ed64447395b08af0233a3f2"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 4930,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n21.blif",
+        "sha256": "5f2c8ec992d2850ac1cd2779cc943297bdf1ddab00323b968078ff489d4a0529"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 21,
+      "threshold": 11,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3805,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n21.v",
+        "sha256": "267f3f17ffd150bd6723f3df69123ff8d8921ea98d68f10867015ae0926f7f73"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 4152,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n23.blif",
+        "sha256": "04aee89a107918f756a09c9c554145a5a69c56419a4f0dbf61d23e83dbf9a032"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 23,
+      "threshold": 12,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 2516,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n23.v",
+        "sha256": "e037147b25c8888959217ea8df44fe9de7aa29dcffd5c9efb059f4bff6476400"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6390,
+        "path": "artifacts/netlists/b/blif/majority_b_n23.blif",
+        "sha256": "5c9801b3f8e59663748e2537be7208898c2ec09310661a43528111503eb060dc"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 23,
+      "threshold": 12,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3737,
+        "path": "artifacts/netlists/b/verilog/majority_b_n23.v",
+        "sha256": "78990362f9cf5a78c990a301f864cb43b0fbb524153a728d2cffe59cb7eaa9bf"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 14379,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n23.blif",
+        "sha256": "59288ff599e2ad10942bde23010f88778c84a5b4e4bab50bcc8842e9c4a25582"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 23,
+      "threshold": 12,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 8356,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n23.v",
+        "sha256": "df03df67ccd10f93a5fb0b8d65a9ced08dc9f156b86f5d47bf7ad605d44b583e"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 25355,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n23.blif",
+        "sha256": "3129d761e15363109cf1b39df84ad48b592f5162086197400e938720a1d46f42"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 23,
+      "threshold": 12,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 31995,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n23.v",
+        "sha256": "e592d55018be6e8915eb67e11139de69daa4a127a0a45e56d756ff42d64152df"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 5062,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n23.blif",
+        "sha256": "0ee4dac2ec03fee5f50ac7ca156d064017b9f28a5b897d2d8333aefe99caa5a2"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 23,
+      "threshold": 12,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3808,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n23.v",
+        "sha256": "10e6ab3db17e6b71357d7d7f6df56e79c2fde2d28b1c340d52ee24f4409a6d68"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 5015,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n25.blif",
+        "sha256": "679ebd167362866f24be31f0ee0ca90abfb280ece472498068ab141ed9570295"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 25,
+      "threshold": 13,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3016,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n25.v",
+        "sha256": "f928b20c24ff92d9b217da3e958c5d91e3058c26fe8da7eaf55747364cc82787"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6383,
+        "path": "artifacts/netlists/b/blif/majority_b_n25.blif",
+        "sha256": "10c5f73aefa336a047f73eaf12397992dd297eda77ac310da0ffa654b6993284"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 25,
+      "threshold": 13,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3739,
+        "path": "artifacts/netlists/b/verilog/majority_b_n25.v",
+        "sha256": "ef150eff960b6098e542f73d61faa839653241a09a34a3801cf105d02180b21c"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 16184,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n25.blif",
+        "sha256": "8cec93a125fcb4d0b05ba95d74a6383588d7a2b769427f1fe18f119b90e9db4b"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 25,
+      "threshold": 13,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 9403,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n25.v",
+        "sha256": "7af9958b95b03b835b911ca66faff090733c777adf815fd941e379401eed1968"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 25350,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n25.blif",
+        "sha256": "06769b8d8978ec9aa756446476e2a55ba0b63b698f8fdede19ceed1b54920ef1"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 25,
+      "threshold": 13,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 31998,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n25.v",
+        "sha256": "fcdb468001ec5aeed2c2f17d9690476802ca93ac5e773c75f348ea4c138251d5"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 5772,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n25.blif",
+        "sha256": "078e1250d5bb1c3de37f0cc806ad93c53a9f4d6a840f21f6c4d0de460cf6442a"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 25,
+      "threshold": 13,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 4272,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n25.v",
+        "sha256": "36502f848fc729f7c5a1ed32f36be3c06db3c5dfff8af9bf98d361ec0dbe9737"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 4998,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n27.blif",
+        "sha256": "fd8d88ae58a9a8914bdac5b93d30311beb7ceb6789f799da0bd1e0ba1e2308f6"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 27,
+      "threshold": 14,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 2992,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n27.v",
+        "sha256": "73186f8aa007a3743481c80a5e6931b63227adf18bb45efde963e27ae2b58143"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6379,
+        "path": "artifacts/netlists/b/blif/majority_b_n27.blif",
+        "sha256": "e6530b60bec607c0e180115da44acd7134e9bb13ec91d37848a0514cab776d84"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 27,
+      "threshold": 14,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3741,
+        "path": "artifacts/netlists/b/verilog/majority_b_n27.v",
+        "sha256": "f855c6b9b071e9605fd0d07625e92286aaf428e12df94e149423edb5bb5fe74e"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 17055,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n27.blif",
+        "sha256": "e8d21a9edd15ff0c009ecae83982daca6138ba8ac49c8bc1c0132d92f8ba7fcd"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 27,
+      "threshold": 14,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 9874,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n27.v",
+        "sha256": "a345f274b1278e47518d74ff2e8ad4b119755a5da8b4239943b92a71bab85e85"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 25347,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n27.blif",
+        "sha256": "ec5a75555a3a69a14207e514f951f594dc0a93d6af9aa2600b1c9f754b95647a"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 27,
+      "threshold": 14,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 32003,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n27.v",
+        "sha256": "94a3a7db086efc7707f3c54dad6216e1927ec34e20915f20aa6157ba640d59e0"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 5908,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n27.blif",
+        "sha256": "03ce8348db4790e0a45c2f0b8cf0dd220e8bc18cf9110f5b30cf70245518676d"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 27,
+      "threshold": 14,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 4282,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n27.v",
+        "sha256": "4e30c98a45cc2dfea667a481a0474a5c9f6f5b031d98d91ad8e9039af375b261"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 5420,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n29.blif",
+        "sha256": "9ff82753d699b1cd7bed29c1ba97e25a22971bb67a15699acc7e59f75e237bec"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 29,
+      "threshold": 15,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3224,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n29.v",
+        "sha256": "ad9d35c41b52d13098b359c0e5169da091f09b27d74be2f4a7b9c88ec504c03d"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6372,
+        "path": "artifacts/netlists/b/blif/majority_b_n29.blif",
+        "sha256": "d8857c9b0c8ba616bbf64d6be8759c05737b707d584994ab03c0204f672db5bb"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 29,
+      "threshold": 15,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3743,
+        "path": "artifacts/netlists/b/verilog/majority_b_n29.v",
+        "sha256": "9a924cbefba93b65d27047e826300af7c212583e7b9225aa5de828bdbd642dac"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 18392,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n29.blif",
+        "sha256": "396c93f214376d7d820cda8f13ba3c1515eebf86d1fcb07f24c28830e96d1cce"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 29,
+      "threshold": 15,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 10633,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n29.v",
+        "sha256": "3470c76d7d7df4ca8fe7209e6971f558bfcea52f7b6caa185cb4e7e95ed8befd"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 25342,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n29.blif",
+        "sha256": "1ceebc83cd146909ade60807268af6abe65a2e1b71e5a2491aa6f32c39cb4b35"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 29,
+      "threshold": 15,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 32006,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n29.v",
+        "sha256": "938b2d67c277676e6fbaaced86d5fe57b59f68b3f9705cf846b51db17572de01"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6329,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n29.blif",
+        "sha256": "6479f62d5e2557edea9357b9f57df2756ce0731ca56573a3f45c008051245e2b"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 29,
+      "threshold": 15,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 4515,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n29.v",
+        "sha256": "b79dd99be278b7431379e978d326b071c4a2256f6da1d333fa83c50a4e22993d"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 5389,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n31.blif",
+        "sha256": "fc50f638f016c95978f183dfa58bb7fc22d08da4727b48ded75cb4e7a6941e53"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 31,
+      "threshold": 16,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3200,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n31.v",
+        "sha256": "d06c827193412ffb170dc1147c2813fc61282c56609c54310f3e543ddeb9739b"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6352,
+        "path": "artifacts/netlists/b/blif/majority_b_n31.blif",
+        "sha256": "c527ba7e41a44fccdcf7a5d32c13f23fef54fd96844921155a20586f66b359d7"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 31,
+      "threshold": 16,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 3745,
+        "path": "artifacts/netlists/b/verilog/majority_b_n31.v",
+        "sha256": "7c8f0413beef072c577b42a33c81db464ba67945bec0fd41c521965b89415783"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 19263,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n31.blif",
+        "sha256": "2174554a3dd0803701cdd337d1d8bef6f9691a1845dbf4535fd4bb2585aa0806"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 31,
+      "threshold": 16,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 11104,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n31.v",
+        "sha256": "da26c18c147d52ef5e2ef08bc0b69e85506a59d57d08f718ab35e4018f099889"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 25339,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n31.blif",
+        "sha256": "bf2a571a14d4d74092ea644fc9efed178dc92207a788df181fdd23e4a600eb2c"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 31,
+      "threshold": 16,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 32011,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n31.v",
+        "sha256": "e73f5b1c869ad4c4cb9bb8a57e516fcbf86078694502e8fddf11ea9744d258a9"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 6463,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n31.blif",
+        "sha256": "11eec96fb112562486eefab47c8c32ef211813f4775735828e0cbab481756fd8"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 31,
+      "threshold": 16,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 4523,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n31.v",
+        "sha256": "285fc2621d3c84b703c4fa756e9619f1850a59736e355c5ea1734e4b4fe1fc9c"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 7364,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n33.blif",
+        "sha256": "df8cccf0a3f1ed2494f707057699b5ce110b904c28ea9d4f3dd6f99167a91e15"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 33,
+      "threshold": 17,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 4365,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n33.v",
+        "sha256": "8a9c1ee98902b99280f5cf703c568dbd1a8bd5ff79dd2a9b5a8c85ce4ca9ee2c"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13180,
+        "path": "artifacts/netlists/b/blif/majority_b_n33.blif",
+        "sha256": "ae1b0ffd95a004e04e33e07feb37211fc1a513e20696fc3d46ff4b143f2da68a"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 33,
+      "threshold": 17,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7486,
+        "path": "artifacts/netlists/b/verilog/majority_b_n33.v",
+        "sha256": "02fd923e026f52b67a61fd13f7c2a58a82144a53e07fe670e279fdcb9f2ad8c7"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 22237,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n33.blif",
+        "sha256": "94c19397b68faaa4782ae0e3f3ffa18701c37de9c6eddbc3c9c0773b3866ba24"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 33,
+      "threshold": 17,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 12887,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n33.v",
+        "sha256": "6ff31a410e3a18b083907872bc54ad57e07e171bb9dea8d0d97fb30ed47f9cd4"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72438,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n33.blif",
+        "sha256": "fee459890d95eb2a0706de8ee7c79c7c0ddd65b92634253ca49061c6fa251c21"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 33,
+      "threshold": 17,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91149,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n33.v",
+        "sha256": "01590e58e9126710d0b4d3d3940b44d1db85d5351d7588656eaafe48dfd018e3"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8185,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n33.blif",
+        "sha256": "0718a5e4990ca8505a8cc52df8c6ff3fc972e5c56f16d9b6469e766fcc453b47"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 33,
+      "threshold": 17,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6017,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n33.v",
+        "sha256": "1f0f1b02a9e01cbbe53ee46c09b6338afcb52b9cad610bd794b61d2904737ced"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 7346,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n35.blif",
+        "sha256": "bc84e6a440655a54a4184b4aafd1eeee98c71e5236fa673d1f0d1e989b314959"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 35,
+      "threshold": 18,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 4335,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n35.v",
+        "sha256": "2d8021fd8c721efa85daca7497e425e823e2bb4bbe58af13eabd8fb89aff3f5b"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13173,
+        "path": "artifacts/netlists/b/blif/majority_b_n35.blif",
+        "sha256": "32db2d27c0a6523f7a596e3e29e2ca9a588b5d6d491e0312b7b3aaa35865bd01"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 35,
+      "threshold": 18,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7488,
+        "path": "artifacts/netlists/b/verilog/majority_b_n35.v",
+        "sha256": "8b6a8e31ee469f00dc88f8973586ae0ffb725cc7204e2a071ab7d027d11b7080"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 23116,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n35.blif",
+        "sha256": "caf1a18afd0735667ec53f7dc4e19dc33eeb84645acb6c5ae234f1c7e9161e04"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 35,
+      "threshold": 18,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 13362,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n35.v",
+        "sha256": "53cafb6fdc270bd759fbe0a01f84e8b3034d0fcfd7ccb424f84aac87ead13bcb"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72435,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n35.blif",
+        "sha256": "9ec6ef26475a594a1204b595ec16cf7dde6a81b929daad9bb94787887866d710"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 35,
+      "threshold": 18,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91154,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n35.v",
+        "sha256": "ff632916951658d3c82520a62b28802fb8816c392253e48a9def0a04d6e76bfe"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8320,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n35.blif",
+        "sha256": "cd03b8f3015beefb36cfa6ea12ff4ab6bbd8137dc6a8d8d24e06a4b290f28c21"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 35,
+      "threshold": 18,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6021,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n35.v",
+        "sha256": "3838afe6919ca73e218a3ac601bc5c4a8c83bc49689538401f8887efd969605c"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 7769,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n37.blif",
+        "sha256": "5d23426c59fb0e05d0bd05e6ed4f2e49fab57d0bd0e705316dc693e0b057e7bb"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 37,
+      "threshold": 19,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 4573,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n37.v",
+        "sha256": "c1fd17df9446ea0aa120424c493e4fefb98f9a99bd8856df0a1b397744f397d3"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13166,
+        "path": "artifacts/netlists/b/blif/majority_b_n37.blif",
+        "sha256": "ba8fe1ed092c65bf00164700f64ab4385a238ecf0c7e1ce1fe6393ee27674837"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 37,
+      "threshold": 19,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7490,
+        "path": "artifacts/netlists/b/verilog/majority_b_n37.v",
+        "sha256": "42ebea20d3b262237576a214ddbd7ae8e6a41da25716be8fe09c411d408fe256"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 24465,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n37.blif",
+        "sha256": "e9b2db7f3a4b2df41fbf50f274069a3fc06d683e1d8d9ed181fc330fe5d9274c"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 37,
+      "threshold": 19,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 14127,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n37.v",
+        "sha256": "fca2bee02122b9317e17afb505afd83d4aadbfa5b192a9b800ef9ba0edf867a9"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72430,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n37.blif",
+        "sha256": "89deb83d01b2ca2936908015902fee73ebab6061c99105f47c13b00dc5797c07"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 37,
+      "threshold": 19,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91157,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n37.v",
+        "sha256": "2bc95818296917139c2fc3e3b8a2858efa036e4d9195782f9f72f74d2bf0a9c7"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8744,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n37.blif",
+        "sha256": "cd104887fc67c5255426b017245c3b60c94dc321fc0c0753bd47089127fce4cf"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 37,
+      "threshold": 19,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6262,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n37.v",
+        "sha256": "67c6472476da511a3a220403a33d5185d308245b45e548522f7cb7e73691e6eb"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 7751,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n39.blif",
+        "sha256": "26a25543cd0240e552aadb6abe6de2b9228d48867a21a4721911f7e0b290ec92"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 39,
+      "threshold": 20,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 4549,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n39.v",
+        "sha256": "df9281dbc003150bf8fbed4deac91ca8712a072189d4a5f77187d00333eeb52b"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13162,
+        "path": "artifacts/netlists/b/blif/majority_b_n39.blif",
+        "sha256": "e82356a3e37621317263ad8af67b57a8f2d7545c5fcfa9e1ceee7648988f607b"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 39,
+      "threshold": 20,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7492,
+        "path": "artifacts/netlists/b/verilog/majority_b_n39.v",
+        "sha256": "98ea738062b21baeaaa0f459efdf863300c910c7bf9d6839e18f1d9f394ae0a8"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 25344,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n39.blif",
+        "sha256": "fc82abe2fe5bc4a71a8124ac39bacf528b4e7aa7807cf7750297d3134cbea5b3"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 39,
+      "threshold": 20,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 14602,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n39.v",
+        "sha256": "88f7a660ad761e2ad1d779d84713b0b59997ac7fab99749ff69802f2d45c5fa6"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72427,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n39.blif",
+        "sha256": "af69db534d46901af959d8a89e8c48a970fe414d61ff62cbd6a3e81ee033d755"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 39,
+      "threshold": 20,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91162,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n39.v",
+        "sha256": "d8732a8bc43abaee502062c88a7608778a79f9c1c7ad2fff97f1b081eb0080d7"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8877,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n39.blif",
+        "sha256": "9f7677be4bae10c83a355fb7340123d8813487ee49b2e286bd3e3ed9650afe2b"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 39,
+      "threshold": 20,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6270,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n39.v",
+        "sha256": "f6fae5cbda0faef05aa6e37b8b7b96fb6cb11d7297e1fc5f944fc8b06b491c3c"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8613,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n41.blif",
+        "sha256": "946d910eadfb12e6748798d3c0cbd761fa9f6e2ec606b39ec50bfdef73d94029"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 41,
+      "threshold": 21,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 5043,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n41.v",
+        "sha256": "7558504a4187a4fd7032f249f1427407254113c1cbd78c567caf6dfacc859235"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13155,
+        "path": "artifacts/netlists/b/blif/majority_b_n41.blif",
+        "sha256": "81b6449ce7667d5fdbeac80f2f9e611f0061398d91d1137517296047a41f06ae"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 41,
+      "threshold": 21,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7494,
+        "path": "artifacts/netlists/b/verilog/majority_b_n41.v",
+        "sha256": "7eabd5e08baa1cb804171528cacd63b24c1f231a2fd80daf92d6ae0fb0f60b86"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 27165,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n41.blif",
+        "sha256": "8fca78cad6e3e2c6ec99bb07d9663f18c63159dad6b75587666274b4a09d5472"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 41,
+      "threshold": 21,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 15657,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n41.v",
+        "sha256": "4dd16706e6f4c631abf6b391be4455c113140ca921144fd5e5633b16d4e34b61"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72422,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n41.blif",
+        "sha256": "7e7af383406b3256d36eb78480d022eb757ef952654173ca8cf3081d4dcfb31e"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 41,
+      "threshold": 21,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91165,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n41.v",
+        "sha256": "202618b7c3ab04e37e8c23d5246501ce41b7b24890156337f73e498d20d52344"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 9587,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n41.blif",
+        "sha256": "fb1afc301066ff9d0ef450d66e8ffbffba2be8a752fa5725fff4c6a27543676a"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 41,
+      "threshold": 21,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6732,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n41.v",
+        "sha256": "fc0887877d1124ce3d23e5665b778193134cd1dd07fd514079bff2b1ff4d4de0"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8595,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n43.blif",
+        "sha256": "9957bcaa71751e5f566acbdf517c074b628c665e1a3332975244d9d286097a38"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 43,
+      "threshold": 22,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 5019,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n43.v",
+        "sha256": "b367b009458d19e6abd7051da7ab8a3189d350c1a37fbdc3ec2c75a97acc71e6"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13148,
+        "path": "artifacts/netlists/b/blif/majority_b_n43.blif",
+        "sha256": "0de7b67f305515d78d3569bbd94a1c50ac1287e480cd25a119d3576f2e4c3440"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 43,
+      "threshold": 22,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7496,
+        "path": "artifacts/netlists/b/verilog/majority_b_n43.v",
+        "sha256": "9be0c70140acfa876bf233583313568defd9f59620f00444cd012c0c9d1a6f31"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 28056,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n43.blif",
+        "sha256": "3709e607e215fe76fe23b753b5a7834a415eb0882c1610378790c2cb21415d68"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 43,
+      "threshold": 22,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 16143,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n43.v",
+        "sha256": "26036dfac6e85574f6cd3951c0925be670ba8188ff33ae36a2ab3a73080f1ce2"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72419,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n43.blif",
+        "sha256": "e82f666b1445bb842482bc9480239f7391dbc97b3f0800178e99d7ea1699b6f7"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 43,
+      "threshold": 22,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91170,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n43.v",
+        "sha256": "fb958cc89e6679154a6c04b3935db869130de3794bb8fc464fa92c3e8bded11a"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 9723,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n43.blif",
+        "sha256": "8a7d7e486006789c838155e6fef27196227b6e38c2f0c5ca844406a5f245491b"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 43,
+      "threshold": 22,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6742,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n43.v",
+        "sha256": "8822a3d9d26dfc5b87a84427c7af10b1e150fa59b10e965e2641d6a4fa67560e"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 9017,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n45.blif",
+        "sha256": "caca05964fae6943a8d8e4626a850a8080f1970b6b68ff9d72d12ada6161d9ee"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 45,
+      "threshold": 23,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 5257,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n45.v",
+        "sha256": "eaa4c4b69a2ea01a2b6ea361bcd28f896de0a48ac236884d316ffdb9bc6d272d"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13144,
+        "path": "artifacts/netlists/b/blif/majority_b_n45.blif",
+        "sha256": "1ac06e81019c43b5d6be94e0e900a9d5e38069ef62b11631ad8efc8a3fb1d74c"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 45,
+      "threshold": 23,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7498,
+        "path": "artifacts/netlists/b/verilog/majority_b_n45.v",
+        "sha256": "aef9a3462942376848f51c68e79e86cdb98d381f01196c644c6e623f12a172cf"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 29415,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n45.blif",
+        "sha256": "f28015f049a6d7743f1c2f27b8f9843a7f89b01c23e2487632ee08882b681995"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 45,
+      "threshold": 23,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 16914,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n45.v",
+        "sha256": "deea2110983970404810e40e2242f158a4b515d0b431c58227854b3149be1822"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72414,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n45.blif",
+        "sha256": "8c87bb989a92e015c011ab7387436f80b85e4021230140a40c99242159e9b8b6"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 45,
+      "threshold": 23,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91173,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n45.v",
+        "sha256": "a04a93a464066c1df961023939d39caf87060fe6a1a3c1a4640bc374e319af1a"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 10144,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n45.blif",
+        "sha256": "158e3a1854febaa24c564220b7e29faa2d3b5f89735fd0f6c914f42719e9d5ed"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 45,
+      "threshold": 23,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6981,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n45.v",
+        "sha256": "a92f4f14a9d431922b13deb7fc4af0a396431c62ee85cf7970bdf252424580f9"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 8999,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n47.blif",
+        "sha256": "0edf986dbf2ddf81dac3895ac1928fb637fb426aaf63cd0f0b9eaa9f73849b2d"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 47,
+      "threshold": 24,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 5227,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n47.v",
+        "sha256": "a771733301e3524ac1e0c4de410e4dbc7162fa516a4292062a485f2ea47b9e90"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13137,
+        "path": "artifacts/netlists/b/blif/majority_b_n47.blif",
+        "sha256": "b80d55ebf212f68da481f54a78f3219f51fa191b76c7433d58424c6a787ef639"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 47,
+      "threshold": 24,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7500,
+        "path": "artifacts/netlists/b/verilog/majority_b_n47.v",
+        "sha256": "aa98e9a96e9487c8b4353660b9f160c1a51bcf600e8c12169184868550de02f4"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 30306,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n47.blif",
+        "sha256": "5014cd8f231ead814e15bc2d4091220b2c3c7ca7662c0766968200efc7ed85a5"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 47,
+      "threshold": 24,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 17400,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n47.v",
+        "sha256": "8a9c9e2cafa5f0cf6a092aa4dd33be6f28dbea0df2dca6d3c283f61f842ccb80"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72411,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n47.blif",
+        "sha256": "9e39d9843cecb9a23f8599d0552ac9061945638d7e4a827cf3c5e7bd3b5b9287"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 47,
+      "threshold": 24,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91178,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n47.v",
+        "sha256": "a2ef2f0970d27d1c65a6112a7b94b12a1ebe1d719df086771b99f71cde8f18d2"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 10277,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n47.blif",
+        "sha256": "5ca5b0cc0b574b67d27ecff1ea58c92e4e4b102db3930d20b763a73a67d7ba34"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 47,
+      "threshold": 24,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6983,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n47.v",
+        "sha256": "fb9207de4bf88b151ba9940ca7cb61e3e2514c9c2d519657cbab97b3d78f2603"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 10303,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n49.blif",
+        "sha256": "a840b7990c87e7a2a9bc453b76cd0b0973ca6b5bd6a2e056258a1c6640d75a1d"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 49,
+      "threshold": 25,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 5996,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n49.v",
+        "sha256": "9c92922b4747a53cbe1e0bb495bb2db2d0cf6fc7ef487c447d30ed2864176c18"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13130,
+        "path": "artifacts/netlists/b/blif/majority_b_n49.blif",
+        "sha256": "c08f0447c59ca257f0ede900b716ecd14d45501f9eeeb792f8f7ec04c5f0aa46"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 49,
+      "threshold": 25,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7502,
+        "path": "artifacts/netlists/b/verilog/majority_b_n49.v",
+        "sha256": "1f43917a0f05513c1c1890cc9f2f8f687d3e3376bc6105c7b36ff0bfc05bf1c9"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 32606,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n49.blif",
+        "sha256": "f7e992961536a269a68080311a14f38fc7a57b9f1a218c87ec51e811e3e8aa55"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 49,
+      "threshold": 25,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 18758,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n49.v",
+        "sha256": "d67a28a49e2f256114ee2d5cab345d84327f890c2584e742758a4edb00474c82"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72406,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n49.blif",
+        "sha256": "da36a815753a67ea751e64100ccb1a52ab4e9e6d9c97e6715969e340f554c7ca"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 49,
+      "threshold": 25,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91181,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n49.v",
+        "sha256": "0ce5d7a45921c288890c7aa9dbf64bfcd4dcd1d1226677cd30e3caff07fc555f"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 11275,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n49.blif",
+        "sha256": "b006ab4d9de59cb3729db76f8585bd3d1e768350263ee2dab762daf72ab27de6"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 49,
+      "threshold": 25,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7674,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n49.v",
+        "sha256": "e14e6a211587c0b4509545056858e8e3ae7ba2362ee6977ff37374e18ff4c366"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 10284,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n51.blif",
+        "sha256": "ec7691095486cbaeab20af56f375047a83f57c60a47503498ea4bccfa7ede3a3"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 51,
+      "threshold": 26,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 5972,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n51.v",
+        "sha256": "22c942f86973fe8fe13556b3af58673b03d385d5af48e7cf77c54e77f2b52ff6"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13126,
+        "path": "artifacts/netlists/b/blif/majority_b_n51.blif",
+        "sha256": "76ea8b693fa6b230652e68f13f1bdd6b7dd7c146d78940bcf42db6a2e937e8ec"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 51,
+      "threshold": 26,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7504,
+        "path": "artifacts/netlists/b/verilog/majority_b_n51.v",
+        "sha256": "e5b0b26201dbdce2f4259c4691679433565497100096ce33d36758ae40ecbfe1"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 33497,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n51.blif",
+        "sha256": "ce1e4c36cd239ddf74a5fbbec113db70481f92b5dfa908eb43a5f58502c3d06f"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 51,
+      "threshold": 26,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 19244,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n51.v",
+        "sha256": "2f60edb66ace3f2f3b48c67bf2d45c6539f07f7854af02178596ba19dc8951ea"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72403,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n51.blif",
+        "sha256": "cbd86de8a6cf93264164318bcee471988e330ea8c690ce8e3931879b67ab57bd"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 51,
+      "threshold": 26,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91186,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n51.v",
+        "sha256": "f3dd47c1efad62224aa5668b7adb7bfe6f08e4b6e3f15001033c6ce9394d75b3"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 11410,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n51.blif",
+        "sha256": "21ae2f24749aa1d3684eb15e1247da559d77f5f5bf180839e5e75d6aaecd7f87"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 51,
+      "threshold": 26,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7684,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n51.v",
+        "sha256": "f40714a12409403991a1e5b4ad22321d55788401b98085e06903f55da2ec0133"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 10707,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n53.blif",
+        "sha256": "31eec7d544a3d23b4ecf0e8e413b8bfba8ada669972788f305e2f6bd4aca3fae"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 53,
+      "threshold": 27,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6204,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n53.v",
+        "sha256": "cf055687498124dc61a0708ecbb61633c5601fa0732b29e516f7e5b0c3fdfbf1"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13119,
+        "path": "artifacts/netlists/b/blif/majority_b_n53.blif",
+        "sha256": "a74ee0968a7f9455f7e00803777f638c9dbfd30c284d91471dc2a47019c0dd09"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 53,
+      "threshold": 27,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7506,
+        "path": "artifacts/netlists/b/verilog/majority_b_n53.v",
+        "sha256": "c2dc0549ebf9715e9fea90db455ed3ad4776f2877b6604d35ccede59b8a70a26"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 34856,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n53.blif",
+        "sha256": "1b4f4ac5be1d3de014fc7d568619ead84c1ea620784a0696cc3f81a1cb38a880"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 53,
+      "threshold": 27,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 20015,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n53.v",
+        "sha256": "0fb5c731f70303edb835d7adb3c5190e7fdff31cafbd4f30e70f94e38b4bd8fc"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72398,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n53.blif",
+        "sha256": "06859976c4321ae3447077467b5095abc4017c8bddae47570165794de88dead4"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 53,
+      "threshold": 27,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91189,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n53.v",
+        "sha256": "b54e60579e5f79e5b7048b973301d3b4f7c1bdf2ee8416c7bc761f1c2bab8629"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 11834,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n53.blif",
+        "sha256": "fb531edd625f0b0d6b6c50415ab37e8ac80f7ab6ae2d9534e8e609df8411492a"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 53,
+      "threshold": 27,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7919,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n53.v",
+        "sha256": "c3bb5336a533daec986a73f402d088bf1433c8c4886d6f177ba32ff55928a98e"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 10689,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n55.blif",
+        "sha256": "4314ce6cb91bed7200ca02a9a6d83b16fb02a3cddf77a7dcedaf893e0faaeaae"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 55,
+      "threshold": 28,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6180,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n55.v",
+        "sha256": "f56a575504a0d928c84f0111548a619a3e6b8457b370bd5128be8b3e2e86d55b"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13112,
+        "path": "artifacts/netlists/b/blif/majority_b_n55.blif",
+        "sha256": "2d3fca4bbaa0f19686280f0f9e2862f2553a7216c70caacf098c7bd1ff37fe37"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 55,
+      "threshold": 28,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7508,
+        "path": "artifacts/netlists/b/verilog/majority_b_n55.v",
+        "sha256": "8c9132f402816032cfeaebc14230206e5bb249428fe4c6810ddb8ce9f5909f44"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 35747,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n55.blif",
+        "sha256": "3f9ef559b34a3f4fea5dddcb075e836d4ba65a300ee1dd59de6b40e2bb36e881"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 55,
+      "threshold": 28,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 20501,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n55.v",
+        "sha256": "9bb4fc5eec13c6188aae41dc44d4591917e7d875941ade6f73ec4c5a400a9bd9"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72395,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n55.blif",
+        "sha256": "76d56b67ab3b868e02dbc054d012b92a2064f6e31fac1cf6ef3cc887f90966dd"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 55,
+      "threshold": 28,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91194,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n55.v",
+        "sha256": "6d9207c9b7fc9cfcc6a61da637e522dc8468d10b674c678906d80f4cf1e94fcd"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 11967,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n55.blif",
+        "sha256": "7e84f907b9f8741c708b7fe1b0d1b950382f1bcd42f15dd7fa97ce82a5f1ab4a"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 55,
+      "threshold": 28,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7927,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n55.v",
+        "sha256": "f6663cdccc447ef20de045899ab64d11917ef450fa6a2b7e2d0ab723723ae358"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 11552,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n57.blif",
+        "sha256": "71ee05507d1e7e01ff1d6d25f1a699d8abc2739ea15a382764e5fb7f85e95a1c"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 57,
+      "threshold": 29,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6680,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n57.v",
+        "sha256": "0e6540b26b5480cf3a2483747e7789362ca2a6330ec6a67a5b4431c0dd7c714e"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13108,
+        "path": "artifacts/netlists/b/blif/majority_b_n57.blif",
+        "sha256": "46f3531dff211ada670ef7f095e948ea2812a5372e97c559181fde3c90101ed0"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 57,
+      "threshold": 29,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7510,
+        "path": "artifacts/netlists/b/verilog/majority_b_n57.v",
+        "sha256": "27af2b11ef91efe77c0129f9a157e574eb2de42923a8649e86bb3747730f64d4"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 37575,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n57.blif",
+        "sha256": "a3a64938824b3044b7d4bfe8fcace5847b24c4b0f4e8fc6e8b2b88177b430c37"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 57,
+      "threshold": 29,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 21562,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n57.v",
+        "sha256": "8267986cb2a45326b6369e0c3bb26df60305b7780f495d1c3bb70b43c6a981a6"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72390,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n57.blif",
+        "sha256": "fc7be3b7be09d169b923fbcf4b35b7a89ae314b6cdbff20b7da1d8ae5e97f40d"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 57,
+      "threshold": 29,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91197,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n57.v",
+        "sha256": "cf0d0aa2e37e09e7ac49098d1532ba1609bf158b45fdca772f3e2fd7170e0692"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 12677,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n57.blif",
+        "sha256": "5d4780858cebb384c669166a3b382e759b4ac52cc7a44c3055502a086cc0c044"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 57,
+      "threshold": 29,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 8393,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n57.v",
+        "sha256": "319534ff4417456a90ba06ef07298f7b38fc7478bc55560defd0325f52451059"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 11534,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n59.blif",
+        "sha256": "9c76e9a1a0bbebf820d97db8558e8646d3f29628ee66dbb1fedd381d1a4e8541"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 59,
+      "threshold": 30,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6650,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n59.v",
+        "sha256": "32947ed9639ec4a5bb30b9271b751625a73400202671236777e808ee2c200d56"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13101,
+        "path": "artifacts/netlists/b/blif/majority_b_n59.blif",
+        "sha256": "adbabd11bdc6def0e6465daeb69f8c83039531f12ed124e7162fcf94d686eb3e"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 59,
+      "threshold": 30,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7512,
+        "path": "artifacts/netlists/b/verilog/majority_b_n59.v",
+        "sha256": "2e8e0899d9efb0c05fb4ae3be2265f291c69ef4a0cb33cf9029527babab6ff6b"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 38466,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n59.blif",
+        "sha256": "a275e0b25e42c282d50642b66499c5bfdfe140a855cecadbbefe4aa9a5ef5419"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 59,
+      "threshold": 30,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 22048,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n59.v",
+        "sha256": "908c433c367b3380468876041ca03448b2a5c630056b6a6820c0bb7520fe74cd"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72387,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n59.blif",
+        "sha256": "8a5994125113e373410ed9991816175fa8311dc85e46ff05aa2463be50a4d7ac"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 59,
+      "threshold": 30,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91202,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n59.v",
+        "sha256": "df66a893f7df941564f536abed3fc8333974d56a51d72f2a62f906435bb4505a"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 12812,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n59.blif",
+        "sha256": "d01c47f2216ba777ee675cdc807a0164ee2a937909b0d31942a3aab563a59dee"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 59,
+      "threshold": 30,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 8397,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n59.v",
+        "sha256": "9af9b4033df77afd83a789479539f5dbe7c6029c52e9babd2d584414d9d23460"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 11957,
+        "path": "artifacts/netlists/fb/blif/majority_fb_n61.blif",
+        "sha256": "25c65d5db9644ac9bf5c80c131f9289e72cb56851df1981fe6c1fa195793204c"
+      },
+      "description": "Folded-bias majority",
+      "method": "fb",
+      "n": 61,
+      "threshold": 31,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 6888,
+        "path": "artifacts/netlists/fb/verilog/majority_fb_n61.v",
+        "sha256": "f4e0476cd4a3429403e144a27fa0590c20d51774e80b0769bdde255c6d04bfac"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13094,
+        "path": "artifacts/netlists/b/blif/majority_b_n61.blif",
+        "sha256": "5b40da39df9fe73082be386e772ccb6d306b05a7a254dbe3f5496f1552cb90be"
+      },
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "method": "b",
+      "n": 61,
+      "threshold": 31,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 7514,
+        "path": "artifacts/netlists/b/verilog/majority_b_n61.v",
+        "sha256": "0b0e03eeb04f7cd3a008c335c065d656df977843d032513a747847e6a935f8be"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 39825,
+        "path": "artifacts/netlists/apc/blif/majority_apc_n61.blif",
+        "sha256": "93d89f25cc105ffa98d45084d58b65374c82ed08dfb003b693458dbd837cc012"
+      },
+      "description": "Parhami accumulative parallel counter",
+      "method": "apc",
+      "n": 61,
+      "threshold": 31,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 22819,
+        "path": "artifacts/netlists/apc/verilog/majority_apc_n61.v",
+        "sha256": "4a49312a83c76a58e95ab2c3169031f33cfa7a9cf66faa5fa2ef15be8c410bca"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 72382,
+        "path": "artifacts/netlists/sn/blif/majority_sn_n61.blif",
+        "sha256": "b8864ad87a6547f218e0df568d34e9ac37a30fbe6b3723f7f368aa1fb977ded1"
+      },
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "method": "sn",
+      "n": 61,
+      "threshold": 31,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 91205,
+        "path": "artifacts/netlists/sn/verilog/majority_sn_n61.v",
+        "sha256": "d110b0b75a85c7dbd4b14c3005e8e746eba437433ef48ad2ca1c2e151ce1cdf9"
+      }
+    },
+    {
+      "blif": {
+        "bytes": 13233,
+        "path": "artifacts/netlists/csa_pa/blif/majority_csa_pa_n61.blif",
+        "sha256": "d27ba393653d2a477dea13902b0aad15c514034ea74ea70564d6f01a044df3d3"
+      },
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "method": "csa_pa",
+      "n": 61,
+      "threshold": 31,
+      "verification": "boundary_plus_seeded_1108_vectors",
+      "verilog": {
+        "bytes": 8636,
+        "path": "artifacts/netlists/csa_pa/verilog/majority_csa_pa_n61.v",
+        "sha256": "b8720edbf07771eb566f433b26484acc2fb65caef2af428be700fa787bb1cf80"
+      }
+    }
+  ],
+  "methods": [
+    {
+      "description": "Folded-bias majority",
+      "directory": "fb"
+    },
+    {
+      "description": "Strict scaffolded HW-plus-threshold baseline",
+      "directory": "b"
+    },
+    {
+      "description": "Parhami accumulative parallel counter",
+      "directory": "apc"
+    },
+    {
+      "description": "Padded-bitonic Piestrak-style sorting network",
+      "directory": "sn"
+    },
+    {
+      "description": "Dadda/CSA plus Kogge-Stone-style prefix threshold",
+      "directory": "csa_pa"
+    }
+  ],
+  "n_values": [
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    51,
+    53,
+    55,
+    57,
+    59,
+    61
+  ],
+  "schema": 1,
+  "verification": "all emitted BLIFs: exhaustive through n=13; boundary-weight plus 1024 seeded vectors thereafter"
+}

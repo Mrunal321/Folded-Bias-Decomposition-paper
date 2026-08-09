@@ -1,0 +1,2263 @@
+.model parhami_2009_apc_51_26
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 x16 x17 x18 x19 x20 x21 x22 x23 x24 x25 x26 x27 x28 x29 x30 x31 x32 x33 x34 x35 x36 x37 x38 x39 x40 x41 x42 x43 x44 x45 x46 x47 x48 x49 x50
+.outputs maj
+.names APC_K1
+1
+.names APC_K2
+1
+.names APC_K5
+1
+.names CONST0
+.names CONST0 x0 x1 apc_l0_a0_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x0 x1 fa0_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a0_c1 fa0_op1 x0 apc_l0_a0_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a0_c1 apc_l0_a0_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a0_c1 fa1_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a0_c2 fa1_op1 apc_l0_a0_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x2 x3 apc_l0_a1_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x2 x3 fa2_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a1_c1 fa2_op1 x2 apc_l0_a1_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a1_c1 apc_l0_a1_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a1_c1 fa3_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a1_c2 fa3_op1 apc_l0_a1_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x4 x5 apc_l0_a2_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x4 x5 fa4_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a2_c1 fa4_op1 x4 apc_l0_a2_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a2_c1 apc_l0_a2_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a2_c1 fa5_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a2_c2 fa5_op1 apc_l0_a2_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x6 x7 apc_l0_a3_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x6 x7 fa6_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a3_c1 fa6_op1 x6 apc_l0_a3_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a3_c1 apc_l0_a3_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a3_c1 fa7_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a3_c2 fa7_op1 apc_l0_a3_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x8 x9 apc_l0_a4_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x8 x9 fa8_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a4_c1 fa8_op1 x8 apc_l0_a4_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a4_c1 apc_l0_a4_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a4_c1 fa9_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a4_c2 fa9_op1 apc_l0_a4_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x10 x11 apc_l0_a5_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x10 x11 fa10_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a5_c1 fa10_op1 x10 apc_l0_a5_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a5_c1 apc_l0_a5_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a5_c1 fa11_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a5_c2 fa11_op1 apc_l0_a5_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x12 x13 apc_l0_a6_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x12 x13 fa12_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a6_c1 fa12_op1 x12 apc_l0_a6_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a6_c1 apc_l0_a6_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a6_c1 fa13_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a6_c2 fa13_op1 apc_l0_a6_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x14 x15 apc_l0_a7_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x14 x15 fa14_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a7_c1 fa14_op1 x14 apc_l0_a7_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a7_c1 apc_l0_a7_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a7_c1 fa15_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a7_c2 fa15_op1 apc_l0_a7_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x16 x17 apc_l0_a8_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x16 x17 fa16_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a8_c1 fa16_op1 x16 apc_l0_a8_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a8_c1 apc_l0_a8_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a8_c1 fa17_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a8_c2 fa17_op1 apc_l0_a8_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x18 x19 apc_l0_a9_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x18 x19 fa18_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a9_c1 fa18_op1 x18 apc_l0_a9_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a9_c1 apc_l0_a9_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a9_c1 fa19_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a9_c2 fa19_op1 apc_l0_a9_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x20 x21 apc_l0_a10_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x20 x21 fa20_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a10_c1 fa20_op1 x20 apc_l0_a10_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a10_c1 apc_l0_a10_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a10_c1 fa21_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a10_c2 fa21_op1 apc_l0_a10_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x22 x23 apc_l0_a11_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x22 x23 fa22_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a11_c1 fa22_op1 x22 apc_l0_a11_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a11_c1 apc_l0_a11_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a11_c1 fa23_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a11_c2 fa23_op1 apc_l0_a11_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x24 x25 apc_l0_a12_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x24 x25 fa24_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a12_c1 fa24_op1 x24 apc_l0_a12_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a12_c1 apc_l0_a12_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a12_c1 fa25_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a12_c2 fa25_op1 apc_l0_a12_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x26 x27 apc_l0_a13_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x26 x27 fa26_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a13_c1 fa26_op1 x26 apc_l0_a13_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a13_c1 apc_l0_a13_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a13_c1 fa27_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a13_c2 fa27_op1 apc_l0_a13_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x28 x29 apc_l0_a14_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x28 x29 fa28_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a14_c1 fa28_op1 x28 apc_l0_a14_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a14_c1 apc_l0_a14_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a14_c1 fa29_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a14_c2 fa29_op1 apc_l0_a14_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x30 x31 apc_l0_a15_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x30 x31 fa30_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a15_c1 fa30_op1 x30 apc_l0_a15_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a15_c1 apc_l0_a15_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a15_c1 fa31_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a15_c2 fa31_op1 apc_l0_a15_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x32 x33 apc_l0_a16_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x32 x33 fa32_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a16_c1 fa32_op1 x32 apc_l0_a16_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a16_c1 apc_l0_a16_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a16_c1 fa33_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a16_c2 fa33_op1 apc_l0_a16_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x34 x35 apc_l0_a17_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x34 x35 fa34_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a17_c1 fa34_op1 x34 apc_l0_a17_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a17_c1 apc_l0_a17_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a17_c1 fa35_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a17_c2 fa35_op1 apc_l0_a17_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x36 x37 apc_l0_a18_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x36 x37 fa36_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a18_c1 fa36_op1 x36 apc_l0_a18_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a18_c1 apc_l0_a18_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a18_c1 fa37_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a18_c2 fa37_op1 apc_l0_a18_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x38 x39 apc_l0_a19_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x38 x39 fa38_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a19_c1 fa38_op1 x38 apc_l0_a19_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a19_c1 apc_l0_a19_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a19_c1 fa39_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a19_c2 fa39_op1 apc_l0_a19_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x40 x41 apc_l0_a20_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x40 x41 fa40_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a20_c1 fa40_op1 x40 apc_l0_a20_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a20_c1 apc_l0_a20_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a20_c1 fa41_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a20_c2 fa41_op1 apc_l0_a20_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x42 x43 apc_l0_a21_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x42 x43 fa42_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a21_c1 fa42_op1 x42 apc_l0_a21_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a21_c1 apc_l0_a21_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a21_c1 fa43_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a21_c2 fa43_op1 apc_l0_a21_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x44 x45 apc_l0_a22_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x44 x45 fa44_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a22_c1 fa44_op1 x44 apc_l0_a22_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a22_c1 apc_l0_a22_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a22_c1 fa45_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a22_c2 fa45_op1 apc_l0_a22_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x46 x47 apc_l0_a23_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x46 x47 fa46_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a23_c1 fa46_op1 x46 apc_l0_a23_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a23_c1 apc_l0_a23_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a23_c1 fa47_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a23_c2 fa47_op1 apc_l0_a23_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 x48 x49 apc_l0_a24_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 x48 x49 fa48_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a24_c1 fa48_op1 x48 apc_l0_a24_s0
+001 1
+010 1
+011 1
+111 1
+.names CONST0 CONST0 apc_l0_a24_c1 apc_l0_a24_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l0_a24_c1 fa49_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l0_a24_c2 fa49_op1 apc_l0_a24_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a0_s0 apc_l0_a1_s0 apc_l1_a0_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a0_s0 apc_l0_a1_s0 fa50_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a0_s0 apc_l1_a0_c1 fa50_op1 apc_l1_a0_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a0_s1 apc_l0_a1_s1 apc_l1_a0_c1 apc_l1_a0_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a0_s1 apc_l0_a1_s1 apc_l1_a0_c1 fa51_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a0_s1 apc_l1_a0_c2 fa51_op1 apc_l1_a0_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a0_c2 apc_l1_a0_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a0_c2 fa52_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a0_c3 fa52_op1 apc_l1_a0_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a2_s0 apc_l0_a3_s0 apc_l1_a1_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a2_s0 apc_l0_a3_s0 fa53_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a2_s0 apc_l1_a1_c1 fa53_op1 apc_l1_a1_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a2_s1 apc_l0_a3_s1 apc_l1_a1_c1 apc_l1_a1_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a2_s1 apc_l0_a3_s1 apc_l1_a1_c1 fa54_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a2_s1 apc_l1_a1_c2 fa54_op1 apc_l1_a1_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a1_c2 apc_l1_a1_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a1_c2 fa55_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a1_c3 fa55_op1 apc_l1_a1_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a4_s0 apc_l0_a5_s0 apc_l1_a2_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a4_s0 apc_l0_a5_s0 fa56_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a4_s0 apc_l1_a2_c1 fa56_op1 apc_l1_a2_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a4_s1 apc_l0_a5_s1 apc_l1_a2_c1 apc_l1_a2_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a4_s1 apc_l0_a5_s1 apc_l1_a2_c1 fa57_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a4_s1 apc_l1_a2_c2 fa57_op1 apc_l1_a2_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a2_c2 apc_l1_a2_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a2_c2 fa58_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a2_c3 fa58_op1 apc_l1_a2_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a6_s0 apc_l0_a7_s0 apc_l1_a3_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a6_s0 apc_l0_a7_s0 fa59_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a6_s0 apc_l1_a3_c1 fa59_op1 apc_l1_a3_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a6_s1 apc_l0_a7_s1 apc_l1_a3_c1 apc_l1_a3_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a6_s1 apc_l0_a7_s1 apc_l1_a3_c1 fa60_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a6_s1 apc_l1_a3_c2 fa60_op1 apc_l1_a3_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a3_c2 apc_l1_a3_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a3_c2 fa61_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a3_c3 fa61_op1 apc_l1_a3_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a8_s0 apc_l0_a9_s0 apc_l1_a4_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a8_s0 apc_l0_a9_s0 fa62_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a8_s0 apc_l1_a4_c1 fa62_op1 apc_l1_a4_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a8_s1 apc_l0_a9_s1 apc_l1_a4_c1 apc_l1_a4_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a8_s1 apc_l0_a9_s1 apc_l1_a4_c1 fa63_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a8_s1 apc_l1_a4_c2 fa63_op1 apc_l1_a4_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a4_c2 apc_l1_a4_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a4_c2 fa64_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a4_c3 fa64_op1 apc_l1_a4_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a10_s0 apc_l0_a11_s0 apc_l1_a5_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a10_s0 apc_l0_a11_s0 fa65_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a10_s0 apc_l1_a5_c1 fa65_op1 apc_l1_a5_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a10_s1 apc_l0_a11_s1 apc_l1_a5_c1 apc_l1_a5_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a10_s1 apc_l0_a11_s1 apc_l1_a5_c1 fa66_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a10_s1 apc_l1_a5_c2 fa66_op1 apc_l1_a5_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a5_c2 apc_l1_a5_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a5_c2 fa67_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a5_c3 fa67_op1 apc_l1_a5_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a12_s0 apc_l0_a13_s0 apc_l1_a6_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a12_s0 apc_l0_a13_s0 fa68_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a12_s0 apc_l1_a6_c1 fa68_op1 apc_l1_a6_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a12_s1 apc_l0_a13_s1 apc_l1_a6_c1 apc_l1_a6_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a12_s1 apc_l0_a13_s1 apc_l1_a6_c1 fa69_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a12_s1 apc_l1_a6_c2 fa69_op1 apc_l1_a6_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a6_c2 apc_l1_a6_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a6_c2 fa70_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a6_c3 fa70_op1 apc_l1_a6_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a14_s0 apc_l0_a15_s0 apc_l1_a7_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a14_s0 apc_l0_a15_s0 fa71_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a14_s0 apc_l1_a7_c1 fa71_op1 apc_l1_a7_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a14_s1 apc_l0_a15_s1 apc_l1_a7_c1 apc_l1_a7_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a14_s1 apc_l0_a15_s1 apc_l1_a7_c1 fa72_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a14_s1 apc_l1_a7_c2 fa72_op1 apc_l1_a7_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a7_c2 apc_l1_a7_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a7_c2 fa73_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a7_c3 fa73_op1 apc_l1_a7_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a16_s0 apc_l0_a17_s0 apc_l1_a8_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a16_s0 apc_l0_a17_s0 fa74_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a16_s0 apc_l1_a8_c1 fa74_op1 apc_l1_a8_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a16_s1 apc_l0_a17_s1 apc_l1_a8_c1 apc_l1_a8_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a16_s1 apc_l0_a17_s1 apc_l1_a8_c1 fa75_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a16_s1 apc_l1_a8_c2 fa75_op1 apc_l1_a8_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a8_c2 apc_l1_a8_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a8_c2 fa76_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a8_c3 fa76_op1 apc_l1_a8_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a18_s0 apc_l0_a19_s0 apc_l1_a9_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a18_s0 apc_l0_a19_s0 fa77_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a18_s0 apc_l1_a9_c1 fa77_op1 apc_l1_a9_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a18_s1 apc_l0_a19_s1 apc_l1_a9_c1 apc_l1_a9_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a18_s1 apc_l0_a19_s1 apc_l1_a9_c1 fa78_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a18_s1 apc_l1_a9_c2 fa78_op1 apc_l1_a9_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a9_c2 apc_l1_a9_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a9_c2 fa79_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a9_c3 fa79_op1 apc_l1_a9_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a20_s0 apc_l0_a21_s0 apc_l1_a10_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a20_s0 apc_l0_a21_s0 fa80_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a20_s0 apc_l1_a10_c1 fa80_op1 apc_l1_a10_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a20_s1 apc_l0_a21_s1 apc_l1_a10_c1 apc_l1_a10_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a20_s1 apc_l0_a21_s1 apc_l1_a10_c1 fa81_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a20_s1 apc_l1_a10_c2 fa81_op1 apc_l1_a10_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a10_c2 apc_l1_a10_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a10_c2 fa82_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a10_c3 fa82_op1 apc_l1_a10_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a22_s0 apc_l0_a23_s0 apc_l1_a11_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a22_s0 apc_l0_a23_s0 fa83_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a22_s0 apc_l1_a11_c1 fa83_op1 apc_l1_a11_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a22_s1 apc_l0_a23_s1 apc_l1_a11_c1 apc_l1_a11_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l0_a22_s1 apc_l0_a23_s1 apc_l1_a11_c1 fa84_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l0_a22_s1 apc_l1_a11_c2 fa84_op1 apc_l1_a11_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l1_a11_c2 apc_l1_a11_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l1_a11_c2 fa85_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l1_a11_c3 fa85_op1 apc_l1_a11_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a24_s0 x50 apc_l1_a12_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a24_s0 x50 fa86_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a24_s0 apc_l1_a12_c1 fa86_op1 apc_l1_a12_s0
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l0_a24_s1 apc_l1_a12_c1 apc_l1_a12_c2
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l0_a24_s1 apc_l1_a12_c1 fa87_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l0_a24_s1 apc_l1_a12_c2 fa87_op1 apc_l1_a12_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l1_a0_s0 apc_l1_a1_s0 apc_l2_a0_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l1_a0_s0 apc_l1_a1_s0 fa88_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a0_s0 apc_l2_a0_c1 fa88_op1 apc_l2_a0_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a0_s1 apc_l1_a1_s1 apc_l2_a0_c1 apc_l2_a0_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a0_s1 apc_l1_a1_s1 apc_l2_a0_c1 fa89_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a0_s1 apc_l2_a0_c2 fa89_op1 apc_l2_a0_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a0_s2 apc_l1_a1_s2 apc_l2_a0_c2 apc_l2_a0_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a0_s2 apc_l1_a1_s2 apc_l2_a0_c2 fa90_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a0_s2 apc_l2_a0_c3 fa90_op1 apc_l2_a0_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l2_a0_c3 apc_l2_a0_c4
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l2_a0_c3 fa91_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l2_a0_c4 fa91_op1 apc_l2_a0_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l1_a2_s0 apc_l1_a3_s0 apc_l2_a1_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l1_a2_s0 apc_l1_a3_s0 fa92_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a2_s0 apc_l2_a1_c1 fa92_op1 apc_l2_a1_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a2_s1 apc_l1_a3_s1 apc_l2_a1_c1 apc_l2_a1_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a2_s1 apc_l1_a3_s1 apc_l2_a1_c1 fa93_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a2_s1 apc_l2_a1_c2 fa93_op1 apc_l2_a1_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a2_s2 apc_l1_a3_s2 apc_l2_a1_c2 apc_l2_a1_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a2_s2 apc_l1_a3_s2 apc_l2_a1_c2 fa94_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a2_s2 apc_l2_a1_c3 fa94_op1 apc_l2_a1_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l2_a1_c3 apc_l2_a1_c4
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l2_a1_c3 fa95_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l2_a1_c4 fa95_op1 apc_l2_a1_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l1_a4_s0 apc_l1_a5_s0 apc_l2_a2_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l1_a4_s0 apc_l1_a5_s0 fa96_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a4_s0 apc_l2_a2_c1 fa96_op1 apc_l2_a2_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a4_s1 apc_l1_a5_s1 apc_l2_a2_c1 apc_l2_a2_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a4_s1 apc_l1_a5_s1 apc_l2_a2_c1 fa97_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a4_s1 apc_l2_a2_c2 fa97_op1 apc_l2_a2_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a4_s2 apc_l1_a5_s2 apc_l2_a2_c2 apc_l2_a2_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a4_s2 apc_l1_a5_s2 apc_l2_a2_c2 fa98_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a4_s2 apc_l2_a2_c3 fa98_op1 apc_l2_a2_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l2_a2_c3 apc_l2_a2_c4
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l2_a2_c3 fa99_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l2_a2_c4 fa99_op1 apc_l2_a2_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l1_a6_s0 apc_l1_a7_s0 apc_l2_a3_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l1_a6_s0 apc_l1_a7_s0 fa100_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a6_s0 apc_l2_a3_c1 fa100_op1 apc_l2_a3_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a6_s1 apc_l1_a7_s1 apc_l2_a3_c1 apc_l2_a3_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a6_s1 apc_l1_a7_s1 apc_l2_a3_c1 fa101_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a6_s1 apc_l2_a3_c2 fa101_op1 apc_l2_a3_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a6_s2 apc_l1_a7_s2 apc_l2_a3_c2 apc_l2_a3_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a6_s2 apc_l1_a7_s2 apc_l2_a3_c2 fa102_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a6_s2 apc_l2_a3_c3 fa102_op1 apc_l2_a3_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l2_a3_c3 apc_l2_a3_c4
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l2_a3_c3 fa103_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l2_a3_c4 fa103_op1 apc_l2_a3_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l1_a8_s0 apc_l1_a9_s0 apc_l2_a4_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l1_a8_s0 apc_l1_a9_s0 fa104_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a8_s0 apc_l2_a4_c1 fa104_op1 apc_l2_a4_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a8_s1 apc_l1_a9_s1 apc_l2_a4_c1 apc_l2_a4_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a8_s1 apc_l1_a9_s1 apc_l2_a4_c1 fa105_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a8_s1 apc_l2_a4_c2 fa105_op1 apc_l2_a4_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a8_s2 apc_l1_a9_s2 apc_l2_a4_c2 apc_l2_a4_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a8_s2 apc_l1_a9_s2 apc_l2_a4_c2 fa106_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a8_s2 apc_l2_a4_c3 fa106_op1 apc_l2_a4_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l2_a4_c3 apc_l2_a4_c4
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l2_a4_c3 fa107_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l2_a4_c4 fa107_op1 apc_l2_a4_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l1_a10_s0 apc_l1_a11_s0 apc_l2_a5_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l1_a10_s0 apc_l1_a11_s0 fa108_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a10_s0 apc_l2_a5_c1 fa108_op1 apc_l2_a5_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a10_s1 apc_l1_a11_s1 apc_l2_a5_c1 apc_l2_a5_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a10_s1 apc_l1_a11_s1 apc_l2_a5_c1 fa109_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a10_s1 apc_l2_a5_c2 fa109_op1 apc_l2_a5_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a10_s2 apc_l1_a11_s2 apc_l2_a5_c2 apc_l2_a5_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a10_s2 apc_l1_a11_s2 apc_l2_a5_c2 fa110_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l1_a10_s2 apc_l2_a5_c3 fa110_op1 apc_l2_a5_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l2_a5_c3 apc_l2_a5_c4
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l2_a5_c3 fa111_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l2_a5_c4 fa111_op1 apc_l2_a5_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l2_a0_s0 apc_l2_a1_s0 apc_l3_a0_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l2_a0_s0 apc_l2_a1_s0 fa112_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a0_s0 apc_l3_a0_c1 fa112_op1 apc_l3_a0_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a0_s1 apc_l2_a1_s1 apc_l3_a0_c1 apc_l3_a0_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l2_a0_s1 apc_l2_a1_s1 apc_l3_a0_c1 fa113_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l2_a0_s1 apc_l3_a0_c2 fa113_op1 apc_l3_a0_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a0_s2 apc_l2_a1_s2 apc_l3_a0_c2 apc_l3_a0_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l2_a0_s2 apc_l2_a1_s2 apc_l3_a0_c2 fa114_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l2_a0_s2 apc_l3_a0_c3 fa114_op1 apc_l3_a0_s2
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a0_s3 apc_l2_a1_s3 apc_l3_a0_c3 apc_l3_a0_c4
+011 1
+101 1
+110 1
+111 1
+.names apc_l2_a0_s3 apc_l2_a1_s3 apc_l3_a0_c3 fa115_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l2_a0_s3 apc_l3_a0_c4 fa115_op1 apc_l3_a0_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l3_a0_c4 apc_l3_a0_c5
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l3_a0_c4 fa116_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l3_a0_c5 fa116_op1 apc_l3_a0_s4
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l2_a2_s0 apc_l2_a3_s0 apc_l3_a1_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l2_a2_s0 apc_l2_a3_s0 fa117_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a2_s0 apc_l3_a1_c1 fa117_op1 apc_l3_a1_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a2_s1 apc_l2_a3_s1 apc_l3_a1_c1 apc_l3_a1_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l2_a2_s1 apc_l2_a3_s1 apc_l3_a1_c1 fa118_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l2_a2_s1 apc_l3_a1_c2 fa118_op1 apc_l3_a1_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a2_s2 apc_l2_a3_s2 apc_l3_a1_c2 apc_l3_a1_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l2_a2_s2 apc_l2_a3_s2 apc_l3_a1_c2 fa119_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l2_a2_s2 apc_l3_a1_c3 fa119_op1 apc_l3_a1_s2
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a2_s3 apc_l2_a3_s3 apc_l3_a1_c3 apc_l3_a1_c4
+011 1
+101 1
+110 1
+111 1
+.names apc_l2_a2_s3 apc_l2_a3_s3 apc_l3_a1_c3 fa120_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l2_a2_s3 apc_l3_a1_c4 fa120_op1 apc_l3_a1_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l3_a1_c4 apc_l3_a1_c5
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l3_a1_c4 fa121_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l3_a1_c5 fa121_op1 apc_l3_a1_s4
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l2_a4_s0 apc_l2_a5_s0 apc_l3_a2_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l2_a4_s0 apc_l2_a5_s0 fa122_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a4_s0 apc_l3_a2_c1 fa122_op1 apc_l3_a2_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a4_s1 apc_l2_a5_s1 apc_l3_a2_c1 apc_l3_a2_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l2_a4_s1 apc_l2_a5_s1 apc_l3_a2_c1 fa123_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l2_a4_s1 apc_l3_a2_c2 fa123_op1 apc_l3_a2_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a4_s2 apc_l2_a5_s2 apc_l3_a2_c2 apc_l3_a2_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l2_a4_s2 apc_l2_a5_s2 apc_l3_a2_c2 fa124_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l2_a4_s2 apc_l3_a2_c3 fa124_op1 apc_l3_a2_s2
+001 1
+100 1
+101 1
+111 1
+.names apc_l2_a4_s3 apc_l2_a5_s3 apc_l3_a2_c3 apc_l3_a2_c4
+011 1
+101 1
+110 1
+111 1
+.names apc_l2_a4_s3 apc_l2_a5_s3 apc_l3_a2_c3 fa125_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l2_a4_s3 apc_l3_a2_c4 fa125_op1 apc_l3_a2_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l3_a2_c4 apc_l3_a2_c5
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l3_a2_c4 fa126_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l3_a2_c5 fa126_op1 apc_l3_a2_s4
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l3_a0_s0 apc_l3_a1_s0 apc_l4_a0_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l3_a0_s0 apc_l3_a1_s0 fa127_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l3_a0_s0 apc_l4_a0_c1 fa127_op1 apc_l4_a0_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l3_a0_s1 apc_l3_a1_s1 apc_l4_a0_c1 apc_l4_a0_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l3_a0_s1 apc_l3_a1_s1 apc_l4_a0_c1 fa128_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l3_a0_s1 apc_l4_a0_c2 fa128_op1 apc_l4_a0_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l3_a0_s2 apc_l3_a1_s2 apc_l4_a0_c2 apc_l4_a0_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l3_a0_s2 apc_l3_a1_s2 apc_l4_a0_c2 fa129_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l3_a0_s2 apc_l4_a0_c3 fa129_op1 apc_l4_a0_s2
+001 1
+100 1
+101 1
+111 1
+.names apc_l3_a0_s3 apc_l3_a1_s3 apc_l4_a0_c3 apc_l4_a0_c4
+011 1
+101 1
+110 1
+111 1
+.names apc_l3_a0_s3 apc_l3_a1_s3 apc_l4_a0_c3 fa130_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l3_a0_s3 apc_l4_a0_c4 fa130_op1 apc_l4_a0_s3
+001 1
+100 1
+101 1
+111 1
+.names apc_l3_a0_s4 apc_l3_a1_s4 apc_l4_a0_c4 apc_l4_a0_c5
+011 1
+101 1
+110 1
+111 1
+.names apc_l3_a0_s4 apc_l3_a1_s4 apc_l4_a0_c4 fa131_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l3_a0_s4 apc_l4_a0_c5 fa131_op1 apc_l4_a0_s4
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l4_a0_c5 apc_l4_a0_c6
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l4_a0_c5 fa132_op1
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_l4_a0_c6 fa132_op1 apc_l4_a0_s5
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l1_a12_s0 apc_l3_a2_s0 apc_l4_a1_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l1_a12_s0 apc_l3_a2_s0 fa133_op1
+010 1
+100 1
+110 1
+111 1
+.names apc_l3_a2_s0 apc_l4_a1_c1 fa133_op1 apc_l4_a1_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l1_a12_s1 apc_l3_a2_s1 apc_l4_a1_c1 apc_l4_a1_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l1_a12_s1 apc_l3_a2_s1 apc_l4_a1_c1 fa134_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l3_a2_s1 apc_l4_a1_c2 fa134_op1 apc_l4_a1_s1
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l3_a2_s2 apc_l4_a1_c2 apc_l4_a1_c3
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l3_a2_s2 apc_l4_a1_c2 fa135_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l3_a2_s2 apc_l4_a1_c3 fa135_op1 apc_l4_a1_s2
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l3_a2_s3 apc_l4_a1_c3 apc_l4_a1_c4
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l3_a2_s3 apc_l4_a1_c3 fa136_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l3_a2_s3 apc_l4_a1_c4 fa136_op1 apc_l4_a1_s3
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l3_a2_s4 apc_l4_a1_c4 apc_l4_a1_c5
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l3_a2_s4 apc_l4_a1_c4 fa137_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l3_a2_s4 apc_l4_a1_c5 fa137_op1 apc_l4_a1_s4
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l4_a0_s0 apc_l4_a1_s0 apc_l5_a0_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l4_a0_s0 apc_l4_a1_s0 fa138_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l4_a0_s0 apc_l5_a0_c1 fa138_op1 apc_l5_a0_s0
+001 1
+100 1
+101 1
+111 1
+.names apc_l4_a0_s1 apc_l4_a1_s1 apc_l5_a0_c1 apc_l5_a0_c2
+011 1
+101 1
+110 1
+111 1
+.names apc_l4_a0_s1 apc_l4_a1_s1 apc_l5_a0_c1 fa139_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l4_a0_s1 apc_l5_a0_c2 fa139_op1 apc_l5_a0_s1
+001 1
+100 1
+101 1
+111 1
+.names apc_l4_a0_s2 apc_l4_a1_s2 apc_l5_a0_c2 apc_l5_a0_c3
+011 1
+101 1
+110 1
+111 1
+.names apc_l4_a0_s2 apc_l4_a1_s2 apc_l5_a0_c2 fa140_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l4_a0_s2 apc_l5_a0_c3 fa140_op1 apc_l5_a0_s2
+001 1
+100 1
+101 1
+111 1
+.names apc_l4_a0_s3 apc_l4_a1_s3 apc_l5_a0_c3 apc_l5_a0_c4
+011 1
+101 1
+110 1
+111 1
+.names apc_l4_a0_s3 apc_l4_a1_s3 apc_l5_a0_c3 fa141_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l4_a0_s3 apc_l5_a0_c4 fa141_op1 apc_l5_a0_s3
+001 1
+100 1
+101 1
+111 1
+.names apc_l4_a0_s4 apc_l4_a1_s4 apc_l5_a0_c4 apc_l5_a0_c5
+011 1
+101 1
+110 1
+111 1
+.names apc_l4_a0_s4 apc_l4_a1_s4 apc_l5_a0_c4 fa142_op1
+001 1
+010 1
+011 1
+111 1
+.names apc_l4_a0_s4 apc_l5_a0_c5 fa142_op1 apc_l5_a0_s4
+001 1
+100 1
+101 1
+111 1
+.names CONST0 apc_l4_a0_s5 apc_l5_a0_c5 apc_l5_a0_c6
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_l4_a0_s5 apc_l5_a0_c5 fa143_op1
+001 1
+100 1
+101 1
+111 1
+.names apc_l4_a0_s5 apc_l5_a0_c6 fa143_op1 apc_l5_a0_s5
+001 1
+100 1
+101 1
+111 1
+.names CONST0 CONST0 apc_l5_a0_s0 apc_final_c1
+011 1
+101 1
+110 1
+111 1
+.names CONST0 CONST0 apc_l5_a0_s0 fa144_op1
+010 1
+100 1
+110 1
+111 1
+.names apc_final_c1 apc_l5_a0_s0 fa144_op1 apc_final_s0
+001 1
+010 1
+011 1
+111 1
+.names APC_K1 apc_final_c1 apc_l5_a0_s1 apc_final_c2
+011 1
+101 1
+110 1
+111 1
+.names APC_K1 apc_final_c1 apc_l5_a0_s1 fa145_op1
+010 1
+100 1
+110 1
+111 1
+.names apc_final_c2 apc_l5_a0_s1 fa145_op1 apc_final_s1
+001 1
+010 1
+011 1
+111 1
+.names APC_K2 apc_final_c2 apc_l5_a0_s2 apc_final_c3
+011 1
+101 1
+110 1
+111 1
+.names APC_K2 apc_final_c2 apc_l5_a0_s2 fa146_op1
+010 1
+100 1
+110 1
+111 1
+.names apc_final_c3 apc_l5_a0_s2 fa146_op1 apc_final_s2
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_final_c3 apc_l5_a0_s3 apc_final_c4
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_final_c3 apc_l5_a0_s3 fa147_op1
+010 1
+100 1
+110 1
+111 1
+.names apc_final_c4 apc_l5_a0_s3 fa147_op1 apc_final_s3
+001 1
+010 1
+011 1
+111 1
+.names CONST0 apc_final_c4 apc_l5_a0_s4 apc_final_c5
+011 1
+101 1
+110 1
+111 1
+.names CONST0 apc_final_c4 apc_l5_a0_s4 fa148_op1
+010 1
+100 1
+110 1
+111 1
+.names apc_final_c5 apc_l5_a0_s4 fa148_op1 apc_final_s4
+001 1
+010 1
+011 1
+111 1
+.names APC_K5 apc_final_c5 apc_l5_a0_s5 apc_final_c6
+011 1
+101 1
+110 1
+111 1
+.names APC_K5 apc_final_c5 apc_l5_a0_s5 fa149_op1
+010 1
+100 1
+110 1
+111 1
+.names apc_final_c6 apc_l5_a0_s5 fa149_op1 apc_final_s5
+001 1
+010 1
+011 1
+111 1
+.names apc_final_c6 maj
+1 1
+.end

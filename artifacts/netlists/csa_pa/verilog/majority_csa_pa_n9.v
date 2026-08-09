@@ -1,0 +1,40 @@
+module csa_kogge_stone_prefix_9(input [8:0] x, output maj);
+  wire KS_K0, KS_K1, KS_K3, d0_c_c0_3, d0_c_c1_4, d0_p_c_c2_6, d0_p_s_c2_6, d0_s_c0_3, d0_s_c1_4, d2_p_c_c1_5, d2_p_s_c1_5, ks_g0, ks_g1, ks_g3, ks_p0, ks_p1, ks_p3, ks_s0_g1, ks_s0_g2, ks_s0_g3, ks_s0_p1, ks_s0_p2, ks_s0_p3, ks_s0_t1, ks_s0_t2, ks_s0_t3, ks_s1_g2, ks_s1_g3, ks_s1_p2, ks_s1_p3, ks_s1_t2, ks_s1_t3, raw_c_c0_0, raw_c_c0_1, raw_c_c0_2, raw_s_c0_0, raw_s_c0_1, raw_s_c0_2;
+  assign KS_K0 = 1'b1;
+  assign KS_K1 = 1'b1;
+  assign KS_K3 = 1'b1;
+  fa u0(.a(x[0]), .b(x[1]), .cin(x[2]), .sum(raw_s_c0_0), .cout(raw_c_c0_0));
+  fa u1(.a(x[3]), .b(x[4]), .cin(x[5]), .sum(raw_s_c0_1), .cout(raw_c_c0_1));
+  fa u2(.a(x[6]), .b(x[7]), .cin(x[8]), .sum(raw_s_c0_2), .cout(raw_c_c0_2));
+  fa u3(.a(raw_s_c0_0), .b(raw_s_c0_1), .cin(raw_s_c0_2), .sum(d0_s_c0_3), .cout(d0_c_c0_3));
+  fa u4(.a(raw_c_c0_0), .b(raw_c_c0_1), .cin(raw_c_c0_2), .sum(d0_s_c1_4), .cout(d0_c_c1_4));
+  fa u5(.a(d0_s_c1_4), .b(d0_c_c0_3), .cin(1'b0), .sum(d2_p_s_c1_5), .cout(d2_p_c_c1_5));
+  fa u6(.a(d0_c_c1_4), .b(d2_p_c_c1_5), .cin(1'b0), .sum(d0_p_s_c2_6), .cout(d0_p_c_c2_6));
+  assign ks_p0 = ~d0_s_c0_3;
+  assign ks_g0 = d0_s_c0_3 & KS_K0;
+  assign ks_p1 = ~d2_p_s_c1_5;
+  assign ks_g1 = d2_p_s_c1_5 & KS_K1;
+  assign ks_p3 = ~d0_p_c_c2_6;
+  assign ks_g3 = d0_p_c_c2_6 & KS_K3;
+  assign ks_s0_p1 = ks_p1 & ks_p0;
+  assign ks_s0_t1 = ks_p1 & ks_g0;
+  assign ks_s0_g1 = ks_g1 | ks_s0_t1;
+  assign ks_s0_p2 = d0_p_s_c2_6 & ks_p1;
+  assign ks_s0_t2 = d0_p_s_c2_6 & ks_g1;
+  assign ks_s0_g2 = 1'b0 | ks_s0_t2;
+  assign ks_s0_p3 = ks_p3 & d0_p_s_c2_6;
+  assign ks_s0_t3 = ks_p3 & 1'b0;
+  assign ks_s0_g3 = ks_g3 | ks_s0_t3;
+  assign ks_s1_p2 = ks_s0_p2 & ks_p0;
+  assign ks_s1_t2 = ks_s0_p2 & ks_g0;
+  assign ks_s1_g2 = ks_s0_g2 | ks_s1_t2;
+  assign ks_s1_p3 = ks_s0_p3 & ks_s0_p1;
+  assign ks_s1_t3 = ks_s0_p3 & ks_s0_g1;
+  assign ks_s1_g3 = ks_s0_g3 | ks_s1_t3;
+  assign maj = ks_s1_g3;
+endmodule
+
+module fa(input a, b, cin, output sum, cout);
+  assign sum = a ^ b ^ cin;
+  assign cout = (a & b) | (a & cin) | (b & cin);
+endmodule

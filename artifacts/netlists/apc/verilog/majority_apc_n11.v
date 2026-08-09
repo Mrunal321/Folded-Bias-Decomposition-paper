@@ -1,0 +1,41 @@
+module parhami_2009_apc_11(input [10:0] x, output maj);
+  wire APC_K1, APC_K3, apc_final_c1, apc_final_c2, apc_final_c3, apc_final_c4, apc_final_s0, apc_final_s1, apc_final_s2, apc_final_s3, apc_l0_a0_c1, apc_l0_a0_c2, apc_l0_a0_s0, apc_l0_a0_s1, apc_l0_a1_c1, apc_l0_a1_c2, apc_l0_a1_s0, apc_l0_a1_s1, apc_l0_a2_c1, apc_l0_a2_c2, apc_l0_a2_s0, apc_l0_a2_s1, apc_l0_a3_c1, apc_l0_a3_c2, apc_l0_a3_s0, apc_l0_a3_s1, apc_l0_a4_c1, apc_l0_a4_c2, apc_l0_a4_s0, apc_l0_a4_s1, apc_l1_a0_c1, apc_l1_a0_c2, apc_l1_a0_c3, apc_l1_a0_s0, apc_l1_a0_s1, apc_l1_a0_s2, apc_l1_a1_c1, apc_l1_a1_c2, apc_l1_a1_c3, apc_l1_a1_s0, apc_l1_a1_s1, apc_l1_a1_s2, apc_l1_a2_c1, apc_l1_a2_c2, apc_l1_a2_s0, apc_l1_a2_s1, apc_l2_a0_c1, apc_l2_a0_c2, apc_l2_a0_c3, apc_l2_a0_c4, apc_l2_a0_s0, apc_l2_a0_s1, apc_l2_a0_s2, apc_l2_a0_s3, apc_l3_a0_c1, apc_l3_a0_c2, apc_l3_a0_c3, apc_l3_a0_c4, apc_l3_a0_s0, apc_l3_a0_s1, apc_l3_a0_s2, apc_l3_a0_s3;
+  assign APC_K1 = 1'b1;
+  assign APC_K3 = 1'b1;
+  fa u0(.a(x[0]), .b(x[1]), .cin(1'b0), .sum(apc_l0_a0_s0), .cout(apc_l0_a0_c1));
+  fa u1(.a(1'b0), .b(1'b0), .cin(apc_l0_a0_c1), .sum(apc_l0_a0_s1), .cout(apc_l0_a0_c2));
+  fa u2(.a(x[2]), .b(x[3]), .cin(1'b0), .sum(apc_l0_a1_s0), .cout(apc_l0_a1_c1));
+  fa u3(.a(1'b0), .b(1'b0), .cin(apc_l0_a1_c1), .sum(apc_l0_a1_s1), .cout(apc_l0_a1_c2));
+  fa u4(.a(x[4]), .b(x[5]), .cin(1'b0), .sum(apc_l0_a2_s0), .cout(apc_l0_a2_c1));
+  fa u5(.a(1'b0), .b(1'b0), .cin(apc_l0_a2_c1), .sum(apc_l0_a2_s1), .cout(apc_l0_a2_c2));
+  fa u6(.a(x[6]), .b(x[7]), .cin(1'b0), .sum(apc_l0_a3_s0), .cout(apc_l0_a3_c1));
+  fa u7(.a(1'b0), .b(1'b0), .cin(apc_l0_a3_c1), .sum(apc_l0_a3_s1), .cout(apc_l0_a3_c2));
+  fa u8(.a(x[8]), .b(x[9]), .cin(1'b0), .sum(apc_l0_a4_s0), .cout(apc_l0_a4_c1));
+  fa u9(.a(1'b0), .b(1'b0), .cin(apc_l0_a4_c1), .sum(apc_l0_a4_s1), .cout(apc_l0_a4_c2));
+  fa u10(.a(apc_l0_a0_s0), .b(apc_l0_a1_s0), .cin(1'b0), .sum(apc_l1_a0_s0), .cout(apc_l1_a0_c1));
+  fa u11(.a(apc_l0_a0_s1), .b(apc_l0_a1_s1), .cin(apc_l1_a0_c1), .sum(apc_l1_a0_s1), .cout(apc_l1_a0_c2));
+  fa u12(.a(1'b0), .b(1'b0), .cin(apc_l1_a0_c2), .sum(apc_l1_a0_s2), .cout(apc_l1_a0_c3));
+  fa u13(.a(apc_l0_a2_s0), .b(apc_l0_a3_s0), .cin(1'b0), .sum(apc_l1_a1_s0), .cout(apc_l1_a1_c1));
+  fa u14(.a(apc_l0_a2_s1), .b(apc_l0_a3_s1), .cin(apc_l1_a1_c1), .sum(apc_l1_a1_s1), .cout(apc_l1_a1_c2));
+  fa u15(.a(1'b0), .b(1'b0), .cin(apc_l1_a1_c2), .sum(apc_l1_a1_s2), .cout(apc_l1_a1_c3));
+  fa u16(.a(apc_l0_a4_s0), .b(x[10]), .cin(1'b0), .sum(apc_l1_a2_s0), .cout(apc_l1_a2_c1));
+  fa u17(.a(apc_l0_a4_s1), .b(1'b0), .cin(apc_l1_a2_c1), .sum(apc_l1_a2_s1), .cout(apc_l1_a2_c2));
+  fa u18(.a(apc_l1_a0_s0), .b(apc_l1_a1_s0), .cin(1'b0), .sum(apc_l2_a0_s0), .cout(apc_l2_a0_c1));
+  fa u19(.a(apc_l1_a0_s1), .b(apc_l1_a1_s1), .cin(apc_l2_a0_c1), .sum(apc_l2_a0_s1), .cout(apc_l2_a0_c2));
+  fa u20(.a(apc_l1_a0_s2), .b(apc_l1_a1_s2), .cin(apc_l2_a0_c2), .sum(apc_l2_a0_s2), .cout(apc_l2_a0_c3));
+  fa u21(.a(1'b0), .b(1'b0), .cin(apc_l2_a0_c3), .sum(apc_l2_a0_s3), .cout(apc_l2_a0_c4));
+  fa u22(.a(apc_l2_a0_s0), .b(apc_l1_a2_s0), .cin(1'b0), .sum(apc_l3_a0_s0), .cout(apc_l3_a0_c1));
+  fa u23(.a(apc_l2_a0_s1), .b(apc_l1_a2_s1), .cin(apc_l3_a0_c1), .sum(apc_l3_a0_s1), .cout(apc_l3_a0_c2));
+  fa u24(.a(apc_l2_a0_s2), .b(1'b0), .cin(apc_l3_a0_c2), .sum(apc_l3_a0_s2), .cout(apc_l3_a0_c3));
+  fa u25(.a(apc_l2_a0_s3), .b(1'b0), .cin(apc_l3_a0_c3), .sum(apc_l3_a0_s3), .cout(apc_l3_a0_c4));
+  fa u26(.a(apc_l3_a0_s0), .b(1'b0), .cin(1'b0), .sum(apc_final_s0), .cout(apc_final_c1));
+  fa u27(.a(apc_l3_a0_s1), .b(APC_K1), .cin(apc_final_c1), .sum(apc_final_s1), .cout(apc_final_c2));
+  fa u28(.a(apc_l3_a0_s2), .b(1'b0), .cin(apc_final_c2), .sum(apc_final_s2), .cout(apc_final_c3));
+  fa u29(.a(apc_l3_a0_s3), .b(APC_K3), .cin(apc_final_c3), .sum(apc_final_s3), .cout(apc_final_c4));
+  assign maj = apc_final_c4;
+endmodule
+
+module fa(input a, b, cin, output sum, cout);
+  assign sum = a ^ b ^ cin;
+  assign cout = (a & b) | (a & cin) | (b & cin);
+endmodule

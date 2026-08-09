@@ -1,0 +1,165 @@
+.model csa_kogge_stone_prefix_9_5
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 x8
+.outputs maj
+.names KS_K0
+1
+.names KS_K1
+1
+.names KS_K3
+1
+.names CONST0
+.names x0 x1 x2 raw_c_c0_0
+011 1
+101 1
+110 1
+111 1
+.names x0 x1 x2 fa0_op1
+001 1
+010 1
+011 1
+111 1
+.names fa0_op1 raw_c_c0_0 x0 raw_s_c0_0
+001 1
+100 1
+101 1
+111 1
+.names x3 x4 x5 raw_c_c0_1
+011 1
+101 1
+110 1
+111 1
+.names x3 x4 x5 fa1_op1
+001 1
+010 1
+011 1
+111 1
+.names fa1_op1 raw_c_c0_1 x3 raw_s_c0_1
+001 1
+100 1
+101 1
+111 1
+.names x6 x7 x8 raw_c_c0_2
+011 1
+101 1
+110 1
+111 1
+.names x6 x7 x8 fa2_op1
+001 1
+010 1
+011 1
+111 1
+.names fa2_op1 raw_c_c0_2 x6 raw_s_c0_2
+001 1
+100 1
+101 1
+111 1
+.names raw_s_c0_0 raw_s_c0_1 raw_s_c0_2 d0_c_c0_3
+011 1
+101 1
+110 1
+111 1
+.names raw_s_c0_0 raw_s_c0_1 raw_s_c0_2 fa3_op1
+001 1
+010 1
+011 1
+111 1
+.names d0_c_c0_3 fa3_op1 raw_s_c0_0 d0_s_c0_3
+001 1
+010 1
+011 1
+111 1
+.names raw_c_c0_0 raw_c_c0_1 raw_c_c0_2 d0_c_c1_4
+011 1
+101 1
+110 1
+111 1
+.names raw_c_c0_0 raw_c_c0_1 raw_c_c0_2 fa4_op1
+001 1
+010 1
+011 1
+111 1
+.names d0_c_c1_4 fa4_op1 raw_c_c0_0 d0_s_c1_4
+001 1
+010 1
+011 1
+111 1
+.names CONST0 d0_c_c0_3 d0_s_c1_4 d2_p_c_c1_5
+011 1
+101 1
+110 1
+111 1
+.names CONST0 d0_c_c0_3 d0_s_c1_4 fa5_op1
+010 1
+100 1
+110 1
+111 1
+.names d0_s_c1_4 d2_p_c_c1_5 fa5_op1 d2_p_s_c1_5
+001 1
+100 1
+101 1
+111 1
+.names CONST0 d0_c_c1_4 d2_p_c_c1_5 d0_p_c_c2_6
+011 1
+101 1
+110 1
+111 1
+.names CONST0 d0_c_c1_4 d2_p_c_c1_5 fa6_op1
+001 1
+100 1
+101 1
+111 1
+.names d0_c_c1_4 d0_p_c_c2_6 fa6_op1 d0_p_s_c2_6
+001 1
+100 1
+101 1
+111 1
+.names d0_s_c0_3 ks_p0
+0 1
+.names d0_s_c0_3 KS_K0 ks_g0
+11 1
+.names d2_p_s_c1_5 ks_p1
+0 1
+.names d2_p_s_c1_5 KS_K1 ks_g1
+11 1
+.names d0_p_c_c2_6 ks_p3
+0 1
+.names d0_p_c_c2_6 KS_K3 ks_g3
+11 1
+.names ks_p1 ks_p0 ks_s0_p1
+11 1
+.names ks_p1 ks_g0 ks_s0_t1
+11 1
+.names ks_g1 ks_s0_t1 ks_s0_g1
+1- 1
+-1 1
+.names d0_p_s_c2_6 ks_p1 ks_s0_p2
+11 1
+.names d0_p_s_c2_6 ks_g1 ks_s0_t2
+11 1
+.names CONST0 ks_s0_t2 ks_s0_g2
+1- 1
+-1 1
+.names ks_p3 d0_p_s_c2_6 ks_s0_p3
+11 1
+.names ks_p3 CONST0 ks_s0_t3
+11 1
+.names ks_g3 ks_s0_t3 ks_s0_g3
+1- 1
+-1 1
+.names ks_s0_p2 ks_p0 ks_s1_p2
+11 1
+.names ks_s0_p2 ks_g0 ks_s1_t2
+11 1
+.names ks_s0_g2 ks_s1_t2 ks_s1_g2
+1- 1
+-1 1
+.names ks_s0_p3 ks_s0_p1 ks_s1_p3
+11 1
+.names ks_s0_p3 ks_s0_g1 ks_s1_t3
+11 1
+.names ks_s0_g3 ks_s1_t3 ks_s1_g3
+1- 1
+-1 1
+.names ks_s1_g3 maj
+1 1
+.end

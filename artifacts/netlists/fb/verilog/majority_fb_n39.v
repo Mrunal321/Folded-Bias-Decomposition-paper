@@ -1,0 +1,48 @@
+module folded_bias_39(input [38:0] x, output maj);
+  wire K2, K3, d0_c_c0_13, d0_c_c0_14, d0_c_c1_19, d0_c_c1_20, d0_c_c2_28, d0_c_c3_33, d0_c_c4_36, d0_s_c0_13, d0_s_c0_14, d0_s_c1_19, d0_s_c1_20, d0_s_c2_28, d0_s_c3_33, d0_s_c4_36, d1_c_c0_15, d1_c_c1_21, d1_c_c1_22, d1_c_c2_29, d1_c_c3_34, d1_s_c0_15, d1_s_c1_21, d1_s_c1_22, d1_s_c2_29, d1_s_c3_34, d2_c_c0_16, d2_c_c1_23, d2_c_c1_24, d2_c_c2_30, d2_s_c0_16, d2_s_c1_23, d2_s_c1_24, d2_s_c2_30, d3_c_c0_17, d3_c_c1_25, d3_c_c2_31, d3_p_c_c3_35, d3_p_s_c3_35, d3_s_c0_17, d3_s_c1_25, d3_s_c2_31, d4_c_c0_18, d4_c_c1_26, d4_s_c0_18, d4_s_c1_26, d5_c_c1_27, d5_p_c_c2_32, d5_p_s_c2_32, d5_s_c1_27, raw_c_c0_0, raw_c_c0_1, raw_c_c0_10, raw_c_c0_11, raw_c_c0_12, raw_c_c0_2, raw_c_c0_3, raw_c_c0_4, raw_c_c0_5, raw_c_c0_6, raw_c_c0_7, raw_c_c0_8, raw_c_c0_9, raw_s_c0_0, raw_s_c0_1, raw_s_c0_10, raw_s_c0_11, raw_s_c0_12, raw_s_c0_2, raw_s_c0_3, raw_s_c0_4, raw_s_c0_5, raw_s_c0_6, raw_s_c0_7, raw_s_c0_8, raw_s_c0_9;
+  assign K2 = 1'b1;
+  assign K3 = 1'b1;
+  fa u0(.a(x[0]), .b(x[1]), .cin(x[2]), .sum(raw_s_c0_0), .cout(raw_c_c0_0));
+  fa u1(.a(x[3]), .b(x[4]), .cin(x[5]), .sum(raw_s_c0_1), .cout(raw_c_c0_1));
+  fa u2(.a(x[6]), .b(x[7]), .cin(x[8]), .sum(raw_s_c0_2), .cout(raw_c_c0_2));
+  fa u3(.a(x[9]), .b(x[10]), .cin(x[11]), .sum(raw_s_c0_3), .cout(raw_c_c0_3));
+  fa u4(.a(x[12]), .b(x[13]), .cin(x[14]), .sum(raw_s_c0_4), .cout(raw_c_c0_4));
+  fa u5(.a(x[15]), .b(x[16]), .cin(x[17]), .sum(raw_s_c0_5), .cout(raw_c_c0_5));
+  fa u6(.a(x[18]), .b(x[19]), .cin(x[20]), .sum(raw_s_c0_6), .cout(raw_c_c0_6));
+  fa u7(.a(x[21]), .b(x[22]), .cin(x[23]), .sum(raw_s_c0_7), .cout(raw_c_c0_7));
+  fa u8(.a(x[24]), .b(x[25]), .cin(x[26]), .sum(raw_s_c0_8), .cout(raw_c_c0_8));
+  fa u9(.a(x[27]), .b(x[28]), .cin(x[29]), .sum(raw_s_c0_9), .cout(raw_c_c0_9));
+  fa u10(.a(x[30]), .b(x[31]), .cin(x[32]), .sum(raw_s_c0_10), .cout(raw_c_c0_10));
+  fa u11(.a(x[33]), .b(x[34]), .cin(x[35]), .sum(raw_s_c0_11), .cout(raw_c_c0_11));
+  fa u12(.a(x[36]), .b(x[37]), .cin(x[38]), .sum(raw_s_c0_12), .cout(raw_c_c0_12));
+  fa u13(.a(raw_s_c0_0), .b(raw_s_c0_1), .cin(raw_s_c0_2), .sum(d0_s_c0_13), .cout(d0_c_c0_13));
+  fa u14(.a(raw_s_c0_3), .b(raw_s_c0_4), .cin(raw_s_c0_5), .sum(d0_s_c0_14), .cout(d0_c_c0_14));
+  fa u15(.a(d0_s_c0_13), .b(d0_s_c0_14), .cin(raw_s_c0_6), .sum(d1_s_c0_15), .cout(d1_c_c0_15));
+  fa u16(.a(d1_s_c0_15), .b(raw_s_c0_7), .cin(raw_s_c0_8), .sum(d2_s_c0_16), .cout(d2_c_c0_16));
+  fa u17(.a(d2_s_c0_16), .b(raw_s_c0_9), .cin(raw_s_c0_10), .sum(d3_s_c0_17), .cout(d3_c_c0_17));
+  fa u18(.a(d3_s_c0_17), .b(raw_s_c0_11), .cin(raw_s_c0_12), .sum(d4_s_c0_18), .cout(d4_c_c0_18));
+  fa u19(.a(raw_c_c0_0), .b(raw_c_c0_1), .cin(raw_c_c0_2), .sum(d0_s_c1_19), .cout(d0_c_c1_19));
+  fa u20(.a(raw_c_c0_3), .b(raw_c_c0_4), .cin(raw_c_c0_5), .sum(d0_s_c1_20), .cout(d0_c_c1_20));
+  fa u21(.a(d0_s_c1_19), .b(d0_s_c1_20), .cin(raw_c_c0_6), .sum(d1_s_c1_21), .cout(d1_c_c1_21));
+  fa u22(.a(raw_c_c0_7), .b(raw_c_c0_8), .cin(raw_c_c0_9), .sum(d1_s_c1_22), .cout(d1_c_c1_22));
+  fa u23(.a(d1_s_c1_21), .b(d1_s_c1_22), .cin(raw_c_c0_10), .sum(d2_s_c1_23), .cout(d2_c_c1_23));
+  fa u24(.a(raw_c_c0_11), .b(raw_c_c0_12), .cin(d0_c_c0_13), .sum(d2_s_c1_24), .cout(d2_c_c1_24));
+  fa u25(.a(d2_s_c1_23), .b(d2_s_c1_24), .cin(d0_c_c0_14), .sum(d3_s_c1_25), .cout(d3_c_c1_25));
+  fa u26(.a(d3_s_c1_25), .b(d1_c_c0_15), .cin(d2_c_c0_16), .sum(d4_s_c1_26), .cout(d4_c_c1_26));
+  fa u27(.a(d4_s_c1_26), .b(d3_c_c0_17), .cin(d4_c_c0_18), .sum(d5_s_c1_27), .cout(d5_c_c1_27));
+  fa u28(.a(d0_c_c1_19), .b(d0_c_c1_20), .cin(d1_c_c1_21), .sum(d0_s_c2_28), .cout(d0_c_c2_28));
+  fa u29(.a(d0_s_c2_28), .b(d1_c_c1_22), .cin(d2_c_c1_23), .sum(d1_s_c2_29), .cout(d1_c_c2_29));
+  fa u30(.a(d1_s_c2_29), .b(d2_c_c1_24), .cin(d3_c_c1_25), .sum(d2_s_c2_30), .cout(d2_c_c2_30));
+  fa u31(.a(d2_s_c2_30), .b(d4_c_c1_26), .cin(d5_c_c1_27), .sum(d3_s_c2_31), .cout(d3_c_c2_31));
+  fa u32(.a(d3_s_c2_31), .b(K2), .cin(1'b0), .sum(d5_p_s_c2_32), .cout(d5_p_c_c2_32));
+  fa u33(.a(d0_c_c2_28), .b(d1_c_c2_29), .cin(d2_c_c2_30), .sum(d0_s_c3_33), .cout(d0_c_c3_33));
+  fa u34(.a(d0_s_c3_33), .b(d3_c_c2_31), .cin(d5_p_c_c2_32), .sum(d1_s_c3_34), .cout(d1_c_c3_34));
+  fa u35(.a(d1_s_c3_34), .b(K3), .cin(1'b0), .sum(d3_p_s_c3_35), .cout(d3_p_c_c3_35));
+  fa u36(.a(d0_c_c3_33), .b(d1_c_c3_34), .cin(d3_p_c_c3_35), .sum(d0_s_c4_36), .cout(d0_c_c4_36));
+  assign maj = d0_c_c4_36;
+endmodule
+
+module fa(input a, b, cin, output sum, cout);
+  assign sum = a ^ b ^ cin;
+  assign cout = (a & b) | (a & cin) | (b & cin);
+endmodule
