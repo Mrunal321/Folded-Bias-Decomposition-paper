@@ -11,10 +11,10 @@ Outputs:
       - maj_fb_<n>.blif
       - maj_baseline_strict_<n>.blif
     Written under:
-      - artifacts/netlists/generated/
-          - folded_bias_threshold/
+      - build/netlists/
+          - folded_bias/
           - folded_bias_carryonly/
-          - baseline_threshold/
+          - baseline/
 
 Notes on BLIF canonicalization:
   * Gate inputs are SORTED (alphabetically) at emission time.
@@ -27,13 +27,13 @@ Notes on BLIF canonicalization:
 """
 
 # ===================== CONFIG =====================
-N = 43  # majority input size (odd, >=3)
+N = 7  # majority input size (odd, >=3)
 
-OUTPUT_ROOT_DIRNAME = "artifacts/netlists/generated"
+OUTPUT_ROOT_DIRNAME = "build/netlists"
 OUTPUT_NAME = f"maj{N}_generated_canon.v"
-BLIF_DIR_FOLDED_BIAS_THRESHOLD = "folded_bias_threshold"
+BLIF_DIR_FOLDED_BIAS_THRESHOLD = "folded_bias"
 BLIF_DIR_FOLDED_BIAS_CARRYONLY = "folded_bias_carryonly"
-BLIF_DIR_BASELINE_THRESHOLD = "baseline_threshold"
+BLIF_DIR_BASELINE_THRESHOLD = "baseline"
 
 INCLUDE_FOLDED_BIAS_FULL      = True   # maj_fb_<n> (legacy/full scheduler)
 INCLUDE_FOLDED_BIAS_CARRYONLY = False   # maj_fb_carryonly_<n> (stop at w-1, maj = carry into w)
@@ -55,6 +55,10 @@ SWEEP_RANDOM_LAYOUTS = 12
 SWEEP_RANDOM_PERMUTATIONS = 12
 SWEEP_MAX_VARIANTS = 24
 
+# Reproduction presets.  ``k_advantage`` disables the structural embedding
+# sweeps used by the paper-replica flow and exposes the direct HW+K form.
+EXPERIMENT_MODE = "default"  # default | k_advantage
+
 # Local mockturtle flow: repeated mig_resubstitution + cleanup_dangling
 USE_MOCKTURTLE_SCORING = True
 MOCKTURTLE_BIN = "tools/mockturtle_mig_opt/build/mockturtle_mig_opt"
@@ -69,8 +73,58 @@ MOCKTURTLE_RECIPES = (
 )
 # ===================================================
 
-import os, math, random, shutil, subprocess, tempfile
+import argparse, os, math, random, shutil, subprocess, tempfile
 from collections import defaultdict, deque
+
+_EXPERIMENT_DEFAULTS = {
+    "ENABLE_STRUCTURAL_BIAS_SWEEP_BASELINE": ENABLE_STRUCTURAL_BIAS_SWEEP_BASELINE,
+    "ENABLE_STRUCTURAL_BIAS_SWEEP_HWK": ENABLE_STRUCTURAL_BIAS_SWEEP_HWK,
+    "ENABLE_FOLDED_MAJ_EMBED_SWEEP": ENABLE_FOLDED_MAJ_EMBED_SWEEP,
+    "ENABLE_FOLDED_DIRECT_PERM_SWEEP": ENABLE_FOLDED_DIRECT_PERM_SWEEP,
+    "SWEEP_RANDOM_LAYOUTS": SWEEP_RANDOM_LAYOUTS,
+    "SWEEP_RANDOM_PERMUTATIONS": SWEEP_RANDOM_PERMUTATIONS,
+    "SWEEP_MAX_VARIANTS": SWEEP_MAX_VARIANTS,
+}
+
+
+def set_experiment_mode(mode: str) -> str:
+    """Apply a named, deterministic structural-search preset."""
+    global EXPERIMENT_MODE
+    global ENABLE_STRUCTURAL_BIAS_SWEEP_BASELINE
+    global ENABLE_STRUCTURAL_BIAS_SWEEP_HWK
+    global ENABLE_FOLDED_MAJ_EMBED_SWEEP
+    global ENABLE_FOLDED_DIRECT_PERM_SWEEP
+    global SWEEP_RANDOM_LAYOUTS
+    global SWEEP_RANDOM_PERMUTATIONS
+    global SWEEP_MAX_VARIANTS
+
+    normalized = (mode or "default").strip().lower().replace("-", "_")
+    if normalized not in ("default", "k_advantage"):
+        raise ValueError("experiment mode must be 'default' or 'k_advantage'")
+
+    ENABLE_STRUCTURAL_BIAS_SWEEP_BASELINE = _EXPERIMENT_DEFAULTS[
+        "ENABLE_STRUCTURAL_BIAS_SWEEP_BASELINE"
+    ]
+    ENABLE_STRUCTURAL_BIAS_SWEEP_HWK = _EXPERIMENT_DEFAULTS[
+        "ENABLE_STRUCTURAL_BIAS_SWEEP_HWK"
+    ]
+    ENABLE_FOLDED_MAJ_EMBED_SWEEP = _EXPERIMENT_DEFAULTS[
+        "ENABLE_FOLDED_MAJ_EMBED_SWEEP"
+    ]
+    ENABLE_FOLDED_DIRECT_PERM_SWEEP = _EXPERIMENT_DEFAULTS[
+        "ENABLE_FOLDED_DIRECT_PERM_SWEEP"
+    ]
+    SWEEP_RANDOM_LAYOUTS = _EXPERIMENT_DEFAULTS["SWEEP_RANDOM_LAYOUTS"]
+    SWEEP_RANDOM_PERMUTATIONS = _EXPERIMENT_DEFAULTS["SWEEP_RANDOM_PERMUTATIONS"]
+    SWEEP_MAX_VARIANTS = _EXPERIMENT_DEFAULTS["SWEEP_MAX_VARIANTS"]
+
+    if normalized == "k_advantage":
+        ENABLE_STRUCTURAL_BIAS_SWEEP_BASELINE = False
+        ENABLE_FOLDED_MAJ_EMBED_SWEEP = False
+        ENABLE_FOLDED_DIRECT_PERM_SWEEP = True
+
+    EXPERIMENT_MODE = normalized
+    return normalized
 
 # ---------- common helpers ----------
 def _verilog_header(n, title):
@@ -938,17 +992,25 @@ def _sanitize(sig: str) -> str:
         return sig
     return sig.replace('[','').replace(']','').replace(' ','_').replace('.', '_')
 
-def _sorted3(a,b,c):
-    """Return tuple of three signal names sorted alphabetically, and their permutation map."""
-    lst = [a,b,c]
-    srt = sorted(lst)
-    perm = tuple(lst.index(srt[i]) for i in range(3))  # new_index -> old_index
-    return tuple(srt), perm
+def _canonical_rows(original_inputs, predicate):
+    """Return unique-fanin BLIF rows for a Boolean predicate.
 
-def _permute_pattern(p, perm):
-    """Permute a 3-bit pattern 'p' according to perm (length 3)."""
-    if len(p) != 3: return p
-    return "".join(p[perm[i]] for i in range(3))
+    Full adders produced by the scaffolded construction can contain repeated
+    constants or signals.  BLIF `.names` fanins must be unique, so enumerate
+    assignments over the unique sorted signals and evaluate the original
+    (possibly repeated) input tuple.
+    """
+    fanins = sorted(set(original_inputs))
+    rows = []
+    for word in range(1 << len(fanins)):
+        values = {
+            signal: (word >> (len(fanins) - index - 1)) & 1
+            for index, signal in enumerate(fanins)
+        }
+        original_values = [values[signal] for signal in original_inputs]
+        if predicate(original_values):
+            rows.append("".join(str(values[signal]) for signal in fanins))
+    return fanins, rows
 
 def _emit_names_lines_for_const1(name):
     return [f".names {name}", "1"]
@@ -994,29 +1056,20 @@ def _write_blif_from_fas_canonical(model_name, n, fa_ops, maj_signal, const1_nam
 
     def emit_maj3(A,B,C,OUT, mask=None):
         na, nb, nc = (False, False, False) if mask is None else mask
-        (A1,B1,C1), perm = _sorted3(A,B,C)
-        mask_orig = [na, nb, nc]
-        mask_sorted = [mask_orig[perm_idx] for perm_idx in perm]
-
-        rows = []
-        for a in (0, 1):
-            for b in (0, 1):
-                for c in (0, 1):
-                    adjusted = (a ^ mask_sorted[0]) + (b ^ mask_sorted[1]) + (c ^ mask_sorted[2])
-                    if adjusted >= 2:
-                        rows.append(f"{a}{b}{c}")
-
-        rows = sorted(set(rows))
-        out.append(f".names {A1} {B1} {C1} {OUT}")
+        masks = (na, nb, nc)
+        fanins, rows = _canonical_rows(
+            (A, B, C),
+            lambda values: sum(value ^ int(masks[index]) for index, value in enumerate(values)) >= 2,
+        )
+        out.append(".names " + " ".join(fanins + [OUT]))
         for r in rows:
             out.append(f"{r} 1")
 
     def emit_xor3(A,B,C,S):
-        # XOR3 canonical minterms (odd parity): 001,010,100,111
-        (A1,B1,C1), perm = _sorted3(A,B,C)
-        rows = ["001","010","100","111"]
-        rows = [_permute_pattern(r, perm) for r in rows]
-        out.append(f".names {A1} {B1} {C1} {S}")
+        fanins, rows = _canonical_rows(
+            (A, B, C), lambda values: (sum(values) & 1) == 1
+        )
+        out.append(".names " + " ".join(fanins + [S]))
         for r in rows:
             out.append(f"{r} 1")
 
@@ -1602,6 +1655,16 @@ def main():
     repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     output_root_dir = os.path.join(repo_root, OUTPUT_ROOT_DIRNAME)
 
+    def display_path(path):
+        """Keep console logs free of local filesystem prefixes."""
+        absolute = os.path.abspath(path)
+        try:
+            if os.path.commonpath((repo_root, absolute)) == repo_root:
+                return os.path.relpath(absolute, repo_root)
+        except ValueError:
+            pass
+        return os.path.basename(absolute)
+
     modules = []
     emitted = set()
     counts = []
@@ -1617,6 +1680,7 @@ def main():
     banner = [
         "// Auto-generated majority circuits (canonical BLIF emission)",
         f"// n = {N}",
+        f"// experiment_mode = {EXPERIMENT_MODE}",
         f"// schedule_mode = {_normalize_schedule_mode(SCHEDULE_MODE)}",
         "// Top modules present (depending on config):",
         "//   - maj_fb_<n>                (folded-bias full scheduler; legacy)",
@@ -1656,7 +1720,13 @@ def main():
     out_v = os.path.join(output_root_dir, OUTPUT_NAME)
     with open(out_v, "w") as f:
         f.write("\n".join(banner + modules))
-    print("Wrote Verilog:", out_v)
+    print("Wrote Verilog:", display_path(out_v))
+    print(
+        f"Experiment mode: {EXPERIMENT_MODE} "
+        f"(baseline_sweep={ENABLE_STRUCTURAL_BIAS_SWEEP_BASELINE}, "
+        f"folded_embed={ENABLE_FOLDED_MAJ_EMBED_SWEEP}, "
+        f"folded_permutations={ENABLE_FOLDED_DIRECT_PERM_SWEEP})"
+    )
     for name, cnt in counts:
         print(f"FA count [{name}]: {cnt}")
     count_map = {name: cnt for name, cnt in counts}
@@ -1666,7 +1736,7 @@ def main():
     if USE_MOCKTURTLE_SCORING:
         if mock_bin is not None:
             print(
-                f"Mockturtle scorer: {mock_bin} (rounds={MOCKTURTLE_ROUNDS}, "
+                f"Mockturtle scorer: {display_path(mock_bin)} (rounds={MOCKTURTLE_ROUNDS}, "
                 f"max_pis={MOCKTURTLE_MAX_PIS}, max_inserts={MOCKTURTLE_MAX_INSERTS}, "
                 f"recipes={','.join(_mockturtle_recipe_list())})"
             )
@@ -1760,7 +1830,7 @@ def main():
             maj_only=MAJ_ONLY_FA,
             maj_ops=fb_maj_ops,
         )
-        print("Wrote BLIF (folded-bias threshold):", fb_blif)
+        print("Wrote BLIF (folded-bias threshold):", display_path(fb_blif))
 
     if INCLUDE_FOLDED_BIAS_CARRYONLY and fb_carry_blif_data is not None:
         fb2_fa_ops, fb2_maj_ops, fb2_const_used, fb2_out = fb_carry_blif_data
@@ -1775,7 +1845,7 @@ def main():
             maj_only=MAJ_ONLY_FA,
             maj_ops=fb2_maj_ops,
         )
-        print("Wrote BLIF (folded-bias carry-only):", fb2_blif)
+        print("Wrote BLIF (folded-bias carry-only):", display_path(fb2_blif))
 
     if INCLUDE_BASELINE_STRICT and bs_blif_data is not None:
         bs_fa_ops, bs_maj_ops, bs_const_used, bs_out = bs_blif_data
@@ -1790,7 +1860,7 @@ def main():
             maj_only=MAJ_ONLY_FA,
             maj_ops=bs_maj_ops,
         )
-        print("Wrote BLIF (baseline threshold):", bs_blif)
+        print("Wrote BLIF (baseline threshold):", display_path(bs_blif))
 
     if RUN_EQUIV_SELF_CHECK:
         if N <= SELF_CHECK_MAX_N:
@@ -1805,5 +1875,78 @@ def main():
         else:
             print(f"Skipped equivalence self-check: N={N} exceeds limit {SELF_CHECK_MAX_N}")
 
+def _parse_cli_args():
+    parser = argparse.ArgumentParser(
+        description="Generate folded-bias and strict scaffolded-baseline majority netlists."
+    )
+    parser.add_argument("--n", type=int, default=N, help="Odd majority input count (default: 7).")
+    parser.add_argument(
+        "--output-dir",
+        default=OUTPUT_ROOT_DIRNAME,
+        help="Output directory, absolute or relative to the repository root.",
+    )
+    parser.add_argument(
+        "--schedule",
+        choices=("serial", "wallace", "dadda"),
+        default=SCHEDULE_MODE,
+    )
+    parser.add_argument(
+        "--experiment-mode",
+        choices=("default", "k_advantage"),
+        default=os.environ.get("FB_EXPERIMENT_MODE", EXPERIMENT_MODE),
+    )
+    parser.add_argument(
+        "--fa-encoding",
+        choices=("majority", "xor"),
+        default="majority",
+        help="BLIF full-adder encoding (default: majority-only).",
+    )
+    parser.add_argument(
+        "--mockturtle-scoring",
+        action="store_true",
+        help="Use the optional local Mockturtle helper to rank structural variants.",
+    )
+    parser.add_argument(
+        "--mockturtle-bin",
+        default=os.environ.get("MOCKTURTLE_BIN", MOCKTURTLE_BIN),
+        help="Path to the optional Mockturtle helper.",
+    )
+    parser.add_argument(
+        "--self-check-max-n",
+        type=int,
+        default=13,
+        help="Exhaustively check generated logic through this n (default: 13).",
+    )
+    parser.add_argument(
+        "--skip-self-check",
+        action="store_true",
+        help="Skip the built-in exhaustive specification check.",
+    )
+    return parser.parse_args()
+
+
+def _configure_cli(args) -> None:
+    global N, OUTPUT_ROOT_DIRNAME, OUTPUT_NAME, SCHEDULE_MODE
+    global MAJ_ONLY_FA, USE_MOCKTURTLE_SCORING, MOCKTURTLE_BIN
+    global RUN_EQUIV_SELF_CHECK, SELF_CHECK_MAX_N
+
+    if args.n < 3 or args.n % 2 == 0:
+        raise SystemExit("--n must be an odd integer greater than or equal to 3")
+    if args.self_check_max_n < 0:
+        raise SystemExit("--self-check-max-n must be non-negative")
+
+    N = args.n
+    OUTPUT_ROOT_DIRNAME = args.output_dir
+    OUTPUT_NAME = f"maj{N}_generated_canon.v"
+    SCHEDULE_MODE = args.schedule
+    MAJ_ONLY_FA = args.fa_encoding == "majority"
+    USE_MOCKTURTLE_SCORING = args.mockturtle_scoring
+    MOCKTURTLE_BIN = args.mockturtle_bin
+    RUN_EQUIV_SELF_CHECK = not args.skip_self_check
+    SELF_CHECK_MAX_N = args.self_check_max_n
+    set_experiment_mode(args.experiment_mode)
+
+
 if __name__ == "__main__":
+    _configure_cli(_parse_cli_args())
     main()

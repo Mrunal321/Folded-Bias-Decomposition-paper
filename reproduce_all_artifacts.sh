@@ -1,239 +1,173 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "${ROOT_DIR}"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "${REPO_ROOT}"
 
-SCRIPTS_DIR="${ROOT_DIR}/scripts"
-export PYTHONPATH="${SCRIPTS_DIR}${PYTHONPATH:+:${PYTHONPATH}}"
-export MPLBACKEND="${MPLBACKEND:-Agg}"
-export SOURCE_DATE_EPOCH="${SOURCE_DATE_EPOCH:-1700000000}"
+REPRO_PROFILE="${REPRO_PROFILE:-quick}"       # quick | paper
+case "${REPRO_PROFILE}" in
+  quick)
+    N_VALUES="${N_VALUES:-5,7,9,11,13}"
+    RUN_THRESHOLDS="${RUN_THRESHOLDS:-0}"
+    ;;
+  paper)
+    N_VALUES="${N_VALUES:-5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61}"
+    RUN_THRESHOLDS="${RUN_THRESHOLDS:-1}"
+    ;;
+  *) echo "REPRO_PROFILE must be quick or paper" >&2; exit 2 ;;
+esac
 
-N_START="${N_START:-5}"
-N_END="${N_END:-61}"
+OUTPUT_ROOT="${OUTPUT_ROOT:-build/reproduction/netlists}"
+SCHEDULE="${SCHEDULE:-dadda}"
+EXPERIMENT_MODE="${EXPERIMENT_MODE:-default}"
+FA_ENCODING="${FA_ENCODING:-majority}"
+SELF_CHECK_MAX_N="${SELF_CHECK_MAX_N:-13}"
 
-RUN_CORE_PACKAGE="${RUN_CORE_PACKAGE:-0}"
-
+RUN_ABC="${RUN_ABC:-0}"                    # auto | 0 | 1
+RUN_THRESHOLD_ABC="${RUN_THRESHOLD_ABC:-0}" # 0 | 1 (218-case mapped/formal extension)
+RUN_MOCKTURTLE="${RUN_MOCKTURTLE:-0}"     # 0 | 1
+RUN_EPFL_VOTER="${RUN_EPFL_VOTER:-0}"      # 0 | 1
+RUN_EPFL_ABC="${RUN_EPFL_ABC:-0}"          # 0 | metrics | formal
+RUN_FICTION="${RUN_FICTION:-0}"            # 0 | 1
+THRESHOLD_N_VALUES="${THRESHOLD_N_VALUES:-31,63,127}"
+THRESHOLD_VECTORS="${THRESHOLD_VECTORS:-paper}"
 ABC_BIN="${ABC_BIN:-abc}"
-CIRKIT_PY="${CIRKIT_PY:-python3}"
-VIVADO_BIN="${VIVADO_BIN:-vivado}"
-FPGA_PART="${FPGA_PART:-xc7a100tcsg324-1}"
-RUN_VIVADO="${RUN_VIVADO:-0}"
+DOCKER_BIN="${DOCKER_BIN:-docker}"
+FICTION_IMAGE="${FICTION_IMAGE:-mawalter/fiction@sha256:c93abd35f49078d637414ce58bc03834298911ed704ec8edd960f1f76214c396}"
+FICTION_EXPORT_LAYOUT_N="${FICTION_EXPORT_LAYOUT_N:-5,31,61}"
+FICTION_TIMEOUT="${FICTION_TIMEOUT:-900}"
+EPFL_VOTER_SOURCE="${EPFL_VOTER_SOURCE:-}"
+MOCKTURTLE_BIN="${MOCKTURTLE_BIN:-tools/mockturtle_mig_opt/build/mockturtle_mig_opt}"
+MOCKTURTLE_CEC_BIN="${MOCKTURTLE_CEC_BIN:-tools/mockturtle_mig_opt/build/mockturtle_blif_cec}"
 
-ASIC_LIB="${ASIC_LIB:-mcnc.genlib}"
+case "${RUN_ABC}" in
+  auto|0|1) ;;
+  *) echo "RUN_ABC must be auto, 0, or 1" >&2; exit 2 ;;
+esac
+case "${RUN_MOCKTURTLE}" in
+  0|1) ;;
+  *) echo "RUN_MOCKTURTLE must be 0 or 1" >&2; exit 2 ;;
+esac
+case "${RUN_THRESHOLD_ABC}" in
+  0|1) ;;
+  *) echo "RUN_THRESHOLD_ABC must be 0 or 1" >&2; exit 2 ;;
+esac
+case "${RUN_THRESHOLDS}" in
+  0|1) ;;
+  *) echo "RUN_THRESHOLDS must be 0 or 1" >&2; exit 2 ;;
+esac
+case "${RUN_FICTION}" in
+  0|1) ;;
+  *) echo "RUN_FICTION must be 0 or 1" >&2; exit 2 ;;
+esac
+case "${RUN_EPFL_VOTER}" in
+  0|1) ;;
+  *) echo "RUN_EPFL_VOTER must be 0 or 1" >&2; exit 2 ;;
+esac
+case "${RUN_EPFL_ABC}" in
+  0|metrics|formal) ;;
+  *) echo "RUN_EPFL_ABC must be 0, metrics, or formal" >&2; exit 2 ;;
+esac
 
-RUN_CROSS_TOOL_WLT="${RUN_CROSS_TOOL_WLT:-0}"
-RUN_INTRO_MOTIVATION="${RUN_INTRO_MOTIVATION:-0}"
-INTRO_EXAMPLE_N="${INTRO_EXAMPLE_N:-}"
-
-RUN_PACKAGE_ZIP="${RUN_PACKAGE_ZIP:-0}"
-
-PAPER_DIR="results/paper_package_${N_START}_${N_END}"
-VIVADO_CMP_DIR="results/vivado_compare_${N_START}_${N_END}_synth"
-VIVADO_PAPER_DIR="results/vivado_paper_package_${N_START}_${N_END}"
-
-log() {
-  echo "[artifact] $*"
-}
-
-die() {
-  echo "[error] $*" >&2
-  exit 1
-}
-
-is_true() {
-  case "${1,,}" in
-    1|true|yes|y|on) return 0 ;;
-    *) return 1 ;;
-  esac
-}
-
-require_executable() {
-  local value="$1"
-  local label="$2"
-  if [[ "${value}" == */* ]]; then
-    [[ -x "${value}" ]] || die "${label} is not executable: ${value}"
-    return
-  fi
-  command -v "${value}" >/dev/null 2>&1 || die "${label} not found in PATH: ${value}"
-}
-
-require_file() {
-  local path="$1"
-  [[ -f "${path}" ]] || die "Missing required file: ${path}"
-}
-
-choose_intro_n() {
-  local start="$1"
-  local end="$2"
-  local requested="${3:-}"
-
-  if [[ -n "${requested}" ]]; then
-    if ! [[ "${requested}" =~ ^[0-9]+$ ]]; then
-      die "INTRO_EXAMPLE_N must be an odd integer in [N_START, N_END]. Got: ${requested}"
-    fi
-    if (( requested < start || requested > end || requested % 2 == 0 )); then
-      die "INTRO_EXAMPLE_N must be odd and within [N_START, N_END]. Got: ${requested}, range=[${start},${end}]"
-    fi
-    echo "${requested}"
-    return
-  fi
-
-  if (( start <= 13 && 13 <= end )); then
-    echo "13"
-    return
-  fi
-
-  local cand="${start}"
-  if (( cand % 2 == 0 )); then
-    cand=$((cand + 1))
-  fi
-  if (( cand > end )); then
-    die "Could not choose an odd INTRO_EXAMPLE_N within [${start},${end}]"
-  fi
-  echo "${cand}"
-}
-
-resolve_mock_bin() {
-  python3 - <<'PY'
-import final_generator as fg
-print(fg._resolve_mockturtle_bin() or "")
-PY
-}
-
-if ! [[ "${N_START}" =~ ^[0-9]+$ && "${N_END}" =~ ^[0-9]+$ ]]; then
-  die "N_START and N_END must be integers. Got N_START=${N_START}, N_END=${N_END}"
+echo "[1/7] Generating baseline and folded-bias netlists"
+generate_args=(
+  --n-values "${N_VALUES}"
+  --output-root "${OUTPUT_ROOT}"
+  --schedule "${SCHEDULE}"
+  --experiment-mode "${EXPERIMENT_MODE}"
+  --fa-encoding "${FA_ENCODING}"
+  --self-check-max-n "${SELF_CHECK_MAX_N}"
+)
+if [[ "${RUN_MOCKTURTLE}" == "1" ]]; then
+  generate_args+=(--mockturtle-scoring --mockturtle-bin "${MOCKTURTLE_BIN}")
 fi
-if (( N_START > N_END )); then
-  die "N_START must be <= N_END"
-fi
-if (( N_START < 3 || N_END < 3 )); then
-  die "N_START/N_END must be >= 3"
-fi
+python3 scripts/generate_suite.py "${generate_args[@]}"
 
-command -v python3 >/dev/null 2>&1 || die "python3 not found in PATH"
+echo "[2/7] Independently checking generated BLIF behavior"
+python3 scripts/verify_blif.py \
+  --n-values "${N_VALUES}" \
+  --input-root "${OUTPUT_ROOT}" \
+  --exhaustive-max-n "${SELF_CHECK_MAX_N}"
 
-if is_true "${RUN_CORE_PACKAGE}"; then
-  require_executable "${ABC_BIN}" "ABC_BIN"
-fi
-
-if is_true "${RUN_CORE_PACKAGE}"; then
-  require_executable "${CIRKIT_PY}" "CIRKIT_PY"
-fi
-
-if is_true "${RUN_VIVADO}"; then
-  require_executable "${VIVADO_BIN}" "VIVADO_BIN"
-fi
-
-if is_true "${RUN_CORE_PACKAGE}"; then
-  MOCK_BIN="$(resolve_mock_bin | tr -d '\n')"
-  [[ -n "${MOCK_BIN}" ]] || die "mockturtle binary not found. Build tools/mockturtle_mig_opt first, or leave RUN_CORE_PACKAGE=0."
-  require_executable "${MOCK_BIN}" "mockturtle binary"
-fi
-
-if is_true "${RUN_CORE_PACKAGE}"; then
-  log "[1/6] Generating core paper package (raw/light + ABC + CirKit)..."
-  python3 "${SCRIPTS_DIR}/generate_paper_package.py" \
-    --n-start "${N_START}" \
-    --n-end "${N_END}" \
-    --abc-bin "${ABC_BIN}" \
-    --cirkit-python "${CIRKIT_PY}"
-else
-  log "[1/6] Skipping core package rebuild (RUN_CORE_PACKAGE=${RUN_CORE_PACKAGE}); using existing CSV artifacts."
-fi
-
-if is_true "${RUN_VIVADO}"; then
-  log "[2/6] Running Vivado synthesis comparison..."
-  python3 "${SCRIPTS_DIR}/compare_vivado_stats.py" \
-    --n-start "${N_START}" \
-    --n-end "${N_END}" \
-    --part "${FPGA_PART}" \
-    --vivado-bin "${VIVADO_BIN}" \
-    --synth-only \
-    --output-dir "${VIVADO_CMP_DIR}"
-else
-  log "[2/6] Skipping Vivado rerun (RUN_VIVADO=${RUN_VIVADO}); expecting committed CSVs."
-fi
-
-if [[ ! -f "${VIVADO_CMP_DIR}/vivado_comparison.csv" ]]; then
-  if is_true "${RUN_VIVADO}"; then
-    die "Missing Vivado output after rerun: ${VIVADO_CMP_DIR}/vivado_comparison.csv"
-  fi
-  die "Missing ${VIVADO_CMP_DIR}/vivado_comparison.csv. Set RUN_VIVADO=1 to regenerate or use a range with committed Vivado CSVs."
-fi
-
-if [[ ! -f "${VIVADO_CMP_DIR}/vivado_detailed.csv" ]]; then
-  if is_true "${RUN_VIVADO}"; then
-    die "Missing Vivado output after rerun: ${VIVADO_CMP_DIR}/vivado_detailed.csv"
-  fi
-  die "Missing ${VIVADO_CMP_DIR}/vivado_detailed.csv. Set RUN_VIVADO=1 to regenerate or use a range with committed Vivado CSVs."
-fi
-
-log "[3/6] Generating Vivado paper package..."
-python3 "${SCRIPTS_DIR}/generate_vivado_paper_package.py" \
-  --comparison-csv "${VIVADO_CMP_DIR}/vivado_comparison.csv" \
-  --detailed-csv "${VIVADO_CMP_DIR}/vivado_detailed.csv"
-
-RAW_CSV="${PAPER_DIR}/data/raw_light_metrics_${N_START}_${N_END}.csv"
-ABC_CSV="${PAPER_DIR}/data/abc_mapped_compare_${N_START}_${N_END}.csv"
-CIRKIT_CSV="${PAPER_DIR}/data/cirkit_qca_stmg_compare_${N_START}_${N_END}.csv"
-VIVADO_CSV="${VIVADO_PAPER_DIR}/data/vivado_comparison.csv"
-
-if is_true "${RUN_CROSS_TOOL_WLT}" || is_true "${RUN_INTRO_MOTIVATION}"; then
-  require_file "${RAW_CSV}"
-fi
-if is_true "${RUN_CROSS_TOOL_WLT}"; then
-  require_file "${ABC_CSV}"
-  require_file "${CIRKIT_CSV}"
-  require_file "${VIVADO_CSV}"
-  log "[4/6] Generating cross-tool WLT figures + LaTeX table..."
-  python3 "${SCRIPTS_DIR}/generate_cross_tool_wlt.py" \
-    --raw-csv "${RAW_CSV}" \
-    --abc-csv "${ABC_CSV}" \
-    --cirkit-csv "${CIRKIT_CSV}" \
-    --vivado-csv "${VIVADO_CSV}" \
-    --asic-lib "${ASIC_LIB}" \
-    --out-fig-prefix "${PAPER_DIR}/figures/fig_cross_tool_wlt_summary" \
-    --out-fig-grouped-prefix "${PAPER_DIR}/figures/fig_cross_tool_wlt_grouped" \
-    --out-tex "${PAPER_DIR}/tables/table_cross_tool_wlt_summary.tex"
-else
-  log "[4/6] Skipping cross-tool WLT artifact generation (RUN_CROSS_TOOL_WLT=${RUN_CROSS_TOOL_WLT})."
-fi
-
-if is_true "${RUN_INTRO_MOTIVATION}"; then
-  INTRO_N="$(choose_intro_n "${N_START}" "${N_END}" "${INTRO_EXAMPLE_N}")"
-  log "[5/6] Generating introduction motivation artifact (n=${INTRO_N})..."
-  python3 "${SCRIPTS_DIR}/generate_intro_motivation_artifact.py" \
-    --raw-csv "${RAW_CSV}" \
-    --example-n "${INTRO_N}" \
-    --out-fig-prefix "${PAPER_DIR}/figures/fig_intro_motivation" \
-    --out-tex "${PAPER_DIR}/tables/fig_intro_motivation.tex" \
-    --out-intro-paragraph "${PAPER_DIR}/tables/intro_motivation_paragraph.tex" \
-    --fig-rel-path-for-latex "${PAPER_DIR}/figures/fig_intro_motivation.pdf"
-else
-  log "[5/6] Skipping introduction motivation artifact (RUN_INTRO_MOTIVATION=${RUN_INTRO_MOTIVATION})."
-fi
-
-if is_true "${RUN_PACKAGE_ZIP}"; then
-  if command -v zip >/dev/null 2>&1; then
-    log "[6/6] Creating zip bundles..."
-    zip -qr "results/paper_package_${N_START}_${N_END}.zip" "${PAPER_DIR}"
-    zip -qr "results/vivado_paper_package_${N_START}_${N_END}.zip" "${VIVADO_PAPER_DIR}"
+echo "[3/7] General-threshold sweep"
+if [[ "${RUN_THRESHOLDS}" == "1" ]]; then
+  threshold_args=(
+    --n-values "${THRESHOLD_N_VALUES}"
+    --vectors "${THRESHOLD_VECTORS}"
+  )
+  if [[ "${RUN_THRESHOLD_ABC}" == "1" ]]; then
+    threshold_args+=(--abc-bin "${ABC_BIN}" --require-abc)
   else
-    log "[6/6] zip not found; skipping zip bundle generation."
+    threshold_args+=(--abc-bin "")
   fi
+  python3 scripts/run_threshold_sweep.py "${threshold_args[@]}"
 else
-  log "[6/6] Skipping zip bundle generation (RUN_PACKAGE_ZIP=${RUN_PACKAGE_ZIP})."
+  echo "[threshold] skipped (set RUN_THRESHOLDS=1 to enable)"
 fi
 
-log "Done."
-log "Core package:               ${PAPER_DIR}"
-log "Vivado compare CSVs:        ${VIVADO_CMP_DIR}"
-log "Vivado package:             ${VIVADO_PAPER_DIR}"
-if is_true "${RUN_CROSS_TOOL_WLT}"; then
-  log "Cross-tool WLT figure:      ${PAPER_DIR}/figures/fig_cross_tool_wlt_summary.pdf"
-  log "Cross-tool grouped figure:  ${PAPER_DIR}/figures/fig_cross_tool_wlt_grouped.pdf"
+echo "[4/7] Optional scoped EPFL voter experiment"
+if [[ "${RUN_EPFL_VOTER}" == "1" ]]; then
+  epfl_args=()
+  if [[ -n "${EPFL_VOTER_SOURCE}" ]]; then
+    epfl_args+=(--epfl-source "${EPFL_VOTER_SOURCE}")
+  fi
+  case "${RUN_EPFL_ABC}" in
+    0)
+      epfl_args+=(--abc-bin "")
+      ;;
+    metrics)
+      epfl_args+=(--abc-bin "${ABC_BIN}" --skip-formal)
+      ;;
+    formal)
+      epfl_args+=(--abc-bin "${ABC_BIN}")
+      ;;
+  esac
+  python3 scripts/run_epfl_voter.py "${epfl_args[@]}"
+else
+  echo "[epfl-voter] skipped (set RUN_EPFL_VOTER=1 to enable)"
 fi
-if is_true "${RUN_INTRO_MOTIVATION}"; then
-  log "Intro motivation figure:    ${PAPER_DIR}/figures/fig_intro_motivation.pdf"
+
+echo "[5/7] Optional pinned Fiction QCA flow"
+if [[ "${RUN_FICTION}" == "1" ]]; then
+  python3 scripts/run_fiction_qca.py \
+    --n-values "${N_VALUES}" \
+    --input-root "${OUTPUT_ROOT}" \
+    --abc-bin "${ABC_BIN}" \
+    --docker-bin "${DOCKER_BIN}" \
+    --image "${FICTION_IMAGE}" \
+    --export-layout-n "${FICTION_EXPORT_LAYOUT_N}" \
+    --timeout "${FICTION_TIMEOUT}"
+else
+  echo "[fiction] skipped (set RUN_FICTION=1 with the paper profile to enable)"
 fi
+
+echo "[6/7] Running available strong-flow checks"
+strong_args=(
+  --n-values "${N_VALUES}"
+  --input-root "${OUTPUT_ROOT}"
+)
+if [[ "${RUN_ABC}" == "0" ]]; then
+  strong_args+=(--abc-bin "")
+else
+  strong_args+=(--abc-bin "${ABC_BIN}")
+fi
+if [[ "${RUN_ABC}" == "1" ]]; then
+  strong_args+=(--require-abc)
+fi
+if [[ "${RUN_MOCKTURTLE}" == "1" ]]; then
+  strong_args+=(
+    --mockturtle-bin "${MOCKTURTLE_BIN}"
+    --mockturtle-cec-bin "${MOCKTURTLE_CEC_BIN}"
+    --require-mockturtle
+    --require-mockturtle-cec
+  )
+else
+  strong_args+=(--mockturtle-bin "" --mockturtle-cec-bin "")
+fi
+python3 scripts/run_strong_flow.py "${strong_args[@]}"
+
+echo "[7/7] Auditing the public release tree"
+python3 scripts/release_audit.py
+
+echo "Reproduction completed successfully."
+echo "Generated files are under build/reproduction/ and are intentionally untracked."

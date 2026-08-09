@@ -1,6 +1,64 @@
+# Python and editor state
 __pycache__/
 *.py[cod]
+.venv/
+.vscode/
+.idea/
+
+# Reproduction output (regenerated locally)
+/build/
+/out/
+/results/
+/artifacts/generated/
+
+# Tool and synthesis output
 .Xil/
 abc.history
-tools/mockturtle_mig_opt/build/
-results/*/runs/
+**/build/
+**/build_*/
+CMakeCache.txt
+CMakeFiles/
+*.o
+*.a
+*.so
+*.jou
+*.rpt
+*.wdb
+*.dcp
+*.vcd
+*.vvp
+*.saif
+*.cnf
+*.qca
+
+# Result dumps, plots, archives, and paper-writing files
+*.csv
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.tex
+*.bib
+*.doc
+*.docx
+*.log
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+
+# Local paper/review work is deliberately outside the public artifact
+/Original paper/
+/proposed_insertions/
+/SUPPLEMENTARY_RESULTS*
+/audit/
+*_backup_*
+*.bak

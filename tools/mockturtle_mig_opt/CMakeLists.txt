@@ -13,8 +13,8 @@ set(BILL_Z3 OFF CACHE BOOL "" FORCE)
 FetchContent_Declare(
   mockturtle_dep
   GIT_REPOSITORY https://github.com/lsils/mockturtle.git
-  GIT_TAG master
-  GIT_SHALLOW TRUE
+  # Tested source revision; avoid floating builds from the default branch.
+  GIT_TAG 420f0271ab9f63a1644bf465ab47c970c173bd7b
 )
 
 FetchContent_MakeAvailable(mockturtle_dep)
@@ -23,3 +23,6 @@ add_executable(mockturtle_mig_opt src/mockturtle_mig_opt.cpp)
 target_link_libraries(mockturtle_mig_opt PRIVATE mockturtle)
 target_compile_features(mockturtle_mig_opt PRIVATE cxx_std_17)
 
+add_executable(mockturtle_blif_cec src/mockturtle_blif_cec.cpp)
+target_link_libraries(mockturtle_blif_cec PRIVATE mockturtle)
+target_compile_features(mockturtle_blif_cec PRIVATE cxx_std_17)
