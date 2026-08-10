@@ -64,14 +64,6 @@ licensed environments and are not reproduced by this command.
 A functional proof requires exhaustive enumeration or an explicit formal CEC
 equivalence result. A finite-vector pass is regression evidence, not a proof.
 
-## Archived numerical results
-
-[`archive/paper-results-v5.61/`](archive/paper-results-v5.61/) contains the
-sanitized v5.61 numerical-result archive: five raw CSVs, portable historical
-analysis scripts, known tool/environment details, and SHA-256 checksums. It is
-the reference bundle for matching the archived tables; it is separate from the
-current compact workflow.
-
 ## Layout
 
 ```text
@@ -79,8 +71,8 @@ reproduce_all_artifacts.sh  main entry point
 scripts/                    generator, verifier, and optional-flow runners
 rtl/fa.v                    full-adder primitive
 artifacts/examples/         checked representative netlists
+artifacts/netlists/         generated FB, B, APC, SN, and CSA+PA netlists
 docs/REPRODUCIBILITY.md     protocol and configuration details
-archive/paper-results-v5.61 sanitized historical numerical archive
 ```
 
 For exact options, output schemas, and limitations, see
